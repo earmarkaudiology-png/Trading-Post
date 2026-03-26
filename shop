@@ -1,0 +1,5390 @@
+!shop-menu
+
+const TradingPost1E = (() => {
+  'use strict';
+
+  const SCRIPT = 'TradingPost1E';
+  const VERSION = '0.2.2';
+
+  const MONEY_ATTRS = ['cp', 'sp', 'ep', 'gp', 'pp'];
+  const CATEGORY_ORDER = ['armor','weapons','ammo','clothing','herbs','misc','provisions','religious','tack','livestock','transport','trinkets'];
+  const STORE_TYPES = ['trading_post','outfitter','smith','stable','herbalist'];
+  const SIZE_ORDER = ['small','medium','large'];
+  const SETTLEMENT_ORDER = ['hamlet','village','town','city'];
+
+  const ITEMS = [
+  {
+    "key": "banded",
+    "name": "Banded Armor",
+    "category": "armor",
+    "price": "90 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "chain",
+    "name": "Chain Mail",
+    "category": "armor",
+    "price": "75 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "helmet_great",
+    "name": "Helmet, Great",
+    "category": "armor",
+    "price": "15 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "helmet_small",
+    "name": "Helmet, Small",
+    "category": "armor",
+    "price": "10 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "leather",
+    "name": "Leather Armor",
+    "category": "armor",
+    "price": "5 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "padded",
+    "name": "Padded Armor",
+    "category": "armor",
+    "price": "4 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "cloth"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "plate",
+    "name": "Plate Mail",
+    "category": "armor",
+    "price": "400 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ring_mail",
+    "name": "Ring Mail",
+    "category": "armor",
+    "price": "30 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "scale",
+    "name": "Scale Mail",
+    "category": "armor",
+    "price": "45 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "shield_large",
+    "name": "Shield, Large",
+    "category": "armor",
+    "price": "15 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "wood",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "shield_small",
+    "name": "Shield, Small",
+    "category": "armor",
+    "price": "10 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "wood",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "shield_small_wood",
+    "name": "Shield, Small, Wooden",
+    "category": "armor",
+    "price": "1 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "splinted",
+    "name": "Splinted Armor",
+    "category": "armor",
+    "price": "80 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "studded",
+    "name": "Studded Leather Armor",
+    "category": "armor",
+    "price": "15 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "arrow_single",
+    "name": "Arrow, normal, single",
+    "category": "ammo",
+    "price": "2 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "arrow_dozen",
+    "name": "Arrow, normal, dozen",
+    "category": "ammo",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "arrow_silver",
+    "name": "Arrow, silver, single",
+    "category": "ammo",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "axe_battle",
+    "name": "Axe, battle",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "axe_hand",
+    "name": "Axe, hand or throwing",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bardiche",
+    "name": "Bardiche",
+    "category": "weapons",
+    "price": "7 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bec_de_corbin",
+    "name": "Bec de corbin",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bill_guisarme",
+    "name": "Bill-Guisarme",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bow_comp_short",
+    "name": "Bow, composite short",
+    "category": "weapons",
+    "price": "75 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "bow"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bow_comp_long",
+    "name": "Bow, composite long",
+    "category": "weapons",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "bow"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bow_long",
+    "name": "Bow, long",
+    "category": "weapons",
+    "price": "60 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "bow"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bow_short",
+    "name": "Bow, short",
+    "category": "weapons",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "bow"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "crossbow_heavy",
+    "name": "Crossbow, heavy",
+    "category": "weapons",
+    "price": "20 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "metal",
+      "crossbow"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "crossbow_light",
+    "name": "Crossbow, light",
+    "category": "weapons",
+    "price": "12 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "metal",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "dagger",
+    "name": "Dagger and scabbard",
+    "category": "weapons",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "dart",
+    "name": "Dart",
+    "category": "weapons",
+    "price": "5 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "fauchard",
+    "name": "Fauchard",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "fauchard_fork",
+    "name": "Fauchard-Fork",
+    "category": "weapons",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "flail_foot",
+    "name": "Flail, footman’s",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "flail_horse",
+    "name": "Flail, horseman’s",
+    "category": "weapons",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "fork_military",
+    "name": "Fork, Military",
+    "category": "weapons",
+    "price": "4 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "glaive",
+    "name": "Glaive",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "glaive_guisarme",
+    "name": "Glaive-Guisarme",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "guisarme",
+    "name": "Guisarme",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "guisarme_voulge",
+    "name": "Guisarme-Voulge",
+    "category": "weapons",
+    "price": "7 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "halberd",
+    "name": "Halberd",
+    "category": "weapons",
+    "price": "9 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "hammer_lucern",
+    "name": "Hammer, Lucern",
+    "category": "weapons",
+    "price": "7 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "hammer",
+    "name": "Hammer",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "javelin",
+    "name": "Javelin",
+    "category": "weapons",
+    "price": "10 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "lance",
+    "name": "Lance",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "mounted"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mace_foot",
+    "name": "Mace, footman’s",
+    "category": "weapons",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mace_horse",
+    "name": "Mace, horseman’s",
+    "category": "weapons",
+    "price": "4 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "morning_star",
+    "name": "Morning Star",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "partisan",
+    "name": "Partisan",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pick_foot",
+    "name": "Pick, Military, footman’s",
+    "category": "weapons",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pick_horse",
+    "name": "Pick, Military, horseman’s",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pike_awl",
+    "name": "Pike, awl",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_light_single",
+    "name": "Quarrel (or Bolt), light, single",
+    "category": "ammo",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_heavy_score",
+    "name": "Quarrel (or Bolt), heavy, score",
+    "category": "ammo",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ranseur",
+    "name": "Ranseur",
+    "category": "weapons",
+    "price": "4 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "scimitar",
+    "name": "Scimitar",
+    "category": "weapons",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sling_dozen",
+    "name": "Sling & Bullets, dozen",
+    "category": "weapons",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sling_bullets_score",
+    "name": "Sling Bullets, score",
+    "category": "ammo",
+    "price": "10 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "spear",
+    "name": "Spear",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "spetum",
+    "name": "Spetum",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sword_bastard",
+    "name": "Sword, bastard, & scabbard",
+    "category": "weapons",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sword_broad",
+    "name": "Sword, broad, & scabbard",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sword_long",
+    "name": "Sword, long & scabbard",
+    "category": "weapons",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sword_short",
+    "name": "Sword, short & scabbard",
+    "category": "weapons",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sword_twohanded",
+    "name": "Sword, two-handed",
+    "category": "weapons",
+    "price": "30 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "trident",
+    "name": "Trident",
+    "category": "weapons",
+    "price": "4 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "voulge",
+    "name": "Voulge",
+    "category": "weapons",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "belt",
+    "name": "Belt",
+    "category": "clothing",
+    "price": "3 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boots_high_hard",
+    "name": "Boots, high, hard",
+    "category": "clothing",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boots_high_soft",
+    "name": "Boots, high, soft",
+    "category": "clothing",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boots_low_hard",
+    "name": "Boots, low, hard",
+    "category": "clothing",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boots_low_soft",
+    "name": "Boots, low, soft",
+    "category": "clothing",
+    "price": "8 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "cap",
+    "name": "Cap",
+    "category": "clothing",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "cloak",
+    "name": "Cloak",
+    "category": "clothing",
+    "price": "5 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "girdle_broad",
+    "name": "Girdle, broad",
+    "category": "clothing",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "girdle_normal",
+    "name": "Girdle, normal",
+    "category": "clothing",
+    "price": "10 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "hat",
+    "name": "Hat",
+    "category": "clothing",
+    "price": "7 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "robe",
+    "name": "Robe",
+    "category": "clothing",
+    "price": "6 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter"
+    ],
+    "tags": [
+      "cloth",
+      "wearable"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "belladonna",
+    "name": "Belladona, sprig",
+    "category": "herbs",
+    "price": "4 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "herbalist",
+      "outfitter"
+    ],
+    "tags": [
+      "natural",
+      "herb"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "garlic",
+    "name": "Garlic, bud",
+    "category": "herbs",
+    "price": "5 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "herbalist",
+      "outfitter"
+    ],
+    "tags": [
+      "natural",
+      "herb"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "wolfsbane",
+    "name": "Wolvesbane, sprig",
+    "category": "herbs",
+    "price": "10 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "herbalist",
+      "outfitter"
+    ],
+    "tags": [
+      "natural",
+      "herb"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "chicken",
+    "name": "Chicken",
+    "category": "livestock",
+    "price": "3 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "food"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "cow",
+    "name": "Cow",
+    "category": "livestock",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "dog_guard",
+    "name": "Dog, guard",
+    "category": "livestock",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "dog_hunting",
+    "name": "Dog, hunting",
+    "category": "livestock",
+    "price": "17 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "donkey",
+    "name": "Donkey",
+    "category": "livestock",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "goat",
+    "name": "Goat",
+    "category": "livestock",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "hawk_large",
+    "name": "Hawk, large",
+    "category": "livestock",
+    "price": "40 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "hawk_small",
+    "name": "Hawk, small",
+    "category": "livestock",
+    "price": "18 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "horse_draft",
+    "name": "Horse, draft",
+    "category": "livestock",
+    "price": "30 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "transport"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "horse_heavy_war",
+    "name": "Horse, heavy war",
+    "category": "livestock",
+    "price": "300 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "horse_light_war",
+    "name": "Horse, light war",
+    "category": "livestock",
+    "price": "150 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "horse_medium_war",
+    "name": "Horse, medium war",
+    "category": "livestock",
+    "price": "225 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "horse_riding",
+    "name": "Horse, riding (light)",
+    "category": "livestock",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mule",
+    "name": "Mule",
+    "category": "livestock",
+    "price": "20 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ox",
+    "name": "Ox",
+    "category": "livestock",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm",
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pigeon",
+    "name": "Pigeon",
+    "category": "livestock",
+    "price": "2 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "piglet",
+    "name": "Piglet",
+    "category": "livestock",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pig",
+    "name": "Pig",
+    "category": "livestock",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pony",
+    "name": "Pony",
+    "category": "livestock",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sheep",
+    "name": "Sheep",
+    "category": "livestock",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "songbird",
+    "name": "Songbird",
+    "category": "livestock",
+    "price": "4 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "backpack",
+    "name": "Backpack, leather",
+    "category": "misc",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "box_iron_large",
+    "name": "Box, iron, large",
+    "category": "misc",
+    "price": "28 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "box_iron_small",
+    "name": "Box, iron, small",
+    "category": "misc",
+    "price": "9 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "candle_tallow",
+    "name": "Candle, tallow",
+    "category": "misc",
+    "price": "1 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "tallow"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "candle_wax",
+    "name": "Candle, wax",
+    "category": "misc",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "wax"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "case_bone_scroll",
+    "name": "Case, bone, map or scroll",
+    "category": "misc",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "case_leather_scroll",
+    "name": "Case, leather, map or scroll",
+    "category": "misc",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "chest_wood_large",
+    "name": "Chest, wooden, large",
+    "category": "misc",
+    "price": "17 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "chest_wood_small",
+    "name": "Chest, wooden, small",
+    "category": "misc",
+    "price": "8 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "lantern_bullseye",
+    "name": "Lantern, bullseye",
+    "category": "misc",
+    "price": "12 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "lantern_hooded",
+    "name": "Lantern, hooded",
+    "category": "misc",
+    "price": "7 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mirror_large_metal",
+    "name": "Mirror, large metal",
+    "category": "misc",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "tool",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mirror_small_silver",
+    "name": "Mirror, small, silver",
+    "category": "misc",
+    "price": "20 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "tool",
+      "luxury",
+      "metal"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "oil_flask",
+    "name": "Oil, flask",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "imported"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pole_10",
+    "name": "Pole, 10’",
+    "category": "misc",
+    "price": "3 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "wood",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pouch_large",
+    "name": "Pouch, belt, large",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "pouch_small",
+    "name": "Pouch, belt, small",
+    "category": "misc",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quiver_arrows_dozen",
+    "name": "Quiver, 1 doz. arrows cap.",
+    "category": "misc",
+    "price": "8 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "ammo",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quiver_arrows_score",
+    "name": "Quiver, 1 score arrows cap.",
+    "category": "misc",
+    "price": "12 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "ammo",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quiver_bolts_score",
+    "name": "Quiver, 1 score bolts cap.",
+    "category": "misc",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "ammo",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "quiver_bolts_2score",
+    "name": "Quiver, 2 score bolts cap.",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "ammo",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "rope_50",
+    "name": "Rope, 50’",
+    "category": "misc",
+    "price": "4 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "rope",
+      "fiber",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sack_large",
+    "name": "Sack, large",
+    "category": "misc",
+    "price": "16 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "cloth"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "sack_small",
+    "name": "Sack, small",
+    "category": "misc",
+    "price": "10 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "cloth"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "skin_water_wine",
+    "name": "Skin for water or wine",
+    "category": "misc",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "container",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "spike_iron_large",
+    "name": "Spike, iron, large",
+    "category": "misc",
+    "price": "1 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "metal",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "thieves_tools",
+    "name": "Thieves’ picks & tools",
+    "category": "misc",
+    "price": "30 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "tool",
+      "metal",
+      "adventuring"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "tinderbox",
+    "name": "Tinder Box, with flint & steel",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "tool"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "torch",
+    "name": "Torch",
+    "category": "misc",
+    "price": "1 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "light",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ale_pint",
+    "name": "Ale, pint",
+    "category": "provisions",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "drink"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "beer_pint",
+    "name": "Beer, small, pint",
+    "category": "provisions",
+    "price": "5 cp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "drink"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "food_meal_merchant",
+    "name": "Food, merchant’s meal",
+    "category": "provisions",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "food_meal_rich",
+    "name": "Food, rich meal",
+    "category": "provisions",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "luxury"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "grain_horse_day",
+    "name": "Grain, horse meal, 1 day",
+    "category": "provisions",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "animal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "mead_pint",
+    "name": "Mead, pint",
+    "category": "provisions",
+    "price": "5 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "drink"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "rations_iron_week",
+    "name": "Rations, iron, 1 week",
+    "category": "provisions",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "rations_standard_week",
+    "name": "Rations, standard, 1 week",
+    "category": "provisions",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "wine_good_pint",
+    "name": "Wine, pint, good",
+    "category": "provisions",
+    "price": "10 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "drink",
+      "luxury"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "wine_watered_pint",
+    "name": "Wine, pint, watered",
+    "category": "provisions",
+    "price": "5 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable",
+      "herbalist"
+    ],
+    "tags": [
+      "food",
+      "drink"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "beads_prayer",
+    "name": "Beads, Prayer",
+    "category": "religious",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "incense_stick",
+    "name": "Incense, stick",
+    "category": "religious",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_iron",
+    "name": "Symbol, Holy, iron",
+    "category": "religious",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_silver",
+    "name": "Symbol, Holy, silver",
+    "category": "religious",
+    "price": "50 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "metal",
+      "luxury"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_wood",
+    "name": "Symbol, Holy, wooden",
+    "category": "religious",
+    "price": "7 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "water_holy_vial",
+    "name": "Water, Holy, vial",
+    "category": "religious",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "barding_chain",
+    "name": "Barding, chain",
+    "category": "tack",
+    "price": "250 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "barding_leather",
+    "name": "Barding, leather",
+    "category": "tack",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "armor",
+      "leather"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "barding_plate",
+    "name": "Barding, plate",
+    "category": "tack",
+    "price": "500 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bit_bridle",
+    "name": "Bit and Bridle",
+    "category": "tack",
+    "price": "15 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "harness",
+    "name": "Harness",
+    "category": "tack",
+    "price": "12 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "saddle",
+    "name": "Saddle",
+    "category": "tack",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "saddlebags_large",
+    "name": "Saddle Bags, large",
+    "category": "tack",
+    "price": "4 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "leather",
+      "container"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "saddlebags_small",
+    "name": "Saddle Bags, small",
+    "category": "tack",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "leather",
+      "container"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "saddle_blanket",
+    "name": "Saddle Blanket",
+    "category": "tack",
+    "price": "3 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "animal",
+      "tack",
+      "cloth"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "barge_small",
+    "name": "Barge (or Raft), small",
+    "category": "transport",
+    "price": "50 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boat_small",
+    "name": "Boat, small",
+    "category": "transport",
+    "price": "75 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "boat_long",
+    "name": "Boat, long",
+    "category": "transport",
+    "price": "150 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "cart",
+    "name": "Cart",
+    "category": "transport",
+    "price": "50 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "land"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "galley_large",
+    "name": "Galley, large",
+    "category": "transport",
+    "price": "25000 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "galley_small",
+    "name": "Galley, small",
+    "category": "transport",
+    "price": "10000 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ship_merchant_large",
+    "name": "Ship, merchant, large",
+    "category": "transport",
+    "price": "15000 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ship_merchant_small",
+    "name": "Ship, merchant, small",
+    "category": "transport",
+    "price": "5000 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "ship_war",
+    "name": "Ship, war",
+    "category": "transport",
+    "price": "20000 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water",
+      "military"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "wagon",
+    "name": "Wagon",
+    "category": "transport",
+    "price": "150 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "land"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": false
+  },
+  {
+    "key": "bronze_plate",
+    "name": "Bronze Plate Armor",
+    "category": "armor",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "field_plate",
+    "name": "Field Plate Armor",
+    "category": "armor",
+    "price": "2000 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "full_plate",
+    "name": "Full Plate Armor",
+    "category": "armor",
+    "price": "4000 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "shield_buckler",
+    "name": "Shield, buckler",
+    "category": "armor",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "armor",
+      "wood",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "aklys",
+    "name": "Aklys",
+    "category": "weapons",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "atlatl",
+    "name": "Atlatl",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "blowgun",
+    "name": "Blowgun",
+    "category": "weapons",
+    "price": "20 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "blowgun_needle",
+    "name": "Blowgun Needle",
+    "category": "ammo",
+    "price": "1 sp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "caltrop",
+    "name": "Caltrop",
+    "category": "misc",
+    "price": "2 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "metal",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "crossbow_hand",
+    "name": "Crossbow, hand",
+    "category": "weapons",
+    "price": "300 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "rare",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "quarrels_hand_crossbow",
+    "name": "Quarrels for hand crossbow",
+    "category": "ammo",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "crossbow"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "garrot",
+    "name": "Garrot",
+    "category": "weapons",
+    "price": "1 ep",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "rope"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "harpoon",
+    "name": "Harpoon",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "water"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "hook_fauchard",
+    "name": "Hook Fauchard",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "knife",
+    "name": "Knife & scabbard",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "lasso",
+    "name": "Lasso",
+    "category": "misc",
+    "price": "5 sp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable"
+    ],
+    "tags": [
+      "rope",
+      "tool"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "man_catcher",
+    "name": "Man Catcher",
+    "category": "weapons",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "scarce",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "sap",
+    "name": "Sap",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "spiked_buckler",
+    "name": "Spiked Buckler",
+    "category": "armor",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal",
+      "weapon"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "staff_sling",
+    "name": "Staff Sling",
+    "category": "weapons",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "sword_falchion",
+    "name": "Sword, falchion, and scabbard",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "sword_khopesh",
+    "name": "Sword, khopesh",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0,
+    "ua": true
+  },
+  {
+    "key": "whip",
+    "name": "Whip",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0,
+    "ua": true
+  }
+];
+  const TRINKETS = [
+  {
+    "key": "trinket_1",
+    "name": "Bone die with one side blank",
+    "price": "6 cp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_2",
+    "name": "Tiny brass bell with cracked tone",
+    "price": "8 cp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_3",
+    "name": "Wax-sealed love letter, never opened",
+    "price": "3 sp",
+    "tags": [
+      "paper",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_4",
+    "name": "Tarnished silver button shaped like a lion",
+    "price": "7 sp",
+    "tags": [
+      "metal",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_5",
+    "name": "Scrimshaw fishhook in a felt pouch",
+    "price": "4 sp",
+    "tags": [
+      "water",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_6",
+    "name": "Carved wooden saint token",
+    "price": "2 sp",
+    "tags": [
+      "wood",
+      "religious"
+    ]
+  },
+  {
+    "key": "trinket_7",
+    "name": "Thumb-sized hourglass with red sand",
+    "price": "1 gp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_8",
+    "name": "Child’s tin whistle",
+    "price": "9 cp",
+    "tags": [
+      "toy",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_9",
+    "name": "Crooked copper ring with initials inside",
+    "price": "4 sp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_10",
+    "name": "Rabbit’s foot wrapped in blue thread",
+    "price": "5 cp",
+    "tags": [
+      "superstition"
+    ]
+  },
+  {
+    "key": "trinket_11",
+    "name": "Small vial of scented lamp oil",
+    "price": "6 sp",
+    "tags": [
+      "oddity",
+      "imported"
+    ]
+  },
+  {
+    "key": "trinket_12",
+    "name": "Folded map fragment of unknown countryside",
+    "price": "8 sp",
+    "tags": [
+      "paper",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_13",
+    "name": "Dice cup made from horn",
+    "price": "5 sp",
+    "tags": [
+      "gaming"
+    ]
+  },
+  {
+    "key": "trinket_14",
+    "name": "Pewter brooch shaped like a crescent moon",
+    "price": "9 sp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_15",
+    "name": "Tiny leather-bound blank journal",
+    "price": "1 gp",
+    "tags": [
+      "paper",
+      "leather"
+    ]
+  },
+  {
+    "key": "trinket_16",
+    "name": "Ink-stained quill knife",
+    "price": "4 sp",
+    "tags": [
+      "tool",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_17",
+    "name": "Weathered prayer strip on linen",
+    "price": "2 sp",
+    "tags": [
+      "religious",
+      "cloth"
+    ]
+  },
+  {
+    "key": "trinket_18",
+    "name": "Glass bead necklace missing one bead",
+    "price": "7 sp",
+    "tags": [
+      "oddity",
+      "luxury"
+    ]
+  },
+  {
+    "key": "trinket_19",
+    "name": "Miniature wooden horse",
+    "price": "5 cp",
+    "tags": [
+      "toy",
+      "wood"
+    ]
+  },
+  {
+    "key": "trinket_20",
+    "name": "Iron key with no known lock",
+    "price": "3 sp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_21",
+    "name": "Dried flower pressed in parchment",
+    "price": "1 sp",
+    "tags": [
+      "oddity",
+      "paper"
+    ]
+  },
+  {
+    "key": "trinket_22",
+    "name": "Small box of colored chalk",
+    "price": "4 cp",
+    "tags": [
+      "tool"
+    ]
+  },
+  {
+    "key": "trinket_23",
+    "name": "Brass token from a ferry or toll house",
+    "price": "5 sp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_24",
+    "name": "Shell comb with one broken tooth",
+    "price": "3 sp",
+    "tags": [
+      "luxury",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_25",
+    "name": "Tiny corked bottle of river sand",
+    "price": "2 sp",
+    "tags": [
+      "oddity",
+      "water"
+    ]
+  },
+  {
+    "key": "trinket_26",
+    "name": "Painted mask no bigger than a palm",
+    "price": "8 sp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_27",
+    "name": "Embroidered handkerchief with faded crest",
+    "price": "6 sp",
+    "tags": [
+      "cloth",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_28",
+    "name": "Old gaming tile with strange symbol",
+    "price": "2 sp",
+    "tags": [
+      "gaming",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_29",
+    "name": "Copper locket containing no portrait",
+    "price": "1 gp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_30",
+    "name": "Carved pipe stem without bowl",
+    "price": "3 sp",
+    "tags": [
+      "wood",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_31",
+    "name": "Bundle of five sealing wax sticks",
+    "price": "4 sp",
+    "tags": [
+      "paper",
+      "tool"
+    ]
+  },
+  {
+    "key": "trinket_32",
+    "name": "Polished skipping stone in velvet wrap",
+    "price": "1 sp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_33",
+    "name": "Small hand mirror with cloudy glass",
+    "price": "9 sp",
+    "tags": [
+      "luxury",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_34",
+    "name": "Set of bone knitting needles",
+    "price": "4 sp",
+    "tags": [
+      "tool",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_35",
+    "name": "Knotted cord used as a counting string",
+    "price": "6 cp",
+    "tags": [
+      "tool"
+    ]
+  },
+  {
+    "key": "trinket_36",
+    "name": "Miniature clay idol of unknown god",
+    "price": "1 gp",
+    "tags": [
+      "religious",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_37",
+    "name": "Tin badge from a militia levy",
+    "price": "5 sp",
+    "tags": [
+      "military",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_38",
+    "name": "Dried newt in a wax paper twist",
+    "price": "8 cp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_39",
+    "name": "Perfume bottle with one drop left",
+    "price": "12 sp",
+    "tags": [
+      "luxury",
+      "imported"
+    ]
+  },
+  {
+    "key": "trinket_40",
+    "name": "Ivory toothpick case",
+    "price": "15 sp",
+    "tags": [
+      "luxury"
+    ]
+  },
+  {
+    "key": "trinket_41",
+    "name": "Brass astrolabe pointer without the instrument",
+    "price": "2 gp",
+    "tags": [
+      "tool",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_42",
+    "name": "Locksmith’s practice pick, bent",
+    "price": "6 sp",
+    "tags": [
+      "tool",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_43",
+    "name": "Tiny cage with no door",
+    "price": "7 sp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_44",
+    "name": "Wooden charm carved as an owl",
+    "price": "2 sp",
+    "tags": [
+      "wood",
+      "superstition"
+    ]
+  },
+  {
+    "key": "trinket_45",
+    "name": "Broken arrowhead wrapped as a keepsake",
+    "price": "1 sp",
+    "tags": [
+      "oddity",
+      "metal"
+    ]
+  },
+  {
+    "key": "trinket_46",
+    "name": "Purse of foreign low-value coins",
+    "price": "9 sp",
+    "tags": [
+      "oddity",
+      "imported"
+    ]
+  },
+  {
+    "key": "trinket_47",
+    "name": "Piece of stained glass set in lead",
+    "price": "14 sp",
+    "tags": [
+      "luxury",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_48",
+    "name": "Reed flute that only plays two notes",
+    "price": "5 sp",
+    "tags": [
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_49",
+    "name": "Wax tablet with a half-erased message",
+    "price": "6 sp",
+    "tags": [
+      "paper",
+      "oddity"
+    ]
+  },
+  {
+    "key": "trinket_50",
+    "name": "Small velvet pouch of lucky marbles",
+    "price": "4 sp",
+    "tags": [
+      "gaming",
+      "oddity"
+    ]
+  }
+];
+
+  const BASIC_TRADE_WEAPONS = {
+    dagger: true, knife: true, axe_hand: true, spear: true, javelin: true,
+    sling_dozen: true, sling_bullets_score: true, staff_sling: true, whip: true
+  };
+  const BASIC_TRADE_ARMOR = {
+    leather: true, padded: true, studded: true, scale: true,
+    shield_small_wood: true, shield_small: true, shield_buckler: true, shield_large: true,
+    helmet_small: true
+  };
+
+  const ARMOR_FIT_REQUIRED_KEYS = ['padded', 'leather', 'studded', 'ring_mail', 'scale', 'chain', 'banded', 'splinted'];
+  const STABLE_BARDING_KEYS = ['barding_leather', 'barding_chain'];
+
+  const HOMMLET_ALWAYS_ARMOR = ['padded', 'leather', 'studded'];
+  const HOMMLET_CHANCE_ARMOR = [
+    { key: 'ring_mail', chance: 70 },
+    { key: 'scale', chance: 50 },
+    { key: 'chain', chance: 30 },
+    { key: 'banded', chance: 10 }
+  ];
+  const HOMMLET_FOOTWEAR_KEYS = ['belt','boots_high_hard','boots_high_soft','boots_low_hard','boots_low_soft'];
+
+  const CUSTOM_ONLY_KEYS = ['plate', 'barding_plate', 'bronze_plate', 'field_plate', 'full_plate'];
+  const HORSE_TRAITS_POOR = ['Biter', 'Kicks', 'Steps on feet', 'Won’t gallop', 'Chews fences', 'Stops occasionally', 'Rubs against fences', 'Bucks', 'Untrained'];
+  const HORSE_TRAITS_GOOD = ['Bucks', 'Bone-jarring', 'Bites', 'Single rider', 'Rears', 'Headstrong', 'Kicks', 'Leaper', 'Knows trick'];
+  const HORSE_TRAITS_OTHER = ['robust', 'fleet', 'fearless', 'skittish', 'strong', 'stable', 'gentle', 'sure-footed'];
+
+  const stateInit = () => {
+    if (!state[SCRIPT]) {
+      state[SCRIPT] = {
+        day: 0,
+        stores: {},
+        carts: {},
+        nextStoreId: 1,
+        baselineHorseTraits: {}
+      };
+    }
+    if (!state[SCRIPT].baselineHorseTraits) state[SCRIPT].baselineHorseTraits = {};
+    Object.keys(state[SCRIPT].stores || {}).forEach(id => {
+      const s = state[SCRIPT].stores[id];
+      if (typeof s.lastMinorRestockDay !== 'number') s.lastMinorRestockDay = (typeof s.lastRestockDay === 'number' ? s.lastRestockDay : state[SCRIPT].day);
+      if (typeof s.lastMajorRestockDay !== 'number') s.lastMajorRestockDay = (typeof s.lastRestockDay === 'number' ? s.lastRestockDay : state[SCRIPT].day);
+      if (typeof s.lastRestockDay !== 'number') s.lastRestockDay = state[SCRIPT].day;
+    });
+    if (!state[SCRIPT].stores.hommlet) {
+      createStore({
+        id: 'hommlet',
+        preset: 'hommlet',
+        name: 'Hommlet Trading Post',
+        type: 'trading_post',
+        size: 'small',
+        settlement: 'village',
+        focus: 'adventurer',
+        tags: ['frontier', 'woods'],
+        baseModifier: 0
+      });
+    }
+  };
+
+  const esc = (s) => String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+  const attrEsc = esc;
+
+  const panel = (title, body) =>
+    '<div style="background:#2a2118;border:1px solid #5b4632;border-radius:10px;padding:10px;max-width:760px;color:#f7f1e6;box-shadow:0 2px 6px rgba(0,0,0,0.35);">' +
+      '<div style="font-size:22px;font-weight:bold;text-align:center;margin:0 0 10px 0;font-family:Georgia,serif;color:#fff8ec;line-height:1.15;word-break:break-word;">' + esc(title) + '</div>' +
+      '<div style="background:#efe3cf;color:#1b1712;padding:12px;border-radius:6px;">' + body + '</div>' +
+    '</div>';
+
+  const makeBody = (lines) => (lines || []).map(line => '<div style="margin:8px 0;line-height:1.35;">' + line + '</div>').join('');
+
+  const sendToPlayer = (playerid, html) => {
+    const player = getObj('player', playerid);
+    const who = player ? player.get('_displayname') : 'GM';
+    sendChat(SCRIPT, '/w "' + who.replace(/"/g, '') + '" ' + html);
+  };
+
+  const sendToGM = (html) => sendChat(SCRIPT, '/w gm ' + html);
+
+  const info = (playerid, title, lines) => sendToPlayer(playerid, panel(title, makeBody(lines)));
+  const gmInfo = (title, lines) => sendToGM(panel(title, makeBody(lines)));
+
+  const rand = (n) => randomInteger(n);
+  const pick = (arr) => arr[rand(arr.length) - 1];
+  const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+  const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  const cap = (s) => String(s).replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  const isGM = (playerid) => (typeof playerIsGM === 'function' ? playerIsGM(playerid) : false);
+
+  const btn = (label, cmd, width) => '<a style="display:inline-block;text-align:center;margin:4px 6px 4px 0;padding:7px 12px;min-width:' + (width || 90) + 'px;color:#ffffff;background:#8a5a32;border:1px solid #6a4323;border-radius:6px;text-decoration:none;font-weight:bold;" href="' + attrEsc(String(cmd).replace(/\n/g, ' ')) + '">' + esc(label) + '</a>';
+
+  const tokenize = (content) => {
+    const matches = String(content || '').match(/"[^"]*"|'[^']*'|\S+/g) || [];
+    return matches.map(t => t.replace(/^["']|["']$/g, ''));
+  };
+
+  const isCustomOnlyKey = (key) => CUSTOM_ONLY_KEYS.indexOf(key) !== -1;
+  const isCustomOnlyItem = (item) => !!(item && isCustomOnlyKey(item.key));
+  const isUnlimitedKey = (key) => key === 'torch';
+
+  const isHorseItemKey = (itemKey) =>
+    ['horse_draft', 'horse_light_war', 'horse_medium_war', 'horse_heavy_war', 'horse_riding_light', 'pony'].indexOf(itemKey) !== -1;
+
+  const needsArmorFit = (itemKey) => ARMOR_FIT_REQUIRED_KEYS.indexOf(itemKey) !== -1;
+  const lineNeedsArmorFit = (line) => !!(line && line.source !== 'baseline' && needsArmorFit(line.itemKey));
+  const cartLineNeedsArmorFit = (store, itemKey) => !!(store && store.id !== 'baseline' && needsArmorFit(itemKey));
+
+  const armorFitText = (line) => {
+    if (!lineNeedsArmorFit(line)) return '';
+    if (!line.fitChecked) return 'Fit: not checked';
+    if (line.fitOk) return 'Fit: fits (d6=' + line.fitRoll + ')';
+    return 'Fit: ' + (line.fitResult || 'does not fit') + ' (d6=' + line.fitRoll + ')';
+  };
+
+  const stockFloor = (stock, key, qty) => {
+    if (qty <= 0) return;
+    stock[key] = Math.max(qty, parseInt(stock[key] || 0, 10));
+  };
+
+  const armorFloorQty = (store, key) => {
+    const size = sizeValue(store.size);
+    const settle = settlementValue(store.settlement);
+    const martial = store.focus === 'adventurer' || store.tags.indexOf('military') !== -1;
+    const frontier = store.tags.indexOf('frontier') !== -1 || store.tags.indexOf('remote') !== -1;
+
+    if (store.type === 'trading_post') {
+      if (key === 'padded') return Math.max(1, size);
+      if (key === 'leather') return Math.max(1, size + (settle >= 3 ? 1 : 0));
+      if (key === 'studded') return (size >= 2 || martial || frontier) ? 1 : 0;
+      if (key === 'scale') return (size >= 3 || martial) ? 1 : 0;
+      return 0;
+    }
+
+    if (store.type === 'outfitter') {
+      if (key === 'padded') return Math.max(1, size + 1);
+      if (key === 'leather') return Math.max(2, size + settle - 1);
+      if (key === 'studded') return Math.max(1, size);
+      if (key === 'scale') return size >= 2 ? Math.max(1, size - 1) : 0;
+      if (key === 'ring_mail') return (size >= 2 || martial) ? 1 : 0;
+      return 0;
+    }
+
+    if (store.type === 'smith') {
+      if (key === 'padded' || key === 'leather') return size >= 2 ? 1 : 0;
+      if (key === 'studded') return Math.max(1, size - 1);
+      if (key === 'scale') return Math.max(1, size);
+      if (key === 'ring_mail') return size >= 2 ? 1 : 0;
+      if (key === 'chain') return (size >= 2 || settle >= 3) ? 1 : 0;
+      return 0;
+    }
+
+    return 0;
+  };
+
+  const stableBardingFloorQty = (store, key) => {
+    if (store.type !== 'stable') return 0;
+    const size = sizeValue(store.size);
+    const settle = settlementValue(store.settlement);
+    const martial = store.tags.indexOf('military') !== -1;
+
+    if (key === 'barding_leather') {
+      if (size === 1 && !martial && settle < 3) return 0;
+      return Math.max(1, size - (settle >= 4 ? 0 : 0));
+    }
+    if (key === 'barding_chain') {
+      return (size >= 2 && (martial || settle >= 3)) ? 1 : 0;
+    }
+    return 0;
+  };
+
+  const rollHorseTraitString = (itemKey) => {
+    const good = ['horse_light_war', 'horse_medium_war', 'horse_heavy_war'].indexOf(itemKey) !== -1;
+    if (!isHorseItemKey(itemKey)) return '';
+    const pool = good ? HORSE_TRAITS_GOOD.slice() : HORSE_TRAITS_POOR.slice();
+    const chosen = [];
+    while (chosen.length < 2 && pool.length) {
+      const idx = rand(pool.length) - 1;
+      chosen.push(pool.splice(idx, 1)[0]);
+    }
+    if (rand(10) === 10 && chosen.length > 1) chosen[1] = pick(HORSE_TRAITS_OTHER);
+    return 'Traits: ' + chosen.join('; ');
+  };
+
+  const getHorseTraitStringForStore = (store, itemKey) => {
+    if (!isHorseItemKey(itemKey)) return '';
+    const map = store && store.horseTraits ? store.horseTraits : (state[SCRIPT].baselineHorseTraits || {});
+    if (!map[itemKey]) map[itemKey] = rollHorseTraitString(itemKey);
+    return map[itemKey];
+  };
+
+  const coinToCp = (coin, amt) => {
+    if (coin === 'cp') return amt;
+    if (coin === 'sp') return amt * 10;
+    if (coin === 'ep') return amt * 50;
+    if (coin === 'gp') return amt * 100;
+    if (coin === 'pp') return amt * 500;
+    return 0;
+  };
+
+  const parsePriceToCp = (price) => {
+    const m = String(price).trim().match(/^([0-9]+(?:\.[0-9]+)?)\s*(cp|sp|ep|gp|pp)$/i);
+    if (!m) return 0;
+    const amt = parseFloat(m[1]);
+    return Math.round(coinToCp(m[2].toLowerCase(), amt));
+  };
+
+  const cpToDisplay = (cp) => {
+    let value = Math.max(0, Math.round(cp));
+    const parts = [];
+    const gp = Math.floor(value / 100);
+    value -= gp * 100;
+    const sp = Math.floor(value / 10);
+    value -= sp * 10;
+    const cpOnly = value;
+
+    if (gp) parts.push(gp + ' Gold');
+    if (sp) parts.push(sp + ' Silver');
+    if (cpOnly) parts.push(cpOnly + ' Bronze');
+    return parts.length ? parts.join(', ') : '0 Bronze';
+  };
+
+  const parseNumber = (v, fallback) => {
+    if (v === undefined || v === null || v === '') return fallback;
+    const m = String(v).match(/-?[0-9]+(?:\.[0-9]+)?/);
+    return m ? parseFloat(m[0]) : fallback;
+  };
+
+  const byKey = {};
+  ITEMS.forEach(i => {
+    i.priceCp = parsePriceToCp(i.price);
+    byKey[i.key] = i;
+  });
+
+  const itemByKey = byKey;
+
+  const trinketByKey = {};
+  TRINKETS.forEach(t => {
+    t.priceCp = parsePriceToCp(t.price);
+    trinketByKey[t.key] = t;
+  });
+
+  const generateRowId = () => {
+    const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let id = '-';
+    for (let i = 0; i < 19; i++) id += chars.charAt(Math.floor(Math.random() * chars.length));
+    return id;
+  };
+
+  const getSelectedCharacter = (msg) => {
+    if (!msg.selected || !msg.selected.length) return null;
+    const tok = getObj('graphic', msg.selected[0]._id);
+    if (!tok) return null;
+    const charId = tok.get('represents');
+    if (!charId) return null;
+    const ch = getObj('character', charId);
+    if (!ch) return null;
+    return { token: tok, character: ch, characterId: charId };
+  };
+
+  const getAttr = (charId, name) => {
+    const attr = findObjs({ type: 'attribute', characterid: charId, name })[0];
+    return attr ? attr.get('current') : '';
+  };
+
+  const setAttr = (charId, name, value) => {
+    let attr = findObjs({ type: 'attribute', characterid: charId, name })[0];
+    if (!attr) {
+      attr = createObj('attribute', { characterid: charId, name, current: value });
+    } else {
+      attr.set('current', value);
+    }
+  };
+
+  const getMoneyCp = (charId) => {
+    const cp = parseNumber(getAttr(charId, 'cp'), 0);
+    const sp = parseNumber(getAttr(charId, 'sp'), 0);
+    const gp = parseNumber(getAttr(charId, 'gp'), 0);
+    return cp + (sp * 10) + (gp * 100);
+  };
+
+  const spendMoneyCp = (charId, costCp) => {
+    let need = Math.max(0, Math.floor(costCp));
+    let gp = parseNumber(getAttr(charId, 'gp'), 0);
+    let sp = parseNumber(getAttr(charId, 'sp'), 0);
+    let cp = parseNumber(getAttr(charId, 'cp'), 0);
+
+    const available = (gp * 100) + (sp * 10) + cp;
+    if (available < need) return false;
+
+    // Spend from Gold first, then Silver, then Bronze.
+    const gpSpend = Math.min(gp, Math.floor(need / 100));
+    gp -= gpSpend;
+    need -= gpSpend * 100;
+
+    const spSpend = Math.min(sp, Math.floor(need / 10));
+    sp -= spSpend;
+    need -= spSpend * 10;
+
+    const cpSpend = Math.min(cp, need);
+    cp -= cpSpend;
+    need -= cpSpend;
+
+    // Break Silver if Bronze is still needed.
+    while (need > 0 && sp > 0) {
+      sp -= 1;
+      cp += 10;
+      const spend = Math.min(cp, need);
+      cp -= spend;
+      need -= spend;
+    }
+
+    // Break Gold only if still needed after using existing Silver/Bronze.
+    while (need > 0 && gp > 0) {
+      gp -= 1;
+      sp += 10;
+
+      const spSpend2 = Math.min(sp, Math.floor(need / 10));
+      sp -= spSpend2;
+      need -= spSpend2 * 10;
+
+      const cpSpend2 = Math.min(cp, need);
+      cp -= cpSpend2;
+      need -= cpSpend2;
+
+      while (need > 0 && sp > 0) {
+        sp -= 1;
+        cp += 10;
+        const spend = Math.min(cp, need);
+        cp -= spend;
+        need -= spend;
+      }
+    }
+
+    if (need > 0) return false;
+
+    setAttr(charId, 'gp', gp);
+    setAttr(charId, 'sp', sp);
+    setAttr(charId, 'cp', cp);
+    return true;
+  };
+
+  const addEquipmentRow = (charId, itemName, qty, weight, costDisplay) => {
+    const rowId = generateRowId();
+    const prefix = 'repeating_equipment_' + rowId + '_';
+    createObj('attribute', { characterid: charId, name: prefix + 'equipment_item', current: itemName });
+    createObj('attribute', { characterid: charId, name: prefix + 'equipment_quantity', current: qty });
+    createObj('attribute', { characterid: charId, name: prefix + 'equipment_weight', current: weight || 0 });
+    createObj('attribute', { characterid: charId, name: prefix + 'equipment_cost', current: costDisplay || '' });
+  };
+
+  const getReactionBonus = (charId) => parseNumber(getAttr(charId, 'reactionbonus'), 0);
+
+  const getCart = (playerid) => {
+    if (!state[SCRIPT].carts[playerid]) {
+      state[SCRIPT].carts[playerid] = {
+        storeId: null,
+        characterId: null,
+        characterName: null,
+        lines: []
+      };
+    }
+    return state[SCRIPT].carts[playerid];
+  };
+
+  const clearCart = (playerid) => {
+    state[SCRIPT].carts[playerid] = {
+      storeId: null,
+      characterId: null,
+      characterName: null,
+      lines: []
+    };
+  };
+
+  const settlementValue = (s) => SETTLEMENT_ORDER.indexOf(s) + 1;
+  const sizeValue = (s) => SIZE_ORDER.indexOf(s) + 1;
+
+  const randomStoreType = () => pick(STORE_TYPES);
+  const randomStoreSize = () => pick(SIZE_ORDER);
+  const randomSettlement = () => pick(SETTLEMENT_ORDER);
+
+  const randomTags = (settlement, type) => {
+    const pool = [];
+    if (settlement === 'hamlet' || settlement === 'village') pool.push('remote', 'woods', 'agricultural', 'poor', 'frontier');
+    if (settlement === 'town') pool.push('river', 'military', 'mining', 'agricultural', 'woods');
+    if (settlement === 'city') pool.push('wealthy', 'port', 'river', 'military', 'market');
+    if (type === 'stable') pool.push('agricultural', 'military');
+    if (type === 'smith') pool.push('mining', 'military');
+    if (type === 'outfitter') pool.push('frontier', 'military', 'market');
+    if (type === 'herbalist') pool.push('woods', 'river');
+    if (!pool.length) pool.push('market');
+    const tags = [];
+    while (tags.length < Math.min(2, pool.length)) {
+      const choice = pick(pool);
+      if (tags.indexOf(choice) === -1) tags.push(choice);
+    }
+    return tags;
+  };
+
+  const randomFocus = () => pick(['normal', 'traveler', 'adventurer']);
+
+  const makeStoreName = (store) => {
+    const typeNames = {
+      trading_post: 'Trading Post',
+      outfitter: 'Adventurer\'s Outfitter',
+      smith: 'Smith & Armorer',
+      stable: 'Stable & Transport',
+      herbalist: 'Herbalist'
+    };
+    return cap(store.size) + ' ' + typeNames[store.type];
+  };
+
+  const computeBaseModifier = (store) => {
+    let mod = 0;
+    if (store.tags.indexOf('remote') !== -1) mod += 10;
+    if (store.tags.indexOf('frontier') !== -1) mod += 10;
+    if (store.tags.indexOf('poor') !== -1) mod += 10;
+    if (store.tags.indexOf('wealthy') !== -1) mod -= 10;
+    if (store.tags.indexOf('market') !== -1) mod -= 5;
+    if (store.tags.indexOf('port') !== -1) mod -= 5;
+    mod += pick([-10, 0, 0, 10, 10, 25]);
+    return clamp(mod, -20, 60);
+  };
+
+  const itemTagModifier = (store, item) => {
+    let mod = 0;
+    const tags = item.tags || [];
+    const has = (x) => tags.indexOf(x) !== -1;
+    if (store.tags.indexOf('woods') !== -1) {
+      if (has('wood') || has('leather') || has('rope') || has('fiber') || has('natural')) mod -= 10;
+      if (has('metal') || has('imported')) mod += 10;
+    }
+    if (store.tags.indexOf('remote') !== -1) {
+      if (has('metal') || has('imported') || has('oil') || has('luxury')) mod += 10;
+      if (has('wood') || has('leather') || has('natural')) mod -= 5;
+    }
+    if (store.tags.indexOf('frontier') !== -1) {
+      if (has('adventuring') || has('rope') || has('light') || has('weapon') || has('ammo')) mod += 5;
+    }
+    if (store.tags.indexOf('mining') !== -1) {
+      if (has('metal') || item.key === 'spike_iron_large' || item.key === 'hammer' || item.key === 'hammer_lucern') mod -= 10;
+      if (has('cloth') || has('luxury')) mod += 10;
+    }
+    if (store.tags.indexOf('port') !== -1 || store.tags.indexOf('river') !== -1) {
+      if (has('water') || has('rope') || has('transport')) mod -= 10;
+      if (has('animal') && !has('water')) mod += 5;
+    }
+    if (store.tags.indexOf('military') !== -1) {
+      if (has('weapon') || has('armor') || has('ammo') || has('military')) mod -= 10;
+      if (has('luxury')) mod += 10;
+    }
+    if (store.tags.indexOf('agricultural') !== -1) {
+      if (has('animal') || has('tack') || has('food') || has('wood')) mod -= 5;
+      if (has('metal') && has('weapon')) mod += 5;
+    }
+    if (store.tags.indexOf('wealthy') !== -1) {
+      if (has('luxury')) mod -= 5;
+    }
+    return clamp(mod, -20, 25);
+  };
+
+  const finalModifier = (store, item) => clamp(store.baseModifier + itemTagModifier(store, item), -20, 60);
+
+  const hommletModifier = (item) => {
+    if (!item) return 0;
+    if (item.category === 'armor') return 50;
+    if (item.category === 'livestock') return (item.tags && item.tags.indexOf('warhorse') !== -1) ? 20 : 10;
+    if (item.category === 'tack' || item.category === 'transport') {
+      if (item.key === 'cart') return -25;
+      return 0;
+    }
+    if (item.category === 'herbs') return 50;
+    if (item.key === 'rations_iron_week' || item.key === 'rations_standard_week') return 20;
+    if (item.tags && (item.tags.indexOf('light') !== -1 || item.tags.indexOf('oil') !== -1)) return 10;
+    if (item.category === 'religious') return 10;
+    if (item.tags && (item.tags.indexOf('rope') !== -1 || item.tags.indexOf('adventuring') !== -1 || item.tags.indexOf('writing') !== -1)) return 10;
+    if (item.category === 'weapons') {
+      if (item.tags && (item.tags.indexOf('polearm') !== -1 || item.tags.indexOf('shield') !== -1)) return 10;
+      return 20;
+    }
+    if (item.category === 'clothing') {
+      if (HOMMLET_FOOTWEAR_KEYS.indexOf(item.key) !== -1) return 25;
+      if (item.tags && (item.tags.indexOf('pack') !== -1 || item.tags.indexOf('adventuring') !== -1)) return 10;
+      if (item.tags && item.tags.indexOf('peasant') !== -1) return -10;
+    }
+    return 0;
+  };
+
+  const priceForStore = (store, item, trinket) => {
+    const base = item ? item.priceCp : trinket.priceCp;
+    if (!store || store.id === 'baseline') return base;
+    let mod = item ? finalModifier(store, item) : clamp(store.baseModifier, -20, 60);
+    if (isHommletStore(store) && item) mod = hommletModifier(item);
+    return Math.max(1, Math.round(base * (100 + mod) / 100));
+  };
+
+  const localAllowed = (store, item) => {
+    if (isCustomOnlyItem(item)) return false;
+    if (item.shopTypes.indexOf(store.type) === -1) return false;
+    if (store.type === 'trading_post') {
+      if (item.category === 'weapons') {
+        if (!BASIC_TRADE_WEAPONS[item.key]) return false;
+        if (store.size === 'small' && rand(100) > 50) return false;
+      }
+      if (item.category === 'armor') {
+        if (!BASIC_TRADE_ARMOR[item.key]) return false;
+        if (store.size === 'small') {
+          if (['padded', 'leather', 'shield_small_wood', 'shield_small', 'shield_buckler'].indexOf(item.key) !== -1) return true;
+          if (item.key === 'studded' && rand(100) > 60) return false;
+          if (item.key === 'scale' && rand(100) > 35) return false;
+          if (['shield_large', 'helmet_small'].indexOf(item.key) !== -1 && rand(100) > 60) return false;
+        }
+      }
+    }
+    if (store.type === 'smith') {
+      if (['armor','weapons','ammo'].indexOf(item.category) === -1 && !(item.tags.indexOf('metal') !== -1) && item.category !== 'tack') return false;
+    }
+    if (store.type === 'stable') {
+      if (['livestock','tack','transport'].indexOf(item.category) === -1 && item.key !== 'grain_horse_day' && item.key !== 'rations_standard_week') return false;
+    }
+    if (store.type === 'herbalist') {
+      if (['herbs','provisions','religious'].indexOf(item.category) === -1 && item.key !== 'candle_wax' && item.key !== 'oil_flask') return false;
+    }
+    return true;
+  };
+
+  const targetQty = (store, item) => {
+    const sz = sizeValue(store.size);
+    const st = settlementValue(store.settlement);
+    const isCity = store.settlement === 'city';
+    let min = 0, max = 0;
+    if (item.category === 'transport') {
+      if (item.tags.indexOf('water') !== -1 && store.tags.indexOf('port') === -1 && store.tags.indexOf('river') === -1) return 0;
+      if (item.key.indexOf('ship_') === 0 || item.key.indexOf('galley_') === 0) {
+        if (store.settlement !== 'city') return 0;
+        min = 0; max = store.tags.indexOf('port') !== -1 ? sz : 0;
+      } else if (item.key === 'wagon') {
+        min = Math.max(0, sz - 1); max = sz + st - 1;
+      } else if (item.key === 'cart') {
+        min = sz; max = sz + st;
+      } else {
+        min = 0; max = sz + (store.tags.indexOf('port') !== -1 || store.tags.indexOf('river') !== -1 ? st : 0);
+      }
+    } else if (item.category === 'livestock') {
+      if (item.tags.indexOf('military') !== -1) {
+        min = 0; max = (store.tags.indexOf('military') !== -1 ? sz : Math.max(0, sz - 2));
+      } else if (item.tags.indexOf('mount') !== -1) {
+        min = Math.max(0, sz - 1); max = sz + st - 1;
+      } else {
+        min = sz; max = sz + st + 1;
+      }
+    } else {
+      switch (item.tier) {
+        case 'common':
+          min = sz; max = (sz * 3) + st;
+          break;
+        case 'uncommon':
+          min = Math.max(0, sz - 1); max = sz + st;
+          break;
+        case 'scarce':
+          min = 0; max = Math.max(1, sz - 1 + Math.floor(st / 2));
+          break;
+        case 'rare':
+          min = 0; max = Math.max(1, Math.floor((sz + st - 2) / 2));
+          break;
+        default:
+          min = sz; max = (sz * 2) + st;
+      }
+    }
+    if (store.focus === 'adventurer') {
+      if (item.tags.indexOf('adventuring') !== -1 || item.category === 'weapons' || item.category === 'armor' || item.category === 'ammo') max += 2;
+    }
+    if (store.focus === 'traveler') {
+      if (item.category === 'provisions' || item.category === 'clothing' || item.category === 'tack' || item.category === 'transport') max += 2;
+    }
+    if (store.type === 'outfitter' && (item.category === 'misc' || item.category === 'provisions')) max += 2;
+    if (store.type === 'trading_post' && (item.category === 'misc' || item.category === 'provisions' || item.category === 'clothing')) max += 2;
+    if (store.type === 'stable' && (item.category === 'livestock' || item.category === 'tack')) max += 2;
+    if (isCity && store.size === 'large' && rand(100) <= 10) return 0;
+    return max <= 0 ? 0 : (min + rand(Math.max(1, max - min + 1)) - 1);
+  };
+
+  const ensureStockFloors = (store, stock) => {
+    ['rations_iron_week', 'rations_standard_week'].forEach(key => {
+      const item = byKey[key];
+      if (!item || !localAllowed(store, item)) return;
+      stockFloor(stock, key, 10);
+    });
+
+    ['padded', 'leather', 'studded', 'scale', 'ring_mail', 'chain'].forEach(key => {
+      const item = byKey[key];
+      if (!item || !localAllowed(store, item)) return;
+      stockFloor(stock, key, armorFloorQty(store, key));
+    });
+
+    STABLE_BARDING_KEYS.forEach(key => {
+      const item = byKey[key];
+      if (!item || !localAllowed(store, item)) return;
+      stockFloor(stock, key, stableBardingFloorQty(store, key));
+    });
+  };
+
+  const generateStock = (store) => {
+    const stock = {};
+    ITEMS.forEach(item => {
+      if (!localAllowed(store, item)) return;
+      const qty = targetQty(store, item);
+      if (qty > 0) stock[item.key] = qty;
+    });
+    ensureStockFloors(store, stock);
+    return stock;
+  };
+
+  const generateTrinkets = (store) => {
+    const pool = TRINKETS.slice();
+    const offer = [];
+    const want = 10;
+    while (offer.length < want && pool.length) {
+      const idx = rand(pool.length) - 1;
+      const tr = pool.splice(idx, 1)[0];
+      let qty = 1;
+      if (store.size === 'medium' && rand(100) <= 25) qty = 2;
+      if (store.size === 'large' && rand(100) <= 40) qty = 2 + (rand(100) <= 20 ? 1 : 0);
+      offer.push({ key: tr.key, qty: qty });
+    }
+    return offer;
+  };
+
+  const isHommletStore = (store) => !!(store && store.preset === 'hommlet');
+
+  const hommletAllowed = (item) => {
+    if (!item) return false;
+    if (item.category === 'armor') {
+      if (HOMMLET_ALWAYS_ARMOR.indexOf(item.key) !== -1) return true;
+      return HOMMLET_CHANCE_ARMOR.some(a => a.key === item.key);
+    }
+    return true;
+  };
+
+  const applyHommletStock = (store) => {
+    const stock = {};
+    ITEMS.forEach(item => {
+      if (!localAllowed(store, item) || !hommletAllowed(item)) return;
+      let qty = targetQty(store, item);
+      if (item.category === 'armor') {
+        if (HOMMLET_ALWAYS_ARMOR.indexOf(item.key) !== -1) qty = Math.max(1, Math.min(2, qty || 1));
+        else {
+          const found = HOMMLET_CHANCE_ARMOR.find(a => a.key === item.key);
+          if (!found || rand(100) > found.chance) qty = 0;
+          else qty = 1;
+        }
+      }
+      if (item.key === 'cart' && qty > 1) qty = 1;
+      if (qty > 0) stock[item.key] = qty;
+    });
+    ensureStockFloors(store, stock);
+    store.stock = stock;
+  };
+
+  const ensureStoreSpecials = (store) => {
+    if (isHommletStore(store)) applyHommletStock(store);
+  };
+
+  const createStore = (opts) => {
+    const store = {
+      id: opts.id || ('S' + state[SCRIPT].nextStoreId++),
+      preset: opts.preset || '',
+      type: opts.type || randomStoreType(),
+      size: opts.size || randomStoreSize(),
+      settlement: opts.settlement || randomSettlement(),
+      focus: opts.focus || randomFocus(),
+      tags: (opts.tags && opts.tags.length ? opts.tags : randomTags(opts.settlement || randomSettlement(), opts.type || randomStoreType())).slice(0, 3),
+      dayCreated: state[SCRIPT].day,
+      lastRestockDay: state[SCRIPT].day,
+      lastMinorRestockDay: state[SCRIPT].day,
+      lastMajorRestockDay: state[SCRIPT].day,
+      stock: {},
+      trinkets: [],
+      horseTraits: {},
+      baseModifier: 0,
+      name: ''
+    };
+    store.name = opts.name || makeStoreName(store);
+    store.baseModifier = (typeof opts.baseModifier === 'number' && !isNaN(opts.baseModifier)) ? opts.baseModifier : computeBaseModifier(store);
+    store.stock = generateStock(store);
+    store.trinkets = generateTrinkets(store);
+    ensureStoreSpecials(store);
+    state[SCRIPT].stores[store.id] = store;
+    return store;
+  };
+
+  const categoriesForStore = (store) => {
+    if (!store || store.id === 'baseline') return CATEGORY_ORDER.filter(c => ITEMS.some(i => i.category === c && i.shopTypes.indexOf('baseline') !== -1 && !isCustomOnlyItem(i)));
+    const cats = [];
+    CATEGORY_ORDER.forEach(cat => {
+      if (cat === 'trinkets') {
+        if (store.trinkets && store.trinkets.length) cats.push(cat);
+      } else {
+        const hasAny = Object.keys(store.stock).some(key => store.stock[key] > 0 && byKey[key] && byKey[key].category === cat && !isCustomOnlyItem(byKey[key]));
+        if (hasAny) cats.push(cat);
+      }
+    });
+    return cats;
+  };
+
+  const getStore = (id) => {
+    if (!id || id === 'baseline') return {
+      id: 'baseline',
+      name: 'Players Handbook Store',
+      type: 'baseline',
+      size: 'large',
+      settlement: 'city',
+      focus: 'normal',
+      tags: ['market'],
+      baseModifier: 0,
+      stock: null,
+      trinkets: [],
+      horseTraits: state[SCRIPT].baselineHorseTraits || {}
+    };
+    return state[SCRIPT].stores[id] || null;
+  };
+
+  const formatStoreHeader = (store) => {
+    const smithRow = btn('Go Visit Blacksmith', '!smith-menu', 110);
+    if (store.id === 'baseline') return [
+      'Permanent chargen and resupply market.',
+      'All standard PHB + UA purchasable gear is available here at book price.',
+      'Custom plate and special weapons are handled through the smith menu.',
+      'Categories:',
+      categoriesForStore(store).map(cat => btn(cap(cat), '!shop-view baseline ' + cat + ' 1', 105)).join(' '),
+      btn('Menu', '!shop-menu', 100) + ' ' + btn('View Cart', '!shop-cart', 100) + ' ' + smithRow
+    ];
+    if (isHommletStore(store)) return [
+      'Preset village trading post based on Hommlet Area 13.',
+      'Small village stock, no magic for sale, and special local pricing by category.',
+      'Type: ' + cap(store.type) + ' | Size: ' + cap(store.size) + ' | Settlement: ' + cap(store.settlement),
+      'Categories:',
+      categoriesForStore(store).map(cat => btn(cap(cat), '!shop-view ' + store.id + ' ' + cat + ' 1', 105)).join(' '),
+      btn('Menu', '!shop-menu', 100) + ' ' + btn('View Cart', '!shop-cart', 100) + ' ' + smithRow
+    ];
+    return [
+      'Store ID: ' + store.id,
+      'Type: ' + cap(store.type) + ' | Size: ' + cap(store.size) + ' | Settlement: ' + cap(store.settlement),
+      'Focus: ' + cap(store.focus) + ' | Price Mod: ' + (store.baseModifier >= 0 ? '+' : '') + store.baseModifier + '%',
+      'Tags: ' + (store.tags.length ? store.tags.join(', ') : 'none'),
+      'Categories:',
+      categoriesForStore(store).map(cat => btn(cap(cat), '!shop-view ' + store.id + ' ' + cat + ' 1', 105)).join(' '),
+      btn('Menu', '!shop-menu', 100) + ' ' + btn('View Cart', '!shop-cart', 100) + ' ' + smithRow
+    ];
+  };
+
+  const itemAvailableQty = (store, key) => {
+    if (isUnlimitedKey(key)) return 9999;
+    if (!store || store.id === 'baseline') return 9999;
+    return store.stock[key] || 0;
+  };
+
+  const reservedQtyInCart = (cart, key) => cart.lines.filter(l => l.itemKey === key).reduce((a, b) => a + b.qty, 0);
+
+  const viewCategory = (playerid, store, category, page) => {
+    const lines = [];
+    const p = Math.max(1, parseInt(page || 1, 10));
+    let rows = [];
+    if (category === 'trinkets') {
+      rows = (store.trinkets || []).map(entry => {
+        const tr = trinketByKey[entry.key];
+        return {
+          key: entry.key,
+          name: tr.name,
+          priceCp: priceForStore(store, null, tr),
+          price: cpToDisplay(priceForStore(store, null, tr)),
+          qty: entry.qty,
+          type: 'trinket'
+        };
+      });
+    } else {
+      rows = ITEMS.filter(i => !isCustomOnlyItem(i) && i.category === category && (store.id === 'baseline' ? i.shopTypes.indexOf('baseline') !== -1 : (store.stock[i.key] || 0) > 0))
+        .map(i => {
+          const priceCp = priceForStore(store, i, null);
+          return {
+            key: i.key,
+            name: i.name,
+            priceCp: priceCp,
+            price: cpToDisplay(priceCp),
+            qty: itemAvailableQty(store, i.key),
+            type: 'item'
+          };
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+    const pageSize = 12;
+    const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+    const curPage = clamp(p, 1, totalPages);
+    const startRow = (curPage - 1) * pageSize;
+    if (category === 'armor' || category === 'weapons') {
+      lines.push('Custom plate and special work: ' + btn('Go Visit Blacksmith', '!smith-menu', 110));
+    }
+    if (category === 'armor') {
+      lines.push('Non-custom body armor requires a fit roll before checkout: 1 = too small, 2-5 = fits, 6 = too large.');
+    }
+    rows.slice(startRow, startRow + pageSize).forEach((row, idx) => {
+      const stockTxt = (store.id === 'baseline' || isUnlimitedKey(row.key)) ? 'unlimited' : row.qty;
+      let desc = '';
+      if (row.type === 'item') {
+        const traits = getHorseTraitStringForStore(store, row.key);
+        if (traits) desc = '<br>' + esc(traits);
+      }
+      lines.push('<b>' + esc(startRow + idx + 1 + '. ' + row.name) + '</b>' + desc + '<br>Price: ' + esc(row.price) + ' | Stock: ' + esc(stockTxt) + '<br>' + btn('Add', '!shop-add ' + store.id + ' ' + row.key + ' ?{Qty|1}', 80));
+    });
+    if (!lines.length) lines.push('No stock in this category.');
+    const nav = [];
+    if (curPage > 1) nav.push(btn('Prev', '!shop-view ' + store.id + ' ' + category + ' ' + (curPage - 1), 80));
+    if (curPage < totalPages) nav.push(btn('Next', '!shop-view ' + store.id + ' ' + category + ' ' + (curPage + 1), 80));
+    nav.push(btn('Return to Store', '!shop-open ' + store.id, 120), btn('Menu', '!shop-menu', 90), btn('Cart', '!shop-cart', 90));
+    lines.push('Page ' + curPage + ' of ' + totalPages + '<br>' + nav.join(' '));
+    lines.unshift('Section: ' + cap(category));
+    info(playerid, store.name, lines);
+  };
+
+  const ensureCartContext = (msg, storeId) => {
+    const sel = getSelectedCharacter(msg);
+    if (!sel) {
+      info(msg.playerid, 'Shop Error', ['Select the buyer token first.']);
+      return null;
+    }
+    const cart = getCart(msg.playerid);
+    if (cart.lines.length) {
+      if (cart.characterId !== sel.characterId) {
+        info(msg.playerid, 'Shop Error', ['Your cart belongs to ' + cart.characterName + '.', 'Clear the cart or re-select that token.']);
+        return null;
+      }
+      if (cart.storeId !== storeId) {
+        info(msg.playerid, 'Shop Error', ['Your cart already belongs to another shop.', btn('Clear Cart', '!shop-clearcart')]);
+        return null;
+      }
+    } else {
+      cart.characterId = sel.characterId;
+      cart.characterName = sel.character.get('name');
+      cart.storeId = storeId;
+    }
+    return { sel, cart };
+  };
+
+  const addToCart = (msg, storeId, itemKey, qtyRaw) => {
+    const store = getStore(storeId);
+    if (!store) return info(msg.playerid, 'Shop Error', ['Unknown store.']);
+    const ctx = ensureCartContext(msg, store.id);
+    if (!ctx) return;
+    let qty = clamp(parseInt(qtyRaw || 1, 10) || 1, 1, 9999);
+    const notes = [];
+    let lineData = null;
+    if (itemKey.indexOf('trinket_') === 0) {
+      const entry = (store.trinkets || []).find(t => t.key === itemKey);
+      const tr = trinketByKey[itemKey];
+      if (!entry || !tr) return info(msg.playerid, 'Shop Error', ['That trinket is not available.']);
+      const inCart = reservedQtyInCart(ctx.cart, itemKey);
+      if (store.id !== 'baseline' && qty > (entry.qty - inCart)) return info(msg.playerid, 'Shop Error', ['Not enough stock on hand.']);
+      lineData = {
+        itemKey: itemKey,
+        name: tr.name,
+        qty: qty,
+        unitCp: priceForStore(store, null, tr),
+        weight: 0,
+        source: store.id,
+        haggled: false,
+        hagglePct: 0,
+        isTrinket: true
+      };
+    } else {
+      const item = byKey[itemKey];
+      if (!item) return info(msg.playerid, 'Shop Error', ['Unknown item.']);
+      if (cartLineNeedsArmorFit(store, itemKey) && qty > 1) {
+        qty = 1;
+        notes.push('Armor fit is checked suit by suit. Quantity was set to 1 for this line.');
+      }
+      const inCart = reservedQtyInCart(ctx.cart, itemKey);
+      if (store.id !== 'baseline' && qty > (itemAvailableQty(store, itemKey) - inCart)) return info(msg.playerid, 'Shop Error', ['Not enough stock on hand.']);
+      lineData = {
+        itemKey: itemKey,
+        name: item.name,
+        qty: qty,
+        unitCp: priceForStore(store, item, null),
+        weight: item.weight || 0,
+        source: store.id,
+        haggled: false,
+        hagglePct: 0,
+        isTrinket: false,
+        fitChecked: false,
+        fitOk: false,
+        fitRoll: 0,
+        fitResult: ''
+      };
+      if (cartLineNeedsArmorFit(store, itemKey)) notes.push('Roll armor fit before checkout. 1 = too small, 2-5 = fits, 6 = too large.');
+    }
+    ctx.cart.lines.push(lineData);
+    const lines = [
+      lineData.name + ' x' + lineData.qty + ' at ' + cpToDisplay(lineData.unitCp) + ' each.'
+    ].concat(notes);
+    if (lineNeedsArmorFit(lineData)) lines.push(btn('Roll Fit', '!shop-fit ' + (ctx.cart.lines.length - 1), 100));
+    lines.push(btn('View Cart', '!shop-cart'));
+    lines.push(btn('Return to Store', '!shop-open ' + store.id, 120));
+    info(msg.playerid, 'Added to Cart', lines);
+  };
+
+  const cartLineTotal = (line) => Math.max(1, Math.round(line.unitCp * line.qty * (100 + (line.hagglePct || 0)) / 100));
+
+  const renderCart = (playerid) => {
+    const cart = getCart(playerid);
+    if (!cart.lines.length) return info(playerid, 'Shopping Cart', ['Your cart is empty.']);
+    const lines = [];
+    let total = 0;
+    cart.lines.forEach((line, idx) => {
+      const lineTotal = cartLineTotal(line);
+      total += lineTotal;
+      const pieces = [
+        (idx + 1) + '. ' + line.name + ' x' + line.qty,
+        'unit ' + cpToDisplay(line.unitCp),
+        'line total ' + cpToDisplay(lineTotal)
+      ];
+      if (lineNeedsArmorFit(line)) pieces.push(armorFitText(line));
+      const controls = [btn('Remove', '!shop-remove ' + idx)];
+      if (lineNeedsArmorFit(line)) controls.unshift(btn('Roll Fit', '!shop-fit ' + idx, 95));
+      lines.push(pieces.join(' — ') + ' ' + controls.join(' '));
+    });
+    lines.push('');
+    lines.push('Total: ' + cpToDisplay(total));
+    lines.push('Cart items are not reserved until checkout.');
+    if (cart.lines.some(lineNeedsArmorFit)) lines.push('Non-custom body armor must pass the fit roll before purchase.');
+    lines.push(btn('Checkout', '!shop-checkout', 100) + ' ' + btn('Clear Cart', '!shop-clearcart', 100) + ' ' + btn('Menu', '!shop-menu', 90));
+    if (cart.storeId) lines.push(btn('Return to Store', '!shop-open ' + cart.storeId, 120));
+    info(playerid, 'Shopping Cart', lines);
+  };
+
+  const haggleLine = (msg) => info(msg.playerid, 'Haggling', ['Haggling is disabled in this build.']);
+
+  const removeLine = (playerid, idxRaw) => {
+    const cart = getCart(playerid);
+    const idx = parseInt(idxRaw, 10);
+    if (isNaN(idx) || !cart.lines[idx]) return info(playerid, 'Shop Error', ['Invalid cart line.']);
+    cart.lines.splice(idx, 1);
+    if (!cart.lines.length) clearCart(playerid);
+    renderCart(playerid);
+  };
+
+  const rollArmorFit = (msg, idxRaw) => {
+    const cart = getCart(msg.playerid);
+    const idx = parseInt(idxRaw, 10);
+    const line = cart.lines[idx];
+    if (isNaN(idx) || !line) return info(msg.playerid, 'Shop Error', ['Invalid cart line.']);
+    if (!lineNeedsArmorFit(line)) return info(msg.playerid, 'Armor Fit', ['That cart line does not require an armor fit roll.']);
+
+    const sel = getSelectedCharacter(msg);
+    if (!sel || sel.characterId !== cart.characterId) return info(msg.playerid, 'Shop Error', ['Select the buyer token for this cart before rolling armor fit.']);
+
+    const roll = rand(6);
+    let result = 'fits';
+    let ok = true;
+    if (roll === 1) {
+      result = 'too small';
+      ok = false;
+    } else if (roll === 6) {
+      result = 'too large';
+      ok = false;
+    }
+
+    line.fitChecked = true;
+    line.fitOk = ok;
+    line.fitRoll = roll;
+    line.fitResult = result;
+
+    const lines = [
+      line.name + ': d6 = ' + roll,
+      ok ? 'Result: fits.' : 'Result: ' + result + '.',
+      'Rule: 1 = too small, 2-5 = fits, 6 = too large.',
+      btn('View Cart', '!shop-cart', 100)
+    ];
+    if (cart.storeId) lines.push(btn('Return to Store', '!shop-open ' + cart.storeId, 120));
+    info(msg.playerid, 'Armor Fit', lines);
+  };
+
+  const validateCartAgainstLiveStock = (store, cart) => {
+    const problems = [];
+    const kept = [];
+    (cart.lines || []).forEach(line => {
+      if (!line) return;
+      if (store.id !== 'baseline' && !isUnlimitedKey(line.itemKey)) {
+        if (line.isTrinket) {
+          const tr = (store.trinkets || []).find(t => t.key === line.itemKey);
+          const live = tr ? parseInt(tr.qty || 0, 10) : 0;
+          if (live <= 0) {
+            problems.push(line.name + ' is now out of stock and was removed from your cart.');
+            return;
+          }
+          if ((line.qty || 0) > live) {
+            problems.push(line.name + ' was reduced from ' + line.qty + ' to ' + live + ' due to current stock.');
+            line.qty = live;
+          }
+        } else {
+          const live = parseInt(store.stock[line.itemKey] || 0, 10);
+          if (live <= 0) {
+            problems.push(line.name + ' is now out of stock and was removed from your cart.');
+            return;
+          }
+          if ((line.qty || 0) > live) {
+            problems.push(line.name + ' was reduced from ' + line.qty + ' to ' + live + ' due to current stock.');
+            line.qty = live;
+          }
+        }
+      }
+      if ((line.qty || 0) > 0) kept.push(line);
+    });
+    cart.lines = kept;
+    return problems;
+  };
+
+  const checkout = (msg) => {
+    const cart = getCart(msg.playerid);
+    if (!cart.lines.length) return info(msg.playerid, 'Shop Error', ['Your cart is empty.']);
+    const sel = getSelectedCharacter(msg);
+    if (!sel || sel.characterId !== cart.characterId) return info(msg.playerid, 'Shop Error', ['Select the buyer token for this cart before checking out.']);
+    const store = getStore(cart.storeId);
+    if (!store) return info(msg.playerid, 'Shop Error', ['The source store no longer exists.']);
+
+    const stockProblems = validateCartAgainstLiveStock(store, cart);
+    if (!cart.lines.length) {
+      const lines = stockProblems.length ? stockProblems.slice() : ['Your cart no longer has any available items.'];
+      lines.push(btn('Return to Store', '!shop-open ' + cart.storeId, 120) + ' ' + btn('Menu', '!shop-menu', 90));
+      clearCart(msg.playerid);
+      return info(msg.playerid, 'Cart Updated', lines);
+    }
+
+    const fitProblems = [];
+    cart.lines.forEach((line, idx) => {
+      if (!lineNeedsArmorFit(line)) return;
+      if (!line.fitChecked) fitProblems.push((idx + 1) + '. ' + line.name + ' needs a fit roll before checkout.');
+      else if (!line.fitOk) fitProblems.push((idx + 1) + '. ' + line.name + ' does not fit (' + (line.fitResult || 'failed') + ').');
+    });
+    if (fitProblems.length) {
+      const lines = stockProblems.slice().concat(fitProblems);
+      lines.push(btn('View Cart', '!shop-cart', 100));
+      return info(msg.playerid, 'Shop Error', lines);
+    }
+
+    let total = 0;
+    for (let i = 0; i < cart.lines.length; i++) total += cartLineTotal(cart.lines[i]);
+
+    const purse = getMoneyCp(sel.characterId);
+    if (purse < total) {
+      const lines = stockProblems.slice();
+      lines.push('You need ' + cpToDisplay(total) + ' but only have ' + cpToDisplay(purse) + '.');
+      lines.push(btn('View Cart', '!shop-cart', 100));
+      return info(msg.playerid, 'Shop Error', lines);
+    }
+
+    if (!spendMoneyCp(sel.characterId, total)) {
+      return info(msg.playerid, 'Shop Error', [
+        'Payment could not be completed from available Gold, Silver, and Bronze.',
+        btn('View Cart', '!shop-cart', 100)
+      ]);
+    }
+
+    const receipt = stockProblems.slice();
+
+    cart.lines.forEach(line => {
+      let itemName = line.name;
+      const traits = getHorseTraitStringForStore(store, line.itemKey);
+      if (traits) itemName += ' (' + traits + ')';
+      addEquipmentRow(sel.characterId, itemName, line.qty, line.weight || 0, cpToDisplay(line.unitCp));
+      receipt.push(itemName + (line.qty > 1 ? ' x' + line.qty : '') + ' — ' + cpToDisplay(cartLineTotal(line)));
+      if (store.id !== 'baseline' && !isUnlimitedKey(line.itemKey)) {
+        if (line.isTrinket) {
+          const tr = (store.trinkets || []).find(t => t.key === line.itemKey);
+          if (tr) tr.qty = Math.max(0, tr.qty - line.qty);
+        } else {
+          store.stock[line.itemKey] = Math.max(0, (store.stock[line.itemKey] || 0) - line.qty);
+        }
+      }
+    });
+
+    receipt.push('');
+    receipt.push('Spent: ' + cpToDisplay(total));
+    receipt.push(btn('Menu', '!shop-menu', 90) + ' ' + btn('Return to Store', '!shop-open ' + cart.storeId, 120));
+    clearCart(msg.playerid);
+    info(msg.playerid, 'Checkout Complete', receipt);
+  };
+
+  const needsMonthlyRestock = (item) => {
+    if (!item) return false;
+    if (item.category === 'armor' || item.category === 'weapons') return true;
+    if (isHorseItemKey(item.key)) return true;
+    if (item.priceCp >= 2500) return true;
+    if (item.tier === 'scarce' || item.tier === 'rare') return true;
+    return false;
+  };
+
+  const restockAmount = (missing, tier, store) => {
+    if (missing <= 0) return 0;
+    switch (tier) {
+      case 'common':
+        return Math.max(1, Math.floor(missing * (50 + rand(51) - 1) / 100));
+      case 'uncommon':
+        return Math.floor(missing * (25 + rand(36) - 1) / 100);
+      case 'scarce':
+        if (rand(100) > (store.settlement === 'city' ? 55 : 35)) return 0;
+        return Math.max(1, Math.floor(missing * (20 + rand(21) - 1) / 100));
+      case 'rare':
+        if (rand(100) > (store.settlement === 'city' ? 25 : 10)) return 0;
+        return 1;
+      default:
+        return Math.max(1, Math.floor(missing * 0.5));
+    }
+  };
+
+  const restockStore = (store, mode) => {
+    const kind = mode || 'both';
+    ITEMS.forEach(item => {
+      if (!localAllowed(store, item)) return;
+      const monthly = needsMonthlyRestock(item);
+      if (kind === 'minor' && monthly) return;
+      if (kind === 'major' && !monthly) return;
+
+      let target = targetQty(store, item);
+      if (isHommletStore(store) && item.category === 'armor') {
+        if (HOMMLET_ALWAYS_ARMOR.indexOf(item.key) !== -1) target = 1;
+        else {
+          const found = HOMMLET_CHANCE_ARMOR.find(a => a.key === item.key);
+          target = (found && rand(100) <= found.chance) ? 1 : 0;
+        }
+      }
+      const current = store.stock[item.key] || 0;
+      if (current >= target) return;
+      const add = restockAmount(target - current, item.tier, store);
+      if (add > 0) store.stock[item.key] = current + add;
+    });
+
+    ensureStockFloors(store, store.stock);
+    if (kind !== 'major') {
+      store.trinkets = generateTrinkets(store);
+      ensureStoreSpecials(store);
+      ensureStockFloors(store, store.stock);
+      store.lastMinorRestockDay = state[SCRIPT].day;
+    } else {
+      store.lastMajorRestockDay = state[SCRIPT].day;
+    }
+    store.lastRestockDay = state[SCRIPT].day;
+  };
+
+  const advanceDays = (days) => {
+    const d = Math.max(0, parseInt(days || 0, 10) || 0);
+    if (!d) return { days: 0, minor: 0, major: 0 };
+    state[SCRIPT].day += d;
+    let minor = 0;
+    let major = 0;
+    Object.keys(state[SCRIPT].stores).forEach(id => {
+      const store = state[SCRIPT].stores[id];
+      while ((state[SCRIPT].day - store.lastMinorRestockDay) >= 7) {
+        restockStore(store, 'minor');
+        minor++;
+      }
+      while ((state[SCRIPT].day - store.lastMajorRestockDay) >= 30) {
+        restockStore(store, 'major');
+        major++;
+      }
+    });
+    return { days: d, minor, major };
+  };
+
+  const refreshAllNow = () => {
+    let count = 0;
+    Object.keys(state[SCRIPT].stores).forEach(id => {
+      restockStore(state[SCRIPT].stores[id], 'both');
+      count++;
+    });
+    return count;
+  };
+
+  const auditStore = (store) => {
+    const cats = categoriesForStore(store);
+    const lines = [
+      'Type: ' + cap(store.type) + ' | Size: ' + cap(store.size) + ' | Settlement: ' + cap(store.settlement),
+      'Focus: ' + cap(store.focus) + ' | Base Mod: ' + (store.baseModifier >= 0 ? '+' : '') + store.baseModifier + '%',
+      'Tags: ' + store.tags.join(', '),
+      'Current Day: ' + state[SCRIPT].day + ' | Last Any Restock: ' + store.lastRestockDay,
+      'Weekly/common refresh day: ' + store.lastMinorRestockDay + ' | Monthly/major refresh day: ' + store.lastMajorRestockDay,
+      'Categories in stock: ' + (cats.length ? cats.join(', ') : 'none'),
+      btn('Open', '!shop-open ' + store.id, 90) + ' ' + btn('Menu', '!shop-menu', 90)
+    ];
+    gmInfo('Store Audit ' + store.id, lines);
+  };
+
+  const parseStoreOpts = (parts) => {
+    const opts = {};
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i];
+      if (p === '--type') opts.type = parts[++i];
+      else if (p === '--size') opts.size = parts[++i];
+      else if (p === '--settlement') opts.settlement = parts[++i];
+      else if (p === '--focus') opts.focus = parts[++i];
+      else if (p === '--name') opts.name = parts[++i];
+      else if (p === '--mod') opts.baseModifier = parseInt(parts[++i], 10);
+      else if (p === '--tags') opts.tags = (parts[++i] || '').split(',').map(s => slug(s));
+    }
+    if (opts.type && STORE_TYPES.indexOf(opts.type) === -1) delete opts.type;
+    if (opts.size && SIZE_ORDER.indexOf(opts.size) === -1) delete opts.size;
+    if (opts.settlement && SETTLEMENT_ORDER.indexOf(opts.settlement) === -1) delete opts.settlement;
+    if (opts.focus && ['normal','traveler','adventurer'].indexOf(opts.focus) === -1) delete opts.focus;
+    return opts;
+  };
+
+  const showMenu = (playerid) => {
+    const lines = [
+      'Select a buyer token before adding to cart or checking out.',
+      btn('Players Handbook Store', '!shop-open baseline', 130) + ' ' + btn('Hommlet', '!shop-open hommlet', 100) + ' ' + btn('View Cart', '!shop-cart', 100) + ' ' + btn('Checkout', '!shop-checkout', 100) + ' ' + btn('Go Visit Blacksmith', '!smith-menu', 110)
+    ];
+
+    const ids = Object.keys(state[SCRIPT].stores).sort().filter(id => id !== 'hommlet');
+    if (ids.length) {
+      lines.push('Local Shops:');
+      ids.forEach(id => {
+        const store = state[SCRIPT].stores[id];
+        lines.push(btn(store.name, '!shop-open ' + id, 180));
+      });
+    }
+
+    if (isGM(playerid)) {
+      lines.push('GM Controls:');
+      lines.push(
+        btn('New Store', '!shop-new --name "?{Store Name|New Store}" --type ?{Store Type|Trading Post,trading_post|Outfitter,outfitter|Smith,smith|Stable,stable|Herbalist,herbalist} --size ?{Size|Small,small|Medium,medium|Large,large} --settlement ?{Settlement|Hamlet,hamlet|Village,village|Town,town|City,city} --focus ?{Focus|Normal,normal|Traveler,traveler|Adventurer,adventurer} --tags "?{Tag Set|Frontier/Woods,frontier,woods|Remote/Poor,remote,poor|Market/Wealthy,market,wealthy|Military/Mining,military,mining|River/Agricultural,river,agricultural|Port/Market,port,market}"', 120) +
+        ' ' +
+        btn('List Stores', '!shop-list', 100) +
+        ' ' +
+        btn('Restock Store', '!shop-refresh ?{Days|7}', 120) +
+        ' ' +
+        btn('Refresh All Now', '!shop-refresh-now', 130) +
+        ' ' +
+        btn('Reset Campaign', '!shop-reset ?{Reset campaign?|No,NO|Yes,YES}', 130)
+      );
+      lines.push('Tags affect local stock and price bias. The preset tag sets keep creation quick.');
+      lines.push('Common goods refresh weekly. Armor, weapons, horses, scarce items, and pricier stock refresh monthly.');
+      lines.push('Shops only accept Gold, Silver, and Bronze at checkout.');
+    }
+
+    info(playerid, 'Trading Post 1E Menu', lines);
+  };
+
+  const showHelp = (playerid) => showMenu(playerid);
+
+  const listStores = (playerid) => {
+    const ids = Object.keys(state[SCRIPT].stores).sort();
+    if (!ids.length) return info(playerid, 'Store List', ['No local stores yet.', btn('Players Handbook Store', '!shop-open baseline', 120), btn('Menu', '!shop-menu', 90)]);
+    const lines = ids.map(id => {
+      const store = state[SCRIPT].stores[id];
+      return id + ': ' + store.name + ' — ' + cap(store.type) + ', ' + cap(store.size) + ', ' + cap(store.settlement) + (store.preset ? ' preset' : '') + ' ' + btn('Open', '!shop-open ' + id, 90) + ' ' + btn('Audit', '!shop-audit ' + id, 90);
+    });
+    lines.push(btn('Menu', '!shop-menu', 90));
+    info(playerid, 'Store List', lines);
+  };
+
+  const handleInput = (msg) => {
+    if (msg.type !== 'api') return;
+    const parts = tokenize(msg.content.trim());
+    const cmd = (parts.shift() || '').toLowerCase();
+
+    if (cmd === '!shop-help' || cmd === '!shop-menu') return showMenu(msg.playerid);
+
+    if (cmd === '!shop-baseline') {
+      const store = getStore('baseline');
+      return info(msg.playerid, store.name, formatStoreHeader(store));
+    }
+
+    if (cmd === '!shop-open') {
+      const id = parts[0] || 'baseline';
+      const store = getStore(id);
+      if (!store) return info(msg.playerid, 'Shop Error', ['Unknown store id.']);
+      return info(msg.playerid, store.name, formatStoreHeader(store));
+    }
+
+    if (cmd === '!shop-view') {
+      const id = parts[0] || 'baseline';
+      const category = (parts[1] || 'misc').toLowerCase();
+      const page = parts[2] || 1;
+      const store = getStore(id);
+      if (!store) return info(msg.playerid, 'Shop Error', ['Unknown store id.']);
+      return viewCategory(msg.playerid, store, category, page);
+    }
+
+    if (cmd === '!shop-add') return addToCart(msg, parts[0] || 'baseline', parts[1], parts[2] || 1);
+    if (cmd === '!shop-fit') return rollArmorFit(msg, parts[0]);
+    if (cmd === '!shop-cart') return renderCart(msg.playerid);
+    if (cmd === '!shop-remove') return removeLine(msg.playerid, parts[0]);
+    if (cmd === '!shop-clearcart') { clearCart(msg.playerid); return info(msg.playerid, 'Shopping Cart', ['Cart cleared.']); }
+    if (cmd === '!shop-haggle') return haggleLine(msg, parts[0]);
+    if (cmd === '!shop-checkout') return checkout(msg);
+
+    if (cmd === '!shop-new') {
+      const store = createStore(parseStoreOpts(parts));
+      return info(msg.playerid, 'Store Created', [
+        store.name + ' (' + store.id + ')',
+        'Type: ' + cap(store.type) + ' | Size: ' + cap(store.size) + ' | Settlement: ' + cap(store.settlement),
+        'Focus: ' + cap(store.focus) + ' | Price Mod: ' + (store.baseModifier >= 0 ? '+' : '') + store.baseModifier + '%',
+        'Tags: ' + store.tags.join(', '),
+        btn('Open', '!shop-open ' + store.id, 90) + ' ' + btn('Audit', '!shop-audit ' + store.id, 90) + ' ' + btn('Menu', '!shop-menu', 90)
+      ]);
+    }
+
+    if (cmd === '!shop-list') return listStores(msg.playerid);
+
+    if (cmd === '!shop-audit') {
+      const store = state[SCRIPT].stores[parts[0]];
+      if (!store) return gmInfo('Store Audit', ['Unknown store id.']);
+      return auditStore(store);
+    }
+
+    if (cmd === '!shop-days' || cmd === '!shop-refresh') {
+      const result = advanceDays(parts[0] || 0);
+      return gmInfo('Store Refresh', [
+        'Days advanced: ' + result.days,
+        'Current day: ' + state[SCRIPT].day,
+        'Weekly/common refreshes applied: ' + result.minor,
+        'Monthly/major refreshes applied: ' + result.major
+      ]);
+    }
+
+    if (cmd === '!shop-restock' || cmd === '!shop-refresh-now') {
+      const count = refreshAllNow();
+      return gmInfo('Refresh All Now', [
+        'Stores refreshed immediately: ' + count,
+        'Weekly/common and monthly/major stock both refreshed.'
+      ]);
+    }
+
+    if (cmd === '!shop-reset') {
+      const confirm = String(parts[0] || '').trim().toUpperCase();
+      if (confirm !== 'YES') {
+        return gmInfo('Reset Campaign', [
+          'No changes made.'
+        ]);
+      }
+      resetCampaign();
+      return gmInfo('Reset Campaign', [
+        'All shop state has been reset.',
+        'Day counter returned to 0.',
+        'Generated stores, carts, and cached horse traits were cleared.'
+      ]);
+    }
+  };
+
+  const resetCampaign = () => {
+    state[SCRIPT] = {
+      day: 0,
+      stores: {},
+      carts: {},
+      nextStoreId: 1,
+      baselineHorseTraits: {}
+    };
+    stateInit();
+  };
+
+  const registerEventHandlers = () => on('chat:message', handleInput);
+  const checkInstall = () => {
+    stateInit();
+    log(SCRIPT + ' v' + VERSION + ' ready.');
+  };
+
+  on('ready', () => {
+    checkInstall();
+    registerEventHandlers();
+  });
+
+  return { version: VERSION };
+})();
