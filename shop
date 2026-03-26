@@ -1,5 +1,3 @@
-!shop-menu
-
 const TradingPost1E = (() => {
   'use strict';
 
