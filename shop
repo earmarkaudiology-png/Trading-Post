@@ -30055,7 +30055,7 @@ const TradingPost1E = (() => {
       'Select a buyer token before adding to cart, checking out, picking up an order, or adding reference magic items to a sheet.',
       btn('Players Handbook Store', '!shop-open baseline', 130) + ' ' + btn('Magic Reference', '!shop-magicref', 130),
       'Other Stores:',
-      btn('Blacksmith', '!smith-menu', 110) + ' ' + btn('Gem/Jeweler', '!jeweler-menu', 120) + ' ' + btn('Leather Shop', '!leather-menu', 120) + ' ' + btn('Money Changer', '!changer-menu', 120) + ' ' + btn('Tailor', '!tailor-menu', 100),
+      btn('Gem/Jeweler', '!jeweler-menu', 120),
       btn('Hommlet', '!shop-open hommlet', 100) + ' ' + btn('View Cart', '!shop-cart', 100) + ' ' + btn('Checkout', '!shop-checkout', 100) + ' ' + btn('Orders', '!shop-orders', 100)
     ];
 
