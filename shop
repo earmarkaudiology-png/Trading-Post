@@ -11,6 +11,7 @@ const TradingPost1E = (() => {
   const SETTLEMENT_ORDER = ['hamlet','village','town','city'];
 
   const ITEMS = [
+
   {
     "key": "banded",
     "name": "Banded",
@@ -448,6 +449,60 @@ const TradingPost1E = (() => {
     "name": "Studded",
     "category": "armor",
     "price": "15 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 200.0,
+    "ua": false
+  },
+  {
+    "key": "plate_mail_exact",
+    "name": "Plate (Mail)",
+    "category": "armor",
+    "price": "0 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 450.0,
+    "ua": false
+  },
+  {
+    "key": "shield_small_wood_exact",
+    "name": "Shield, Small, Wood",
+    "category": "armor",
+    "price": "0 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": false
+  },
+  {
+    "key": "studded_leather_exact",
+    "name": "Studded (Leather)",
+    "category": "armor",
+    "price": "0 gp",
     "shopTypes": [
       "smith",
       "outfitter",
@@ -1688,6 +1743,224 @@ const TradingPost1E = (() => {
     "ua": true
   },
   {
+    "key": "atlatl_and_javelin",
+    "name": "Atlatl and javelin",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": false
+  },
+  {
+    "key": "blowgun_and_needle",
+    "name": "Blowgun and needle",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 15.0,
+    "ua": false
+  },
+  {
+    "key": "club_exact",
+    "name": "Club",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": false
+  },
+  {
+    "key": "fist_or_kick",
+    "name": "Fist or kick",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "lance_heavy_horse",
+    "name": "Lance (heavy horse)",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "mounted"
+    ],
+    "tier": "uncommon",
+    "weight": 150.0,
+    "ua": false
+  },
+  {
+    "key": "lance_medium_horse",
+    "name": "Lance (medium horse)",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "mounted"
+    ],
+    "tier": "uncommon",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "staff_exact",
+    "name": "Staff",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "sword_bastard_exact",
+    "name": "Sword, Bastard",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "sword_broad_exact",
+    "name": "Sword, Broad",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 75.0,
+    "ua": false
+  },
+  {
+    "key": "sword_falchion_exact",
+    "name": "Sword, Falchion",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 70.0,
+    "ua": false
+  },
+  {
+    "key": "sword_long_exact",
+    "name": "Sword, Long",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 60.0,
+    "ua": false
+  },
+  {
+    "key": "sword_short_exact",
+    "name": "Sword, Short",
+    "category": "weapons",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 35.0,
+    "ua": false
+  },
+  {
     "key": "arrow_dozen",
     "name": "Arrow, normal, dozen",
     "category": "ammo",
@@ -1834,6 +2107,161 @@ const TradingPost1E = (() => {
     ],
     "tier": "common",
     "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "arrow_exact",
+    "name": "Arrow",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_bolt_hand",
+    "name": "Quarrel (or Bolt), hand",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 1.0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_bolt_heavy",
+    "name": "Quarrel (or Bolt), heavy",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_bolt_light",
+    "name": "Quarrel (or Bolt), light",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 1.0,
+    "ua": false
+  },
+  {
+    "key": "sling_bullet_exact",
+    "name": "Sling Bullet",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "sling_stone_exact",
+    "name": "Sling Stone",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 1.0,
+    "ua": false
+  },
+  {
+    "key": "staff_sling_bullet_exact",
+    "name": "Staff Sling Bullet",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 5.0,
+    "ua": false
+  },
+  {
+    "key": "staff_sling_stone_exact",
+    "name": "Staff Sling Stone",
+    "category": "ammo",
+    "price": "0 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 4.0,
     "ua": false
   },
   {
@@ -5857,7 +6285,8 @@ const TradingPost1E = (() => {
     "weight": 0.0,
     "ua": false
   }
-];;
+
+  ];;
   const TRINKETS = [
   {
     "key": "trinket_1",
@@ -6299,11 +6728,8 @@ const TradingPost1E = (() => {
   }
 ];
 
-  const BASIC_TRADE_WEAPONS = {
-    dagger: true, knife: true, axe_hand: true, spear: true, javelin: true,
-    sling_dozen: true, sling_bullets_score: true, staff_sling: true, whip: true
-  };
-  const BASIC_TRADE_ARMOR = { leather: true, padded: true, studded: true, scale: true, ring_mail: true, chain: true, banded: true, plate: true, bronze_plate: true, field_plate: true, full_plate: true, splint: true, splinted: true, shield_small_wood: true, shield_small: true, shield_medium: true, shield_buckler: true, shield_large: true, spiked_buckler: true, helmet_small: true, helmet_great: true, chain_elfin: true };
+  const BASIC_TRADE_WEAPONS = {dagger: true, knife: true, axe_hand: true, spear: true, javelin: true, sling_dozen: true, sling_bullets_score: true, staff_sling: true, whip: true, atlatl_and_javelin: true, blowgun_and_needle: true, club_exact: true, fist_or_kick: true, lance_heavy_horse: true, lance_medium_horse: true, staff_exact: true, sword_bastard_exact: true, sword_broad_exact: true, sword_falchion_exact: true, sword_long_exact: true, sword_short_exact: true};
+  const BASIC_TRADE_ARMOR = {leather: true, padded: true, studded: true, scale: true, ring_mail: true, chain: true, banded: true, plate: true, bronze_plate: true, field_plate: true, full_plate: true, splint: true, splinted: true, shield_small_wood: true, shield_small: true, shield_medium: true, shield_buckler: true, shield_large: true, spiked_buckler: true, helmet_small: true, helmet_great: true, chain_elfin: true, plate_mail_exact: true, shield_small_wood_exact: true, studded_leather_exact: true};
 
   const ARMOR_FIT_REQUIRED_KEYS = ['padded', 'leather', 'studded', 'ring_mail', 'scale', 'chain', 'banded', 'splinted'];
   const STABLE_BARDING_KEYS = ['barding_leather', 'barding_chain'];
@@ -30129,7 +30555,7 @@ const TradingPost1E = (() => {
 
   const itemByKey = byKey;
 
-  const SHEET_SYNC_BY_ITEM_KEY = Object.freeze({"banded":{"sheetItem":"Banded","type":"2","cost":"90","weight":"350","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain":{"sheetItem":"Chain","type":"2","cost":"75","weight":"300","armorType":"1","armor":{"ac":"5","base":"5","bulk":"fairly"}},"helmet_great":{"sheetItem":"Helmet, great","type":"2","cost":"15","weight":"15","armorType":"4","armor":{"ac":"1","base":"","bulk":"bulky"}},"helmet_small":{"sheetItem":"Helmet, small","type":"2","cost":"10","weight":"10","armorType":"4","armor":{"ac":"1","base":"","bulk":"non-bulky"}},"leather":{"sheetItem":"Leather","type":"2","cost":"5","weight":"150","armorType":"1","armor":{"ac":"8","base":"8","bulk":"non-bulky"}},"padded":{"sheetItem":"Padded","type":"2","cost":"4","weight":"100","armorType":"1","armor":{"ac":"8","base":"8","bulk":"fairly"}},"plate":{"sheetItem":"Plate","type":"0","cost":"400","weight":"450","armorType":"1","armor":{"ac":"3","base":"3","bulk":"bulky"}},"ring_mail":{"sheetItem":"Ring","type":"2","cost":"30","weight":"250","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"scale":{"sheetItem":"Scale","type":"2","cost":"45","weight":"400","armorType":"1","armor":{"ac":"6","base":"6","bulk":"fairly"}},"shield_large":{"sheetItem":"Shield, large","type":"2","cost":"15","weight":"100","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"bulky"}},"shield_small":{"sheetItem":"Shield, small","type":"2","cost":"10","weight":"50","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"shield_small_wood":{"sheetItem":"Shield, small, wooden","type":"2","cost":"1","weight":"30","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"splinted":{"sheetItem":"Splinted","type":"2","cost":"80","weight":"40","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"studded":{"sheetItem":"Studded","type":"0","cost":"15","weight":"200","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"arrow_single":{"sheetItem":"Arrow, normal, single","type":"1","cost":"0.2","weight":"2","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_dozen":{"sheetItem":"Arrow, normal, dozen","type":"1","cost":"1","weight":"24","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_silver":{"sheetItem":"Arrow, silver, single","type":"1","cost":"1","weight":"0","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"axe_battle":{"sheetItem":"Axe, battle","type":"1","cost":"5","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"axe_hand":{"sheetItem":"Axe, hand or throwing","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"1ft"}},"bardiche":{"sheetItem":"Bardiche","type":"1","cost":"7","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 5ft","space":"5ft"}},"bec_de_corbin":{"sheetItem":"Bec de corbin","type":"1","cost":"6","weight":"100","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 6ft","space":"6ft"}},"bill_guisarme":{"sheetItem":"Bill-Guisarme","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"bow_comp_short":{"sheetItem":"Bow, composite short","type":"1","cost":"75","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/18","speed":"","length":"","space":""}},"bow_comp_long":{"sheetItem":"Bow, composite, long","type":"1","cost":"100","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"6/12/21","speed":"","length":"","space":""}},"bow_long":{"sheetItem":"Bow, long","type":"1","cost":"60","weight":"120","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"7/14/21","speed":"","length":"","space":""}},"bow_short":{"sheetItem":"Bow, short","type":"1","cost":"15","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/15","speed":"","length":"","space":""}},"crossbow_heavy":{"sheetItem":"Crossbow, heavy","type":"1","cost":"20","weight":"120","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"8/16/24","speed":"","length":"","space":""}},"crossbow_light":{"sheetItem":"Crossbow, light","type":"1","cost":"12","weight":"40","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"6/12/18","speed":"","length":"","space":""}},"dagger":{"sheetItem":"Dagger and scabbard","type":"1","cost":"2","weight":"10","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d3","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"15in","space":"1ft"}},"dart":{"sheetItem":"Dart","type":"1","cost":"0.5","weight":"5","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"3","range":"1.5/3/4.5","speed":"","length":"","space":""}},"fauchard":{"sheetItem":"Fauchard","type":"1","cost":"3","weight":"60","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"2ft"}},"fauchard_fork":{"sheetItem":"Fauchard-Fork","type":"1","cost":"8","weight":"80","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft","space":"2ft"}},"flail_foot":{"sheetItem":"Flail, footman's","type":"1","cost":"3","weight":"150","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"6ft"}},"flail_horse":{"sheetItem":"Flail, horseman's","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4+1","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 2ft","space":"4ft"}},"fork_military":{"sheetItem":"Fork, Military","type":"1","cost":"4","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"7ft+","space":"1ft"}},"glaive":{"sheetItem":"Glaive","type":"1","cost":"6","weight":"75","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"glaive_guisarme":{"sheetItem":"Glaive-Guisarme","type":"1","cost":"10","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"1ft"}},"guisarme":{"sheetItem":"Guisarme","type":"1","cost":"5","weight":"80","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"6ft+","space":"2ft"}},"guisarme_voulge":{"sheetItem":"Guisarme-Voulge","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"7ft+","space":"2ft"}},"halberd":{"sheetItem":"Halberd","type":"1","cost":"9","weight":"175","weapon":{"attack_type":"0","dsm":"1d10","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer_lucern":{"sheetItem":"Hammer, Lucern","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer":{"sheetItem":"Hammer","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"2ft"}},"javelin":{"sheetItem":"Javelin","type":"1","cost":"1","weight":"20","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"lance":{"sheetItem":"Lance","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"mace_foot":{"sheetItem":"Mace, footman's","type":"1","cost":"8","weight":"100","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 2.5ft","space":"4ft"}},"mace_horse":{"sheetItem":"Mace, horseman's","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 1.5ft","space":"2ft"}},"morning_star":{"sheetItem":"Morning Star","type":"1","cost":"5","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"5ft"}},"partisan":{"sheetItem":"Partisan","type":"1","cost":"10","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"9","length":"7ft+","space":"3ft"}},"pick_foot":{"sheetItem":"Pick, Military, footman's","type":"1","cost":"8","weight":"60","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"pick_horse":{"sheetItem":"Pick, Military, horseman's","type":"1","cost":"5","weight":"40","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 2ft","space":"2ft"}},"pike_awl":{"sheetItem":"Pike, awl","type":"1","cost":"3","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"13","length":"18ft+","space":"1ft"}},"quarrel_light_single":{"sheetItem":"Quarrel (or Bolt), light, single","type":"1","cost":"0.1","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_heavy_score":{"sheetItem":"Quarrel (or Bolt), heavy, score","type":"1","cost":"2","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"ranseur":{"sheetItem":"Ranseur","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"scimitar":{"sheetItem":"Scimitar","type":"1","cost":"15","weight":"40","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"4","length":"c. 3ft","space":"2ft"}},"sling_dozen":{"sheetItem":"Sling & Bullets, dozen","type":"1","cost":"1.5","weight":"0","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"sling_bullets_score":{"sheetItem":"Sling Bullets, score","type":"1","cost":"1","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"spear":{"sheetItem":"Spear","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"1","range":"1/2/3","speed":"6-8","length":"5-13ft+","space":"1ft"}},"spetum":{"sheetItem":"Spetum","type":"1","cost":"3","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"sword_bastard":{"sheetItem":"Sword, bastard, & scabbard","type":"1","cost":"25","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d8","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 4.5ft","space":"4ft+"}},"sword_broad":{"sheetItem":"Sword, broad, & scabbard","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"4ft"}},"sword_long":{"sheetItem":"Sword, long & scabbard","type":"1","cost":"15","weight":"60","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3ft"}},"sword_short":{"sheetItem":"Sword, short & scabbard","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"3","length":"c. 2ft","space":"1ft"}},"sword_twohanded":{"sheetItem":"Sword, two-handed","type":"1","cost":"30","weight":"250","weapon":{"attack_type":"0","dsm":"1d10","dlg":"3d6","dmgtype":"","rof":"","range":"","speed":"10","length":"c. 6ft","space":"6ft"}},"trident":{"sheetItem":"Trident","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"6-8","length":"4-8ft+","space":"1ft"}},"voulge":{"sheetItem":"Voulge","type":"1","cost":"2","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"belt":{"sheetItem":"Belt","type":"0","cost":"0.5","weight":"0"},"boots_high_hard":{"sheetItem":"Boots, high, hard","type":"0","cost":"2","weight":"0"},"boots_high_soft":{"sheetItem":"Boots, high, soft","type":"0","cost":"1","weight":"0"},"boots_low_hard":{"sheetItem":"Boots, low, hard","type":"0","cost":"1","weight":"0"},"boots_low_soft":{"sheetItem":"Boots, low, soft","type":"0","cost":"0.8","weight":"0"},"cap":{"sheetItem":"Cap","type":"0","cost":"0.1","weight":"0"},"cloak":{"sheetItem":"Cloak","type":"0","cost":"0.3","weight":"10"},"girdle_broad":{"sheetItem":"Girdle, broad","type":"0","cost":"2","weight":"0"},"girdle_normal":{"sheetItem":"Girdle, normal","type":"0","cost":"1","weight":"0"},"hat":{"sheetItem":"Hat","type":"0","cost":"0.7","weight":"0"},"robe":{"sheetItem":"Robe","type":"0","cost":"0.6","weight":"0"},"belladonna":{"sheetItem":"Belladona, sprig","type":"0","cost":"0.4","weight":"0"},"garlic":{"sheetItem":"Garlic, bud","type":"3","cost":"0.05","weight":"0"},"wolfsbane":{"sheetItem":"Wolvesbane, sprig","type":"0","cost":"1","weight":"0"},"chicken":{"sheetItem":"Chicken","type":"4","cost":"0.03","weight":"0"},"cow":{"sheetItem":"Cow","type":"4","cost":"10","weight":"0"},"dog_guard":{"sheetItem":"Dog, guard","type":"4","cost":"25","weight":"0"},"dog_hunting":{"sheetItem":"Dog, hunting","type":"4","cost":"17","weight":"0"},"donkey":{"sheetItem":"Donkey","type":"4","cost":"8","weight":"0"},"goat":{"sheetItem":"Goat","type":"4","cost":"1","weight":"0"},"hawk_large":{"sheetItem":"Hawk, large","type":"4","cost":"40","weight":"0"},"hawk_small":{"sheetItem":"Hawk, small","type":"4","cost":"18","weight":"0"},"horse_draft":{"sheetItem":"Horse, draft","type":"4","cost":"15","weight":"8000"},"horse_heavy_war":{"sheetItem":"Horse, heavy war","type":"4","cost":"500","weight":"8000"},"horse_light_war":{"sheetItem":"Horse, light war","type":"4","cost":"200","weight":"5000"},"horse_medium_war":{"sheetItem":"Horse, medium war","type":"4","cost":"350","weight":"7000"},"horse_riding":{"sheetItem":"Horse, riding (light)","type":"4","cost":"40","weight":"3500"},"mule":{"sheetItem":"Mule","type":"4","cost":"18","weight":"6000"},"ox":{"sheetItem":"Ox","type":"4","cost":"15","weight":"8000"},"pigeon":{"sheetItem":"Pigeon","type":"4","cost":"0.02","weight":"0"},"piglet":{"sheetItem":"Piglet","type":"4","cost":"1","weight":"0"},"pig":{"sheetItem":"Pig","type":"4","cost":"3","weight":"0"},"pony":{"sheetItem":"Pony","type":"4","cost":"12","weight":"3000"},"sheep":{"sheetItem":"Sheep","type":"4","cost":"2","weight":"0"},"songbird":{"sheetItem":"Songbird","type":"4","cost":"0.04","weight":"0"},"backpack":{"sheetItem":"Backpack, leather","type":"0","cost":"2","weight":"0"},"box_iron_large":{"sheetItem":"Box, iron, large","type":"0","cost":"28","weight":"20"},"box_iron_small":{"sheetItem":"Box, iron, small","type":"0","cost":"9","weight":"10"},"candle_tallow":{"sheetItem":"Candle, tallow","type":"0","cost":"0.01","weight":"0"},"candle_wax":{"sheetItem":"Candle, wax","type":"0","cost":"0.1","weight":"0"},"case_bone_scroll":{"sheetItem":"Case, bone, map or scroll","type":"0","cost":"5","weight":"0"},"case_leather_scroll":{"sheetItem":"Case, leather, map or scroll","type":"0","cost":"1.5","weight":"0"},"chest_wood_large":{"sheetItem":"Chest, wooden, large","type":"0","cost":"1.7","weight":"20"},"chest_wood_small":{"sheetItem":"Chest, wooden, small","type":"0","cost":"0.8","weight":"0"},"lantern_bullseye":{"sheetItem":"Lantern, bullseye","type":"0","cost":"12","weight":"30"},"lantern_hooded":{"sheetItem":"Lantern, hooded","type":"0","cost":"7","weight":"20"},"mirror_large_metal":{"sheetItem":"Mirror, large metal","type":"0","cost":"10","weight":"0"},"mirror_small_silver":{"sheetItem":"Mirror (small silver)","type":"0","cost":"45","weight":"0.5"},"oil_flask":{"sheetItem":"Oil, flask of","type":"0","cost":"1","weight":"0"},"pole_10":{"sheetItem":"Pole, 10ft","type":"0","cost":"0.03","weight":"0"},"pouch_large":{"sheetItem":"Pouch, belt, large","type":"0","cost":"1","weight":"0"},"pouch_small":{"sheetItem":"Pouch, belt, small","type":"0","cost":"1.5","weight":"0"},"quiver_arrows_dozen":{"sheetItem":"Quiver, 1 doz. arrows cap.","type":"0","cost":"0.8","weight":"0"},"quiver_arrows_score":{"sheetItem":"Quiver, 1 score arrows cap.","type":"0","cost":"1.2","weight":"0"},"quiver_bolts_score":{"sheetItem":"Quiver, 1 score bolts cap.","type":"0","cost":"1.5","weight":"0"},"quiver_bolts_2score":{"sheetItem":"Quiver, 2 score bolts cap.","type":"0","cost":"1","weight":"0"},"rope_50":{"sheetItem":"Rope, 50ft","type":"0","cost":"0.4","weight":"0"},"sack_large":{"sheetItem":"Sack, large","type":"0","cost":"0.16","weight":"0"},"sack_small":{"sheetItem":"Sack, small","type":"0","cost":"0.1","weight":"0"},"skin_water_wine":{"sheetItem":"Skin for water or wine","type":"0","cost":"1.5","weight":"0"},"spike_iron_large":{"sheetItem":"Spike, iron, large","type":"0","cost":"0.01","weight":"0"},"thieves_tools":{"sheetItem":"Thieves' picks & tools","type":"0","cost":"30","weight":"0"},"tinderbox":{"sheetItem":"Tinder Box, with flint & steel","type":"0","cost":"1","weight":"0"},"torch":{"sheetItem":"Torch","type":"0","cost":"0.01","weight":"10"},"ale_pint":{"sheetItem":"Ale, pint","type":"0","cost":"0.1","weight":"10"},"beer_pint":{"sheetItem":"Beer, small, pint","type":"0","cost":"0.05","weight":"0"},"food_meal_merchant":{"sheetItem":"Food, merchant's meal","type":"0","cost":"0.1","weight":"0"},"food_meal_rich":{"sheetItem":"Food, rich meal","type":"0","cost":"1","weight":"0"},"grain_horse_day":{"sheetItem":"Grain, horse meal, 1 day","type":"0","cost":"0.1","weight":"50"},"mead_pint":{"sheetItem":"Mead, pint","type":"0","cost":"0.5","weight":"0"},"rations_iron_week":{"sheetItem":"Rations, iron, 1 week","type":"0","cost":"0","weight":"140"},"rations_standard_week":{"sheetItem":"Rations, standard, 1 week","type":"0","cost":"3","weight":"140"},"wine_good_pint":{"sheetItem":"Wine, pint, good","type":"0","cost":"1","weight":"0"},"wine_watered_pint":{"sheetItem":"Wine, pint, watered","type":"0","cost":"0.5","weight":"0"},"beads_prayer":{"sheetItem":"Beads, Prayer","type":"0","cost":"1","weight":"0"},"incense_stick":{"sheetItem":"Incense, stick","type":"0","cost":"1","weight":"0"},"symbol_holy_iron":{"sheetItem":"Holy symbol, pewter","type":"0","cost":"5","weight":"10"},"symbol_holy_silver":{"sheetItem":"Holy symbol, silver","type":"0","cost":"25","weight":"10"},"symbol_holy_wood":{"sheetItem":"Holy symbol, wooden","type":"0","cost":"0.6","weight":"0"},"water_holy_vial":{"sheetItem":"Water, holy (per vial)","type":"0","cost":"25","weight":"0.5"},"barding_chain":{"sheetItem":"Barding, chain","type":"4","cost":"250","weight":"0"},"barding_leather":{"sheetItem":"Barding, leather","type":"4","cost":"100","weight":"0"},"barding_plate":{"sheetItem":"Barding, plate","type":"4","cost":"1.5","weight":"0"},"bit_bridle":{"sheetItem":"Bit and Bridle","type":"4","cost":"1.5","weight":"0"},"harness":{"sheetItem":"Harness","type":"4","cost":"1.2","weight":"0"},"saddle":{"sheetItem":"Saddle","type":"4","cost":"10","weight":"0"},"saddlebags_large":{"sheetItem":"Saddle Bags, large","type":"4","cost":"4","weight":"0"},"saddlebags_small":{"sheetItem":"Saddle Bags, small","type":"4","cost":"3","weight":"0"},"saddle_blanket":{"sheetItem":"Saddle Blanket","type":"4","cost":"0.3","weight":"0"},"barge_small":{"sheetItem":"Barge (or Raft), small","type":"4","cost":"50","weight":"0"},"boat_small":{"sheetItem":"Boat, small","type":"4","cost":"75","weight":"0"},"boat_long":{"sheetItem":"Boat, long","type":"4","cost":"150","weight":"0"},"cart":{"sheetItem":"Cart","type":"4","cost":"50","weight":"0"},"galley_large":{"sheetItem":"Galley, large","type":"4","cost":"25000","weight":"0"},"galley_small":{"sheetItem":"Galley, small","type":"4","cost":"10000","weight":"0"},"ship_merchant_large":{"sheetItem":"Ship, merchant, large","type":"4","cost":"15000","weight":"0"},"ship_merchant_small":{"sheetItem":"Ship, merchant, small","type":"4","cost":"5000","weight":"0"},"ship_war":{"sheetItem":"Ship, war","type":"4","cost":"20000","weight":"0"},"wagon":{"sheetItem":"Wagon","type":"4","cost":"150","weight":"0"},"bronze_plate":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"field_plate":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_buckler":{"sheetItem":"Shield, buckler","type":"2","cost":"5","weight":"5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"aklys":{"sheetItem":"Aklys","type":"1","cost":"2","weight":"35","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d3","dmgtype":"","rof":"1","range":"1*/-/-","speed":"4 (+1)","length":"c. 2ft","space":"2ft"}},"atlatl":{"sheetItem":"Atlatl","type":"1","cost":"1","weight":"30","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"3/6/9","speed":"n/a","length":"c. 3ft","space":"1ft"}},"blowgun":{"sheetItem":"Blowgun","type":"1","cost":"20","weight":"15","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"n/a","length":"4-7ft","space":"1ft"}},"blowgun_needle":{"sheetItem":"Blowgun Needle","type":"0","cost":"0.1","weight":"15","weapon":{"attack_type":"1","speed":"","length":"","space":"","misc":"","dsm":"1","dlg":"1","dmgtype":"","rof":"2","range":"1/2/3"}},"caltrop":{"sheetItem":"Caltrop","type":"1","cost":"0.2","weight":"3","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"crossbow_hand":{"sheetItem":"Crossbow, hand","type":"1","cost":"300","weight":"0","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"quarrels_hand_crossbow":{"sheetItem":"Quarrels for same","type":"1","cost":"100","weight":"0","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"garrot":{"sheetItem":"Garrot","type":"1","cost":"0.5","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"2","length":"c. 3ft","space":"1.5ft"}},"harpoon":{"sheetItem":"Harpoon","type":"1","cost":"5","weight":"55","weapon":{"attack_type":"1","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"1","range":"1/2/3","speed":"6","length":"6-8ft","space":"1.5ft"}},"hook_fauchard":{"sheetItem":"Hook Fauchard","type":"1","cost":"6","weight":"80","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"2.5ft"}},"knife":{"sheetItem":"Knife & scabbard","type":"1","cost":"1","weight":"6","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"c. 1ft","space":"1ft"}},"lasso":{"sheetItem":"Lasso","type":"1","cost":"0.5","weight":"20","weapon":{"attack_type":"1","dsm":"","dlg":"","dmgtype":"","rof":"1/2","range":"1/2/3","speed":"10","length":"10-20ft","space":"8ft+"}},"man_catcher":{"sheetItem":"Man Catcher","type":"1","cost":"25","weight":"80","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"7","length":"8ft+","space":"2.5ft"}},"sap":{"sheetItem":"Sap","type":"1","cost":"1","weight":"10","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"2","length":"0.5ft","space":"1ft"}},"spiked_buckler":{"sheetItem":"Spiked Buckler","type":"2","cost":"10","weight":"35","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"staff_sling":{"sheetItem":"Staff Sling","type":"1","cost":"2","weight":"0","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9","speed":"11","length":"5ft","space":"6ft"}},"sword_falchion":{"sheetItem":"Sword, falchion, and scabbard","type":"1","cost":"10","weight":"70","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3.5ft"}},"sword_khopesh":{"sheetItem":"Sword, khopesh","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 3.5ft","space":"4ft"}},"whip":{"sheetItem":"Whip","type":"1","cost":"3","weight":"30","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1","dmgtype":"","rof":"","range":"","speed":"5-8","length":"8-20ft","space":"8-20ft"}},"bronze_plate_x":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain_elfin":{"sheetItem":"Chain, Elfin","type":"2","cost":"0","weight":"150","armorType":"1","armor":{"ac":"5","base":"5","bulk":"non-bulky"}},"field_plate_x":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate_x":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_medium":{"sheetItem":"Shield, Medium","type":"2","cost":"10","weight":"7.5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"fairly"}},"splint":{"sheetItem":"Splint","type":"2","cost":"80","weight":"400","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"bo_stick":{"sheetItem":"Bo Stick","type":"1","cost":"5","weight":"15"},"dagger_x":{"sheetItem":"Dagger","type":"1","cost":"0.2","weight":"10"},"jo_stick":{"sheetItem":"Jo Stick","type":"1","cost":"5","weight":"40"},"knife_x":{"sheetItem":"Knife","type":"1","cost":"0.1","weight":"6"},"lance_light_horse":{"sheetItem":"Lance (light horse)","type":"1","cost":"6","weight":"50"},"staff_quarter":{"sheetItem":"Staff, Quarter","type":"1","cost":"0.2","weight":"50"},"air_bladder":{"sheetItem":"Air bladder","type":"0","cost":"15","weight":"20"},"basket_large_bushel":{"sheetItem":"Basket, large (bushel)","type":"0","cost":"0.5","weight":"80"},"basket_small":{"sheetItem":"Basket, small","type":"0","cost":"0.2","weight":"40"},"beacon":{"sheetItem":"Beacon","type":"0","cost":"40","weight":"200"},"bedroll":{"sheetItem":"Bedroll","type":"0","cost":"0.2","weight":"50"},"bell":{"sheetItem":"Bell","type":"0","cost":"1","weight":"0"},"birdcage":{"sheetItem":"Birdcage","type":"0","cost":"0.5","weight":"50"},"blanket_woollen":{"sheetItem":"Blanket, woollen","type":"0","cost":"0.2","weight":"20"},"block_and_tackle":{"sheetItem":"Block and tackle","type":"0","cost":"5","weight":"50"},"boots_heavy":{"sheetItem":"Boots, heavy","type":"0","cost":"2","weight":"50"},"boots_soft":{"sheetItem":"Boots, soft","type":"0","cost":"1","weight":"30"},"bottle_wine":{"sheetItem":"Bottle (wine)","type":"0","cost":"2","weight":"10"},"box_small_gold":{"sheetItem":"Box, small gold","type":"0","cost":"100","weight":"20"},"box_small_lead":{"sheetItem":"Box, small lead","type":"0","cost":"20","weight":"20"},"bracer_leather":{"sheetItem":"Bracer, leather","type":"0","cost":"0.8","weight":"0"},"caltrops":{"sheetItem":"Caltrops","type":"0","cost":"1","weight":"20"},"candle_beeswax":{"sheetItem":"Candle, beeswax","type":"0","cost":"0.01","weight":"0"},"canvas_per_sq_yd":{"sheetItem":"Canvas (per sq. yd.)","type":"0","cost":"0.1","weight":"10"},"cauldron_and_tripod":{"sheetItem":"Cauldron and tripod","type":"0","cost":"2","weight":"150"},"chain_per_10_ft":{"sheetItem":"Chain (per 10 ft.)","type":"0","cost":"30","weight":"100"},"chalk_piece":{"sheetItem":"Chalk, piece","type":"0","cost":"0.01","weight":"0"},"crampons":{"sheetItem":"Crampons","type":"0","cost":"40","weight":"50"},"crowbar":{"sheetItem":"Crowbar","type":"0","cost":"3","weight":"75"},"dice_bone_pair":{"sheetItem":"Dice, bone, pair","type":"0","cost":"0.5","weight":"0"},"dice_loaded_pair":{"sheetItem":"Dice, loaded, pair","type":"0","cost":"5","weight":"0"},"doublet_linen":{"sheetItem":"Doublet, linen","type":"0","cost":"3","weight":"0"},"drill_iron":{"sheetItem":"Drill, iron","type":"0","cost":"5","weight":"50"},"firewood_per_day":{"sheetItem":"Firewood (per day)","type":"0","cost":"0.01","weight":"30"},"fish_hook":{"sheetItem":"Fish hook","type":"0","cost":"0.1","weight":"0"},"fishing_net_per_25_sq_ft":{"sheetItem":"Fishing net (per 25 sq. ft.)","type":"0","cost":"0.1","weight":"0"},"flask_leather":{"sheetItem":"Flask (leather)","type":"0","cost":"0.03","weight":"0"},"flint_and_steel":{"sheetItem":"Flint and steel","type":"0","cost":"1","weight":"0"},"gloves_kidskin_pair":{"sheetItem":"Gloves, kidskin, pair","type":"0","cost":"3","weight":"0"},"gown_linen":{"sheetItem":"Gown, linen","type":"0","cost":"3","weight":"10"},"gown_silk":{"sheetItem":"Gown, silk","type":"0","cost":"50","weight":"10"},"gown_woollen":{"sheetItem":"Gown, woollen","type":"0","cost":"0.5","weight":"10"},"grappling_hook":{"sheetItem":"Grappling hook","type":"0","cost":"75","weight":"75"},"hammer_tool_not_war":{"sheetItem":"Hammer (tool, not war)","type":"0","cost":"0.5","weight":"20"},"hose":{"sheetItem":"Hose","type":"0","cost":"1","weight":"0"},"iron_spikes_dozen":{"sheetItem":"Iron spikes, dozen","type":"0","cost":"1","weight":"50"},"ladder_per_10_ft":{"sheetItem":"Ladder (per 10 ft.)","type":"0","cost":"0.5","weight":"200"},"lamp_bronze":{"sheetItem":"Lamp (bronze)","type":"0","cost":"0.1","weight":"10"},"lantern_waterproof":{"sheetItem":"Lantern, waterproof","type":"0","cost":"50","weight":"50"},"lard_pint":{"sheetItem":"Lard, pint","type":"0","cost":"0.05","weight":"20"},"lock":{"sheetItem":"Lock","type":"0","cost":"20","weight":"0.5"},"manacles":{"sheetItem":"Manacles","type":"0","cost":"15","weight":"20"},"mirror_small_steel":{"sheetItem":"Mirror (small steel)","type":"0","cost":"20","weight":"0.5"},"musical_instrument":{"sheetItem":"Musical instrument","type":"0","cost":"5","weight":"10"},"needle_and_thread":{"sheetItem":"Needle and thread","type":"0","cost":"0.03","weight":"0"},"oil_lamp_per_pint":{"sheetItem":"Oil (lamp) (per pint)","type":"0","cost":"0.1","weight":"10"},"oil_waterproofing":{"sheetItem":"Oil, waterproofing","type":"0","cost":"1","weight":"20"},"parchment_per_sheet":{"sheetItem":"Parchment (per sheet)","type":"0","cost":"0.2","weight":"0"},"pickaxe":{"sheetItem":"Pickaxe","type":"0","cost":"20","weight":"200"},"pin_cloak":{"sheetItem":"Pin (cloak)","type":"0","cost":"0.4","weight":"0"},"piton":{"sheetItem":"Piton","type":"0","cost":"0.1","weight":"0.5"},"pole_per_10_ft":{"sheetItem":"Pole (per 10 ft.)","type":"0","cost":"0.2","weight":"80"},"pot_iron":{"sheetItem":"Pot, iron","type":"0","cost":"0.5","weight":"50"},"powder_chalk":{"sheetItem":"Powder, chalk","type":"0","cost":"0.2","weight":"20"},"pulley":{"sheetItem":"Pulley","type":"0","cost":"25","weight":"60"},"quill_pen":{"sheetItem":"Quill (pen)","type":"0","cost":"0.1","weight":"0"},"quiver_holds_12_arrows":{"sheetItem":"Quiver (holds 12 arrows)","type":"0","cost":"1","weight":"0"},"quiver_holds_12_bolts":{"sheetItem":"Quiver (holds 12 bolts)","type":"0","cost":"1.2","weight":"0"},"quiver_holds_24_arrows":{"sheetItem":"Quiver (holds 24 arrows)","type":"0","cost":"2.5","weight":"0"},"quiver_holds_24_bolts":{"sheetItem":"Quiver (holds 24 bolts)","type":"0","cost":"3","weight":"0"},"rations_standard_per_day":{"sheetItem":"Rations, standard (per day)","type":"0","cost":"2","weight":"20"},"rations_trail_per_day":{"sheetItem":"Rations, trail (per day)","type":"0","cost":"6","weight":"10"},"reed_hollow":{"sheetItem":"Reed, hollow","type":"0","cost":"0.1","weight":"1"},"reins_bit_and_bridle":{"sheetItem":"Reins, bit and bridle","type":"0","cost":"2","weight":"50"},"robe_linen":{"sheetItem":"Robe, linen","type":"0","cost":"3","weight":"10"},"robe_silk":{"sheetItem":"Robe, silk","type":"0","cost":"60","weight":"10"},"rope_hemp_per_50_ft":{"sheetItem":"Rope, hemp (per 50 ft.)","type":"0","cost":"1","weight":"100"},"rope_silk_per_50_ft":{"sheetItem":"Rope, silk (per 50 ft.)","type":"0","cost":"10","weight":"50"},"saddle_and_stirrups":{"sheetItem":"Saddle and stirrups","type":"0","cost":"10","weight":"200"},"scrollcase_bone":{"sheetItem":"Scrollcase, bone","type":"0","cost":"4","weight":"0.5"},"scrollcase_leather":{"sheetItem":"Scrollcase, leather","type":"0","cost":"1","weight":"0.5"},"shoes_common":{"sheetItem":"Shoes, common","type":"0","cost":"0.5","weight":"10"},"shoes_noble":{"sheetItem":"Shoes, noble","type":"0","cost":"30","weight":"10"},"shovel":{"sheetItem":"Shovel","type":"0","cost":"10","weight":"180"},"signal_whistle":{"sheetItem":"Signal whistle","type":"0","cost":"0.8","weight":"0"},"skillet":{"sheetItem":"Skillet","type":"0","cost":"1","weight":"50"},"soap_per_lb":{"sheetItem":"Soap (per lb.)","type":"0","cost":"0.5","weight":"10"},"symbol_holy_unholy_iron":{"sheetItem":"Symbol, Holy/Unholy, iron","type":"0","cost":"2","weight":"0"},"symbol_holy_unholy_silver":{"sheetItem":"Symbol, Holy/Unholy, silver","type":"0","cost":"50","weight":"0"},"symbol_holy_unholy_wooden":{"sheetItem":"Symbol, Holy/Unholy, wooden","type":"0","cost":"0.7","weight":"0"},"tent":{"sheetItem":"Tent","type":"0","cost":"10","weight":"200"},"thieves_tools_x":{"sheetItem":"Thieves’ tools","type":"0","cost":"30","weight":"10"},"tunic_banqueting":{"sheetItem":"Tunic, banqueting","type":"0","cost":"10","weight":"10"},"tunic_woollen":{"sheetItem":"Tunic, woollen","type":"0","cost":"0.3","weight":"10"},"twine_linen_per_100_ft":{"sheetItem":"Twine, linen (per 100 ft.)","type":"0","cost":"0.08","weight":"0.5"},"vellum_per_sheet":{"sheetItem":"Vellum (per sheet)","type":"0","cost":"0.3","weight":"0"},"wagon_large":{"sheetItem":"Wagon, large","type":"0","cost":"250","weight":"0"},"wagon_small":{"sheetItem":"Wagon, small","type":"0","cost":"100","weight":"0"},"water_holy_unholy_vial":{"sheetItem":"Water, Holy/Unholy, vial","type":"0","cost":"25","weight":"0"},"whetstone":{"sheetItem":"Whetstone","type":"0","cost":"0.02","weight":"0.5"},"whistle":{"sheetItem":"Whistle","type":"0","cost":"0.1","weight":"1"},"wine_pint":{"sheetItem":"Wine, pint","type":"0","cost":"0.5","weight":"10"},"boat_collapsible":{"sheetItem":"Boat, collapsible","type":"4","cost":"500","weight":"600"},"canoe_large":{"sheetItem":"Canoe, large","type":"4","cost":"300","weight":"1600"},"canoe_small":{"sheetItem":"Canoe, small","type":"4","cost":"100","weight":"800"},"kayak":{"sheetItem":"Kayak","type":"4","cost":"250","weight":"500"},"axe_hand_x":{"sheetItem":"Axe, hand","type":"0","cost":"1","weight":"50"},"composite_bow_long":{"sheetItem":"Composite bow, long","type":"0","cost":"100","weight":"80"},"composite_bow_short":{"sheetItem":"Composite bow, short","type":"0","cost":"75","weight":"50"},"flail_heavy":{"sheetItem":"Flail, heavy","type":"0","cost":"3","weight":"100"},"flail_light":{"sheetItem":"Flail, light","type":"0","cost":"6","weight":"40"},"horse_cart_draft":{"sheetItem":"Horse, cart (draft)","type":"0","cost":"15","weight":"8000"},"horse_nag":{"sheetItem":"Horse, nag","type":"0","cost":"8","weight":"3000"},"horse_palfrey_riding_horse":{"sheetItem":"Horse, palfrey (riding horse)","type":"0","cost":"40","weight":"3500"},"horse_rouncey_all_purpose":{"sheetItem":"Horse, rouncey (all-purpose)","type":"0","cost":"25","weight":"4000"},"horse_war_heavy":{"sheetItem":"Horse, war, heavy","type":"0","cost":"500","weight":"8000"},"horse_war_light":{"sheetItem":"Horse, war, light","type":"0","cost":"200","weight":"5000"},"horse_war_medium":{"sheetItem":"Horse, war, medium","type":"0","cost":"350","weight":"7000"},"mace_heavy":{"sheetItem":"Mace, heavy","type":"0","cost":"10","weight":"100"},"mace_light":{"sheetItem":"Mace, light","type":"0","cost":"4","weight":"50"},"pick_heavy":{"sheetItem":"Pick, heavy","type":"0","cost":"8","weight":"10"},"pick_light":{"sheetItem":"Pick, light","type":"0","cost":"5","weight":"40"},"pole_arm":{"sheetItem":"Pole arm","type":"0","cost":"6","weight":"80"},"sling":{"sheetItem":"Sling","type":"0","cost":"0.5","weight":"5"},"sword_bastard_claymore":{"sheetItem":"Sword, bastard/claymore","type":"0","cost":"25","weight":"100"},"sword_scimitar_cutlass":{"sheetItem":"Sword, scimitar/cutlass","type":"0","cost":"15","weight":"50"},"warhammer_heavy":{"sheetItem":"Warhammer, heavy","type":"0","cost":"7","weight":"100"},"warhammer_light":{"sheetItem":"Warhammer, light","type":"0","cost":"1","weight":"50"}});
+  const SHEET_SYNC_BY_ITEM_KEY = Object.freeze({"banded":{"sheetItem":"Banded","type":"2","cost":"90","weight":"350","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain":{"sheetItem":"Chain","type":"2","cost":"75","weight":"300","armorType":"1","armor":{"ac":"5","base":"5","bulk":"fairly"}},"helmet_great":{"sheetItem":"Helmet, great","type":"2","cost":"15","weight":"15","armorType":"4","armor":{"ac":"1","base":"","bulk":"bulky"}},"helmet_small":{"sheetItem":"Helmet, small","type":"2","cost":"10","weight":"10","armorType":"4","armor":{"ac":"1","base":"","bulk":"non-bulky"}},"leather":{"sheetItem":"Leather","type":"2","cost":"5","weight":"150","armorType":"1","armor":{"ac":"8","base":"8","bulk":"non-bulky"}},"padded":{"sheetItem":"Padded","type":"2","cost":"4","weight":"100","armorType":"1","armor":{"ac":"8","base":"8","bulk":"fairly"}},"plate":{"sheetItem":"Plate","type":"0","cost":"400","weight":"450","armorType":"1","armor":{"ac":"3","base":"3","bulk":"bulky"}},"ring_mail":{"sheetItem":"Ring","type":"2","cost":"30","weight":"250","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"scale":{"sheetItem":"Scale","type":"2","cost":"45","weight":"400","armorType":"1","armor":{"ac":"6","base":"6","bulk":"fairly"}},"shield_large":{"sheetItem":"Shield, large","type":"2","cost":"15","weight":"100","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"bulky"}},"shield_small":{"sheetItem":"Shield, small","type":"2","cost":"10","weight":"50","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"shield_small_wood":{"sheetItem":"Shield, small, wooden","type":"2","cost":"1","weight":"30","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"splinted":{"sheetItem":"Splinted","type":"2","cost":"80","weight":"40","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"studded":{"sheetItem":"Studded","type":"0","cost":"15","weight":"200","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"arrow_single":{"sheetItem":"Arrow, normal, single","type":"1","cost":"0.2","weight":"2","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_dozen":{"sheetItem":"Arrow, normal, dozen","type":"1","cost":"1","weight":"24","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_silver":{"sheetItem":"Arrow, silver, single","type":"1","cost":"1","weight":"0","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"axe_battle":{"sheetItem":"Axe, battle","type":"1","cost":"5","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"axe_hand":{"sheetItem":"Axe, hand or throwing","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"1ft"}},"bardiche":{"sheetItem":"Bardiche","type":"1","cost":"7","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 5ft","space":"5ft"}},"bec_de_corbin":{"sheetItem":"Bec de corbin","type":"1","cost":"6","weight":"100","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 6ft","space":"6ft"}},"bill_guisarme":{"sheetItem":"Bill-Guisarme","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"bow_comp_short":{"sheetItem":"Bow, composite short","type":"1","cost":"75","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/18","speed":"","length":"","space":""}},"bow_comp_long":{"sheetItem":"Bow, composite, long","type":"1","cost":"100","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"6/12/21","speed":"","length":"","space":""}},"bow_long":{"sheetItem":"Bow, long","type":"1","cost":"60","weight":"120","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"7/14/21","speed":"","length":"","space":""}},"bow_short":{"sheetItem":"Bow, short","type":"1","cost":"15","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/15","speed":"","length":"","space":""}},"crossbow_heavy":{"sheetItem":"Crossbow, heavy","type":"1","cost":"20","weight":"120","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"8/16/24","speed":"","length":"","space":""}},"crossbow_light":{"sheetItem":"Crossbow, light","type":"1","cost":"12","weight":"40","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"6/12/18","speed":"","length":"","space":""}},"dagger":{"sheetItem":"Dagger and scabbard","type":"1","cost":"2","weight":"10","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d3","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"15in","space":"1ft"}},"dart":{"sheetItem":"Dart","type":"1","cost":"0.5","weight":"5","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"3","range":"1.5/3/4.5","speed":"","length":"","space":""}},"fauchard":{"sheetItem":"Fauchard","type":"1","cost":"3","weight":"60","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"2ft"}},"fauchard_fork":{"sheetItem":"Fauchard-Fork","type":"1","cost":"8","weight":"80","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft","space":"2ft"}},"flail_foot":{"sheetItem":"Flail, footman's","type":"1","cost":"3","weight":"150","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"6ft"}},"flail_horse":{"sheetItem":"Flail, horseman's","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4+1","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 2ft","space":"4ft"}},"fork_military":{"sheetItem":"Fork, Military","type":"1","cost":"4","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"7ft+","space":"1ft"}},"glaive":{"sheetItem":"Glaive","type":"1","cost":"6","weight":"75","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"glaive_guisarme":{"sheetItem":"Glaive-Guisarme","type":"1","cost":"10","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"1ft"}},"guisarme":{"sheetItem":"Guisarme","type":"1","cost":"5","weight":"80","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"6ft+","space":"2ft"}},"guisarme_voulge":{"sheetItem":"Guisarme-Voulge","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"7ft+","space":"2ft"}},"halberd":{"sheetItem":"Halberd","type":"1","cost":"9","weight":"175","weapon":{"attack_type":"0","dsm":"1d10","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer_lucern":{"sheetItem":"Hammer, Lucern","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer":{"sheetItem":"Hammer","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"2ft"}},"javelin":{"sheetItem":"Javelin","type":"1","cost":"1","weight":"20","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"lance":{"sheetItem":"Lance","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"mace_foot":{"sheetItem":"Mace, footman's","type":"1","cost":"8","weight":"100","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 2.5ft","space":"4ft"}},"mace_horse":{"sheetItem":"Mace, horseman's","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 1.5ft","space":"2ft"}},"morning_star":{"sheetItem":"Morning Star","type":"1","cost":"5","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"5ft"}},"partisan":{"sheetItem":"Partisan","type":"1","cost":"10","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"9","length":"7ft+","space":"3ft"}},"pick_foot":{"sheetItem":"Pick, Military, footman's","type":"1","cost":"8","weight":"60","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"pick_horse":{"sheetItem":"Pick, Military, horseman's","type":"1","cost":"5","weight":"40","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 2ft","space":"2ft"}},"pike_awl":{"sheetItem":"Pike, awl","type":"1","cost":"3","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"13","length":"18ft+","space":"1ft"}},"quarrel_light_single":{"sheetItem":"Quarrel (or Bolt), light, single","type":"1","cost":"0.1","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_heavy_score":{"sheetItem":"Quarrel (or Bolt), heavy, score","type":"1","cost":"2","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"ranseur":{"sheetItem":"Ranseur","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"scimitar":{"sheetItem":"Scimitar","type":"1","cost":"15","weight":"40","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"4","length":"c. 3ft","space":"2ft"}},"sling_dozen":{"sheetItem":"Sling & Bullets, dozen","type":"1","cost":"1.5","weight":"0","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"sling_bullets_score":{"sheetItem":"Sling Bullets, score","type":"1","cost":"1","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"spear":{"sheetItem":"Spear","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"1","range":"1/2/3","speed":"6-8","length":"5-13ft+","space":"1ft"}},"spetum":{"sheetItem":"Spetum","type":"1","cost":"3","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"sword_bastard":{"sheetItem":"Sword, bastard, & scabbard","type":"1","cost":"25","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d8","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 4.5ft","space":"4ft+"}},"sword_broad":{"sheetItem":"Sword, broad, & scabbard","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"4ft"}},"sword_long":{"sheetItem":"Sword, long & scabbard","type":"1","cost":"15","weight":"60","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3ft"}},"sword_short":{"sheetItem":"Sword, short & scabbard","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"3","length":"c. 2ft","space":"1ft"}},"sword_twohanded":{"sheetItem":"Sword, two-handed","type":"1","cost":"30","weight":"250","weapon":{"attack_type":"0","dsm":"1d10","dlg":"3d6","dmgtype":"","rof":"","range":"","speed":"10","length":"c. 6ft","space":"6ft"}},"trident":{"sheetItem":"Trident","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"6-8","length":"4-8ft+","space":"1ft"}},"voulge":{"sheetItem":"Voulge","type":"1","cost":"2","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"belt":{"sheetItem":"Belt","type":"0","cost":"0.5","weight":"0"},"boots_high_hard":{"sheetItem":"Boots, high, hard","type":"0","cost":"2","weight":"0"},"boots_high_soft":{"sheetItem":"Boots, high, soft","type":"0","cost":"1","weight":"0"},"boots_low_hard":{"sheetItem":"Boots, low, hard","type":"0","cost":"1","weight":"0"},"boots_low_soft":{"sheetItem":"Boots, low, soft","type":"0","cost":"0.8","weight":"0"},"cap":{"sheetItem":"Cap","type":"0","cost":"0.1","weight":"0"},"cloak":{"sheetItem":"Cloak","type":"0","cost":"0.3","weight":"10"},"girdle_broad":{"sheetItem":"Girdle, broad","type":"0","cost":"2","weight":"0"},"girdle_normal":{"sheetItem":"Girdle, normal","type":"0","cost":"1","weight":"0"},"hat":{"sheetItem":"Hat","type":"0","cost":"0.7","weight":"0"},"robe":{"sheetItem":"Robe","type":"0","cost":"0.6","weight":"0"},"belladonna":{"sheetItem":"Belladona, sprig","type":"0","cost":"0.4","weight":"0"},"garlic":{"sheetItem":"Garlic, bud","type":"3","cost":"0.05","weight":"0"},"wolfsbane":{"sheetItem":"Wolvesbane, sprig","type":"0","cost":"1","weight":"0"},"chicken":{"sheetItem":"Chicken","type":"4","cost":"0.03","weight":"0"},"cow":{"sheetItem":"Cow","type":"4","cost":"10","weight":"0"},"dog_guard":{"sheetItem":"Dog, guard","type":"4","cost":"25","weight":"0"},"dog_hunting":{"sheetItem":"Dog, hunting","type":"4","cost":"17","weight":"0"},"donkey":{"sheetItem":"Donkey","type":"4","cost":"8","weight":"0"},"goat":{"sheetItem":"Goat","type":"4","cost":"1","weight":"0"},"hawk_large":{"sheetItem":"Hawk, large","type":"4","cost":"40","weight":"0"},"hawk_small":{"sheetItem":"Hawk, small","type":"4","cost":"18","weight":"0"},"horse_draft":{"sheetItem":"Horse, draft","type":"4","cost":"15","weight":"8000"},"horse_heavy_war":{"sheetItem":"Horse, heavy war","type":"4","cost":"500","weight":"8000"},"horse_light_war":{"sheetItem":"Horse, light war","type":"4","cost":"200","weight":"5000"},"horse_medium_war":{"sheetItem":"Horse, medium war","type":"4","cost":"350","weight":"7000"},"horse_riding":{"sheetItem":"Horse, riding (light)","type":"4","cost":"40","weight":"3500"},"mule":{"sheetItem":"Mule","type":"4","cost":"18","weight":"6000"},"ox":{"sheetItem":"Ox","type":"4","cost":"15","weight":"8000"},"pigeon":{"sheetItem":"Pigeon","type":"4","cost":"0.02","weight":"0"},"piglet":{"sheetItem":"Piglet","type":"4","cost":"1","weight":"0"},"pig":{"sheetItem":"Pig","type":"4","cost":"3","weight":"0"},"pony":{"sheetItem":"Pony","type":"4","cost":"12","weight":"3000"},"sheep":{"sheetItem":"Sheep","type":"4","cost":"2","weight":"0"},"songbird":{"sheetItem":"Songbird","type":"4","cost":"0.04","weight":"0"},"backpack":{"sheetItem":"Backpack, leather","type":"0","cost":"2","weight":"0"},"box_iron_large":{"sheetItem":"Box, iron, large","type":"0","cost":"28","weight":"20"},"box_iron_small":{"sheetItem":"Box, iron, small","type":"0","cost":"9","weight":"10"},"candle_tallow":{"sheetItem":"Candle, tallow","type":"0","cost":"0.01","weight":"0"},"candle_wax":{"sheetItem":"Candle, wax","type":"0","cost":"0.1","weight":"0"},"case_bone_scroll":{"sheetItem":"Case, bone, map or scroll","type":"0","cost":"5","weight":"0"},"case_leather_scroll":{"sheetItem":"Case, leather, map or scroll","type":"0","cost":"1.5","weight":"0"},"chest_wood_large":{"sheetItem":"Chest, wooden, large","type":"0","cost":"1.7","weight":"20"},"chest_wood_small":{"sheetItem":"Chest, wooden, small","type":"0","cost":"0.8","weight":"0"},"lantern_bullseye":{"sheetItem":"Lantern, bullseye","type":"0","cost":"12","weight":"30"},"lantern_hooded":{"sheetItem":"Lantern, hooded","type":"0","cost":"7","weight":"20"},"mirror_large_metal":{"sheetItem":"Mirror, large metal","type":"0","cost":"10","weight":"0"},"mirror_small_silver":{"sheetItem":"Mirror (small silver)","type":"0","cost":"45","weight":"0.5"},"oil_flask":{"sheetItem":"Oil, flask of","type":"0","cost":"1","weight":"0"},"pole_10":{"sheetItem":"Pole, 10ft","type":"0","cost":"0.03","weight":"0"},"pouch_large":{"sheetItem":"Pouch, belt, large","type":"0","cost":"1","weight":"0"},"pouch_small":{"sheetItem":"Pouch, belt, small","type":"0","cost":"1.5","weight":"0"},"quiver_arrows_dozen":{"sheetItem":"Quiver, 1 doz. arrows cap.","type":"0","cost":"0.8","weight":"0"},"quiver_arrows_score":{"sheetItem":"Quiver, 1 score arrows cap.","type":"0","cost":"1.2","weight":"0"},"quiver_bolts_score":{"sheetItem":"Quiver, 1 score bolts cap.","type":"0","cost":"1.5","weight":"0"},"quiver_bolts_2score":{"sheetItem":"Quiver, 2 score bolts cap.","type":"0","cost":"1","weight":"0"},"rope_50":{"sheetItem":"Rope, 50ft","type":"0","cost":"0.4","weight":"0"},"sack_large":{"sheetItem":"Sack, large","type":"0","cost":"0.16","weight":"0"},"sack_small":{"sheetItem":"Sack, small","type":"0","cost":"0.1","weight":"0"},"skin_water_wine":{"sheetItem":"Skin for water or wine","type":"0","cost":"1.5","weight":"0"},"spike_iron_large":{"sheetItem":"Spike, iron, large","type":"0","cost":"0.01","weight":"0"},"thieves_tools":{"sheetItem":"Thieves' picks & tools","type":"0","cost":"30","weight":"0"},"tinderbox":{"sheetItem":"Tinder Box, with flint & steel","type":"0","cost":"1","weight":"0"},"torch":{"sheetItem":"Torch","type":"0","cost":"0.01","weight":"10"},"ale_pint":{"sheetItem":"Ale, pint","type":"0","cost":"0.1","weight":"10"},"beer_pint":{"sheetItem":"Beer, small, pint","type":"0","cost":"0.05","weight":"0"},"food_meal_merchant":{"sheetItem":"Food, merchant's meal","type":"0","cost":"0.1","weight":"0"},"food_meal_rich":{"sheetItem":"Food, rich meal","type":"0","cost":"1","weight":"0"},"grain_horse_day":{"sheetItem":"Grain, horse meal, 1 day","type":"0","cost":"0.1","weight":"50"},"mead_pint":{"sheetItem":"Mead, pint","type":"0","cost":"0.5","weight":"0"},"rations_iron_week":{"sheetItem":"Rations, iron, 1 week","type":"0","cost":"0","weight":"140"},"rations_standard_week":{"sheetItem":"Rations, standard, 1 week","type":"0","cost":"3","weight":"140"},"wine_good_pint":{"sheetItem":"Wine, pint, good","type":"0","cost":"1","weight":"0"},"wine_watered_pint":{"sheetItem":"Wine, pint, watered","type":"0","cost":"0.5","weight":"0"},"beads_prayer":{"sheetItem":"Beads, Prayer","type":"0","cost":"1","weight":"0"},"incense_stick":{"sheetItem":"Incense, stick","type":"0","cost":"1","weight":"0"},"symbol_holy_iron":{"sheetItem":"Holy symbol, pewter","type":"0","cost":"5","weight":"10"},"symbol_holy_silver":{"sheetItem":"Holy symbol, silver","type":"0","cost":"25","weight":"10"},"symbol_holy_wood":{"sheetItem":"Holy symbol, wooden","type":"0","cost":"0.6","weight":"0"},"water_holy_vial":{"sheetItem":"Water, holy (per vial)","type":"0","cost":"25","weight":"0.5"},"barding_chain":{"sheetItem":"Barding, chain","type":"4","cost":"250","weight":"0"},"barding_leather":{"sheetItem":"Barding, leather","type":"4","cost":"100","weight":"0"},"barding_plate":{"sheetItem":"Barding, plate","type":"4","cost":"1.5","weight":"0"},"bit_bridle":{"sheetItem":"Bit and Bridle","type":"4","cost":"1.5","weight":"0"},"harness":{"sheetItem":"Harness","type":"4","cost":"1.2","weight":"0"},"saddle":{"sheetItem":"Saddle","type":"4","cost":"10","weight":"0"},"saddlebags_large":{"sheetItem":"Saddle Bags, large","type":"4","cost":"4","weight":"0"},"saddlebags_small":{"sheetItem":"Saddle Bags, small","type":"4","cost":"3","weight":"0"},"saddle_blanket":{"sheetItem":"Saddle Blanket","type":"4","cost":"0.3","weight":"0"},"barge_small":{"sheetItem":"Barge (or Raft), small","type":"4","cost":"50","weight":"0"},"boat_small":{"sheetItem":"Boat, small","type":"4","cost":"75","weight":"0"},"boat_long":{"sheetItem":"Boat, long","type":"4","cost":"150","weight":"0"},"cart":{"sheetItem":"Cart","type":"4","cost":"50","weight":"0"},"galley_large":{"sheetItem":"Galley, large","type":"4","cost":"25000","weight":"0"},"galley_small":{"sheetItem":"Galley, small","type":"4","cost":"10000","weight":"0"},"ship_merchant_large":{"sheetItem":"Ship, merchant, large","type":"4","cost":"15000","weight":"0"},"ship_merchant_small":{"sheetItem":"Ship, merchant, small","type":"4","cost":"5000","weight":"0"},"ship_war":{"sheetItem":"Ship, war","type":"4","cost":"20000","weight":"0"},"wagon":{"sheetItem":"Wagon","type":"4","cost":"150","weight":"0"},"bronze_plate":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"field_plate":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_buckler":{"sheetItem":"Shield, buckler","type":"2","cost":"5","weight":"5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"aklys":{"sheetItem":"Aklys","type":"1","cost":"2","weight":"35","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d3","dmgtype":"","rof":"1","range":"1*/-/-","speed":"4 (+1)","length":"c. 2ft","space":"2ft"}},"atlatl":{"sheetItem":"Atlatl","type":"1","cost":"1","weight":"30","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"3/6/9","speed":"n/a","length":"c. 3ft","space":"1ft"}},"blowgun":{"sheetItem":"Blowgun","type":"1","cost":"20","weight":"15","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"n/a","length":"4-7ft","space":"1ft"}},"blowgun_needle":{"sheetItem":"Blowgun Needle","type":"0","cost":"0.1","weight":"15","weapon":{"attack_type":"1","speed":"","length":"","space":"","misc":"","dsm":"1","dlg":"1","dmgtype":"","rof":"2","range":"1/2/3"}},"caltrop":{"sheetItem":"Caltrop","type":"1","cost":"0.2","weight":"3","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"crossbow_hand":{"sheetItem":"Crossbow, hand","type":"1","cost":"300","weight":"0","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"quarrels_hand_crossbow":{"sheetItem":"Quarrels for same","type":"1","cost":"100","weight":"0","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"garrot":{"sheetItem":"Garrot","type":"1","cost":"0.5","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"2","length":"c. 3ft","space":"1.5ft"}},"harpoon":{"sheetItem":"Harpoon","type":"1","cost":"5","weight":"55","weapon":{"attack_type":"1","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"1","range":"1/2/3","speed":"6","length":"6-8ft","space":"1.5ft"}},"hook_fauchard":{"sheetItem":"Hook Fauchard","type":"1","cost":"6","weight":"80","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"2.5ft"}},"knife":{"sheetItem":"Knife & scabbard","type":"1","cost":"1","weight":"6","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"c. 1ft","space":"1ft"}},"lasso":{"sheetItem":"Lasso","type":"1","cost":"0.5","weight":"20","weapon":{"attack_type":"1","dsm":"","dlg":"","dmgtype":"","rof":"1/2","range":"1/2/3","speed":"10","length":"10-20ft","space":"8ft+"}},"man_catcher":{"sheetItem":"Man Catcher","type":"1","cost":"25","weight":"80","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"7","length":"8ft+","space":"2.5ft"}},"sap":{"sheetItem":"Sap","type":"1","cost":"1","weight":"10","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"2","length":"0.5ft","space":"1ft"}},"spiked_buckler":{"sheetItem":"Spiked Buckler","type":"2","cost":"10","weight":"35","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"staff_sling":{"sheetItem":"Staff Sling","type":"1","cost":"2","weight":"0","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9","speed":"11","length":"5ft","space":"6ft"}},"sword_falchion":{"sheetItem":"Sword, falchion, and scabbard","type":"1","cost":"10","weight":"70","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3.5ft"}},"sword_khopesh":{"sheetItem":"Sword, khopesh","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 3.5ft","space":"4ft"}},"whip":{"sheetItem":"Whip","type":"1","cost":"3","weight":"30","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1","dmgtype":"","rof":"","range":"","speed":"5-8","length":"8-20ft","space":"8-20ft"}},"bronze_plate_x":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain_elfin":{"sheetItem":"Chain, Elfin","type":"2","cost":"0","weight":"150","armorType":"1","armor":{"ac":"5","base":"5","bulk":"non-bulky"}},"field_plate_x":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate_x":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_medium":{"sheetItem":"Shield, Medium","type":"2","cost":"10","weight":"7.5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"fairly"}},"splint":{"sheetItem":"Splint","type":"2","cost":"80","weight":"400","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"bo_stick":{"sheetItem":"Bo Stick","type":"1","cost":"5","weight":"15"},"dagger_x":{"sheetItem":"Dagger","type":"1","cost":"0.2","weight":"10"},"jo_stick":{"sheetItem":"Jo Stick","type":"1","cost":"5","weight":"40"},"knife_x":{"sheetItem":"Knife","type":"1","cost":"0.1","weight":"6"},"lance_light_horse":{"sheetItem":"Lance (light horse)","type":"1","cost":"6","weight":"50"},"staff_quarter":{"sheetItem":"Staff, Quarter","type":"1","cost":"0.2","weight":"50"},"air_bladder":{"sheetItem":"Air bladder","type":"0","cost":"15","weight":"20"},"basket_large_bushel":{"sheetItem":"Basket, large (bushel)","type":"0","cost":"0.5","weight":"80"},"basket_small":{"sheetItem":"Basket, small","type":"0","cost":"0.2","weight":"40"},"beacon":{"sheetItem":"Beacon","type":"0","cost":"40","weight":"200"},"bedroll":{"sheetItem":"Bedroll","type":"0","cost":"0.2","weight":"50"},"bell":{"sheetItem":"Bell","type":"0","cost":"1","weight":"0"},"birdcage":{"sheetItem":"Birdcage","type":"0","cost":"0.5","weight":"50"},"blanket_woollen":{"sheetItem":"Blanket, woollen","type":"0","cost":"0.2","weight":"20"},"block_and_tackle":{"sheetItem":"Block and tackle","type":"0","cost":"5","weight":"50"},"boots_heavy":{"sheetItem":"Boots, heavy","type":"0","cost":"2","weight":"50"},"boots_soft":{"sheetItem":"Boots, soft","type":"0","cost":"1","weight":"30"},"bottle_wine":{"sheetItem":"Bottle (wine)","type":"0","cost":"2","weight":"10"},"box_small_gold":{"sheetItem":"Box, small gold","type":"0","cost":"100","weight":"20"},"box_small_lead":{"sheetItem":"Box, small lead","type":"0","cost":"20","weight":"20"},"bracer_leather":{"sheetItem":"Bracer, leather","type":"0","cost":"0.8","weight":"0"},"caltrops":{"sheetItem":"Caltrops","type":"0","cost":"1","weight":"20"},"candle_beeswax":{"sheetItem":"Candle, beeswax","type":"0","cost":"0.01","weight":"0"},"canvas_per_sq_yd":{"sheetItem":"Canvas (per sq. yd.)","type":"0","cost":"0.1","weight":"10"},"cauldron_and_tripod":{"sheetItem":"Cauldron and tripod","type":"0","cost":"2","weight":"150"},"chain_per_10_ft":{"sheetItem":"Chain (per 10 ft.)","type":"0","cost":"30","weight":"100"},"chalk_piece":{"sheetItem":"Chalk, piece","type":"0","cost":"0.01","weight":"0"},"crampons":{"sheetItem":"Crampons","type":"0","cost":"40","weight":"50"},"crowbar":{"sheetItem":"Crowbar","type":"0","cost":"3","weight":"75"},"dice_bone_pair":{"sheetItem":"Dice, bone, pair","type":"0","cost":"0.5","weight":"0"},"dice_loaded_pair":{"sheetItem":"Dice, loaded, pair","type":"0","cost":"5","weight":"0"},"doublet_linen":{"sheetItem":"Doublet, linen","type":"0","cost":"3","weight":"0"},"drill_iron":{"sheetItem":"Drill, iron","type":"0","cost":"5","weight":"50"},"firewood_per_day":{"sheetItem":"Firewood (per day)","type":"0","cost":"0.01","weight":"30"},"fish_hook":{"sheetItem":"Fish hook","type":"0","cost":"0.1","weight":"0"},"fishing_net_per_25_sq_ft":{"sheetItem":"Fishing net (per 25 sq. ft.)","type":"0","cost":"0.1","weight":"0"},"flask_leather":{"sheetItem":"Flask (leather)","type":"0","cost":"0.03","weight":"0"},"flint_and_steel":{"sheetItem":"Flint and steel","type":"0","cost":"1","weight":"0"},"gloves_kidskin_pair":{"sheetItem":"Gloves, kidskin, pair","type":"0","cost":"3","weight":"0"},"gown_linen":{"sheetItem":"Gown, linen","type":"0","cost":"3","weight":"10"},"gown_silk":{"sheetItem":"Gown, silk","type":"0","cost":"50","weight":"10"},"gown_woollen":{"sheetItem":"Gown, woollen","type":"0","cost":"0.5","weight":"10"},"grappling_hook":{"sheetItem":"Grappling hook","type":"0","cost":"75","weight":"75"},"hammer_tool_not_war":{"sheetItem":"Hammer (tool, not war)","type":"0","cost":"0.5","weight":"20"},"hose":{"sheetItem":"Hose","type":"0","cost":"1","weight":"0"},"iron_spikes_dozen":{"sheetItem":"Iron spikes, dozen","type":"0","cost":"1","weight":"50"},"ladder_per_10_ft":{"sheetItem":"Ladder (per 10 ft.)","type":"0","cost":"0.5","weight":"200"},"lamp_bronze":{"sheetItem":"Lamp (bronze)","type":"0","cost":"0.1","weight":"10"},"lantern_waterproof":{"sheetItem":"Lantern, waterproof","type":"0","cost":"50","weight":"50"},"lard_pint":{"sheetItem":"Lard, pint","type":"0","cost":"0.05","weight":"20"},"lock":{"sheetItem":"Lock","type":"0","cost":"20","weight":"0.5"},"manacles":{"sheetItem":"Manacles","type":"0","cost":"15","weight":"20"},"mirror_small_steel":{"sheetItem":"Mirror (small steel)","type":"0","cost":"20","weight":"0.5"},"musical_instrument":{"sheetItem":"Musical instrument","type":"0","cost":"5","weight":"10"},"needle_and_thread":{"sheetItem":"Needle and thread","type":"0","cost":"0.03","weight":"0"},"oil_lamp_per_pint":{"sheetItem":"Oil (lamp) (per pint)","type":"0","cost":"0.1","weight":"10"},"oil_waterproofing":{"sheetItem":"Oil, waterproofing","type":"0","cost":"1","weight":"20"},"parchment_per_sheet":{"sheetItem":"Parchment (per sheet)","type":"0","cost":"0.2","weight":"0"},"pickaxe":{"sheetItem":"Pickaxe","type":"0","cost":"20","weight":"200"},"pin_cloak":{"sheetItem":"Pin (cloak)","type":"0","cost":"0.4","weight":"0"},"piton":{"sheetItem":"Piton","type":"0","cost":"0.1","weight":"0.5"},"pole_per_10_ft":{"sheetItem":"Pole (per 10 ft.)","type":"0","cost":"0.2","weight":"80"},"pot_iron":{"sheetItem":"Pot, iron","type":"0","cost":"0.5","weight":"50"},"powder_chalk":{"sheetItem":"Powder, chalk","type":"0","cost":"0.2","weight":"20"},"pulley":{"sheetItem":"Pulley","type":"0","cost":"25","weight":"60"},"quill_pen":{"sheetItem":"Quill (pen)","type":"0","cost":"0.1","weight":"0"},"quiver_holds_12_arrows":{"sheetItem":"Quiver (holds 12 arrows)","type":"0","cost":"1","weight":"0"},"quiver_holds_12_bolts":{"sheetItem":"Quiver (holds 12 bolts)","type":"0","cost":"1.2","weight":"0"},"quiver_holds_24_arrows":{"sheetItem":"Quiver (holds 24 arrows)","type":"0","cost":"2.5","weight":"0"},"quiver_holds_24_bolts":{"sheetItem":"Quiver (holds 24 bolts)","type":"0","cost":"3","weight":"0"},"rations_standard_per_day":{"sheetItem":"Rations, standard (per day)","type":"0","cost":"2","weight":"20"},"rations_trail_per_day":{"sheetItem":"Rations, trail (per day)","type":"0","cost":"6","weight":"10"},"reed_hollow":{"sheetItem":"Reed, hollow","type":"0","cost":"0.1","weight":"1"},"reins_bit_and_bridle":{"sheetItem":"Reins, bit and bridle","type":"0","cost":"2","weight":"50"},"robe_linen":{"sheetItem":"Robe, linen","type":"0","cost":"3","weight":"10"},"robe_silk":{"sheetItem":"Robe, silk","type":"0","cost":"60","weight":"10"},"rope_hemp_per_50_ft":{"sheetItem":"Rope, hemp (per 50 ft.)","type":"0","cost":"1","weight":"100"},"rope_silk_per_50_ft":{"sheetItem":"Rope, silk (per 50 ft.)","type":"0","cost":"10","weight":"50"},"saddle_and_stirrups":{"sheetItem":"Saddle and stirrups","type":"0","cost":"10","weight":"200"},"scrollcase_bone":{"sheetItem":"Scrollcase, bone","type":"0","cost":"4","weight":"0.5"},"scrollcase_leather":{"sheetItem":"Scrollcase, leather","type":"0","cost":"1","weight":"0.5"},"shoes_common":{"sheetItem":"Shoes, common","type":"0","cost":"0.5","weight":"10"},"shoes_noble":{"sheetItem":"Shoes, noble","type":"0","cost":"30","weight":"10"},"shovel":{"sheetItem":"Shovel","type":"0","cost":"10","weight":"180"},"signal_whistle":{"sheetItem":"Signal whistle","type":"0","cost":"0.8","weight":"0"},"skillet":{"sheetItem":"Skillet","type":"0","cost":"1","weight":"50"},"soap_per_lb":{"sheetItem":"Soap (per lb.)","type":"0","cost":"0.5","weight":"10"},"symbol_holy_unholy_iron":{"sheetItem":"Symbol, Holy/Unholy, iron","type":"0","cost":"2","weight":"0"},"symbol_holy_unholy_silver":{"sheetItem":"Symbol, Holy/Unholy, silver","type":"0","cost":"50","weight":"0"},"symbol_holy_unholy_wooden":{"sheetItem":"Symbol, Holy/Unholy, wooden","type":"0","cost":"0.7","weight":"0"},"tent":{"sheetItem":"Tent","type":"0","cost":"10","weight":"200"},"thieves_tools_x":{"sheetItem":"Thieves’ tools","type":"0","cost":"30","weight":"10"},"tunic_banqueting":{"sheetItem":"Tunic, banqueting","type":"0","cost":"10","weight":"10"},"tunic_woollen":{"sheetItem":"Tunic, woollen","type":"0","cost":"0.3","weight":"10"},"twine_linen_per_100_ft":{"sheetItem":"Twine, linen (per 100 ft.)","type":"0","cost":"0.08","weight":"0.5"},"vellum_per_sheet":{"sheetItem":"Vellum (per sheet)","type":"0","cost":"0.3","weight":"0"},"wagon_large":{"sheetItem":"Wagon, large","type":"0","cost":"250","weight":"0"},"wagon_small":{"sheetItem":"Wagon, small","type":"0","cost":"100","weight":"0"},"water_holy_unholy_vial":{"sheetItem":"Water, Holy/Unholy, vial","type":"0","cost":"25","weight":"0"},"whetstone":{"sheetItem":"Whetstone","type":"0","cost":"0.02","weight":"0.5"},"whistle":{"sheetItem":"Whistle","type":"0","cost":"0.1","weight":"1"},"wine_pint":{"sheetItem":"Wine, pint","type":"0","cost":"0.5","weight":"10"},"boat_collapsible":{"sheetItem":"Boat, collapsible","type":"4","cost":"500","weight":"600"},"canoe_large":{"sheetItem":"Canoe, large","type":"4","cost":"300","weight":"1600"},"canoe_small":{"sheetItem":"Canoe, small","type":"4","cost":"100","weight":"800"},"kayak":{"sheetItem":"Kayak","type":"4","cost":"250","weight":"500"},"axe_hand_x":{"sheetItem":"Axe, hand","type":"0","cost":"1","weight":"50"},"composite_bow_long":{"sheetItem":"Composite bow, long","type":"0","cost":"100","weight":"80"},"composite_bow_short":{"sheetItem":"Composite bow, short","type":"0","cost":"75","weight":"50"},"flail_heavy":{"sheetItem":"Flail, heavy","type":"0","cost":"3","weight":"100"},"flail_light":{"sheetItem":"Flail, light","type":"0","cost":"6","weight":"40"},"horse_cart_draft":{"sheetItem":"Horse, cart (draft)","type":"0","cost":"15","weight":"8000"},"horse_nag":{"sheetItem":"Horse, nag","type":"0","cost":"8","weight":"3000"},"horse_palfrey_riding_horse":{"sheetItem":"Horse, palfrey (riding horse)","type":"0","cost":"40","weight":"3500"},"horse_rouncey_all_purpose":{"sheetItem":"Horse, rouncey (all-purpose)","type":"0","cost":"25","weight":"4000"},"horse_war_heavy":{"sheetItem":"Horse, war, heavy","type":"0","cost":"500","weight":"8000"},"horse_war_light":{"sheetItem":"Horse, war, light","type":"0","cost":"200","weight":"5000"},"horse_war_medium":{"sheetItem":"Horse, war, medium","type":"0","cost":"350","weight":"7000"},"mace_heavy":{"sheetItem":"Mace, heavy","type":"0","cost":"10","weight":"100"},"mace_light":{"sheetItem":"Mace, light","type":"0","cost":"4","weight":"50"},"pick_heavy":{"sheetItem":"Pick, heavy","type":"0","cost":"8","weight":"10"},"pick_light":{"sheetItem":"Pick, light","type":"0","cost":"5","weight":"40"},"pole_arm":{"sheetItem":"Pole arm","type":"0","cost":"6","weight":"80"},"sling":{"sheetItem":"Sling","type":"0","cost":"0.5","weight":"5"},"sword_bastard_claymore":{"sheetItem":"Sword, bastard/claymore","type":"0","cost":"25","weight":"100"},"sword_scimitar_cutlass":{"sheetItem":"Sword, scimitar/cutlass","type":"0","cost":"15","weight":"50"},"warhammer_heavy":{"sheetItem":"Warhammer, heavy","type":"0","cost":"7","weight":"100"},"warhammer_light":{"sheetItem":"Warhammer, light","type":"0","cost":"1","weight":"50"},"arrow_exact":{"sheetItem":"Arrow","type":"0","cost":"0","weight":"2","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_bolt_hand":{"sheetItem":"Quarrel (or Bolt), hand","type":"1","cost":"0","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_bolt_heavy":{"sheetItem":"Quarrel (or Bolt), heavy","type":"0","cost":"0","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_bolt_light":{"sheetItem":"Quarrel (or Bolt), light","type":"0","cost":"0","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"sling_bullet_exact":{"sheetItem":"Sling Bullet","type":"1","cost":"0","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"sling_stone_exact":{"sheetItem":"Sling Stone","type":"1","cost":"0","weight":"1","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"staff_sling_bullet_exact":{"sheetItem":"Staff Sling Bullet","type":"1","cost":"0","weight":"5","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9","speed":"11","length":"5ft","space":"6ft"}},"staff_sling_stone_exact":{"sheetItem":"Staff Sling Stone","type":"1","cost":"0","weight":"4","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9","speed":"11","length":"5ft","space":"6ft"}},"plate_mail_exact":{"sheetItem":"Plate (Mail)","type":"0","cost":"0","weight":"450","armorType":"1","armor":{"ac":"3","base":"3","bulk":"bulky"}},"shield_small_wood_exact":{"sheetItem":"Shield, Small, Wood","type":"0","cost":"0","weight":"30","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"studded_leather_exact":{"sheetItem":"Studded (Leather)","type":"0","cost":"0","weight":"200","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"atlatl_and_javelin":{"sheetItem":"Atlatl and javelin","type":"0","cost":"0","weight":"30","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"3/6/9","speed":"n/a","length":"c. 3ft","space":"1ft"}},"blowgun_and_needle":{"sheetItem":"Blowgun and needle","type":"0","cost":"0","weight":"15","weapon":{"attack_type":"1","speed":"","length":"","space":"","misc":"","dsm":"1","dlg":"1","dmgtype":"","rof":"2","range":"1/2/3"}},"club_exact":{"sheetItem":"Club","type":"1","cost":"0","weight":"30","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":"","misc":""}},"fist_or_kick":{"sheetItem":"Fist or kick","type":"0","cost":"0","weight":"0"},"lance_heavy_horse":{"sheetItem":"Lance (heavy horse)","type":"1","cost":"0","weight":"150","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"lance_medium_horse":{"sheetItem":"Lance (medium horse)","type":"1","cost":"0","weight":"100","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"staff_exact":{"sheetItem":"Staff","type":"0","cost":"0","weight":"50"},"sword_bastard_exact":{"sheetItem":"Sword, Bastard","type":"0","cost":"0","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d8","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 4.5ft","space":"4ft+"}},"sword_broad_exact":{"sheetItem":"Sword, Broad","type":"0","cost":"0","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"4ft"}},"sword_falchion_exact":{"sheetItem":"Sword, Falchion","type":"0","cost":"0","weight":"70","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3.5ft"}},"sword_long_exact":{"sheetItem":"Sword, Long","type":"0","cost":"0","weight":"60","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3ft"}},"sword_short_exact":{"sheetItem":"Sword, Short","type":"0","cost":"0","weight":"35","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"3","length":"c. 2ft","space":"1ft"}}});
 
   const trinketByKey = {};
   TRINKETS.forEach(t => {
