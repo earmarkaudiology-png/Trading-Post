@@ -13,7 +13,7 @@ const TradingPost1E = (() => {
   const ITEMS = [
   {
     "key": "banded",
-    "name": "Banded Armor",
+    "name": "Banded",
     "category": "armor",
     "price": "90 gp",
     "shopTypes": [
@@ -26,12 +26,47 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 350.0,
+    "ua": false
+  },
+  {
+    "key": "bronze_plate",
+    "name": "Bronze Plate",
+    "category": "armor",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 45.0,
+    "ua": true
+  },
+  {
+    "key": "bronze_plate_x",
+    "name": "Bronze Plate",
+    "category": "armor",
+    "price": "100 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 45.0,
     "ua": false
   },
   {
     "key": "chain",
-    "name": "Chain Mail",
+    "name": "Chain",
     "category": "armor",
     "price": "75 gp",
     "shopTypes": [
@@ -44,12 +79,99 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 300.0,
+    "ua": false
+  },
+  {
+    "key": "chain_elfin",
+    "name": "Chain, Elfin",
+    "category": "armor",
+    "price": "0 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 150.0,
+    "ua": false
+  },
+  {
+    "key": "field_plate",
+    "name": "Field Plate",
+    "category": "armor",
+    "price": "2000 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 50.0,
+    "ua": true
+  },
+  {
+    "key": "field_plate_x",
+    "name": "Field Plate",
+    "category": "armor",
+    "price": "2000 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "full_plate",
+    "name": "Full Plate",
+    "category": "armor",
+    "price": "4000 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal"
+    ],
+    "tier": "rare",
+    "weight": 70.0,
+    "ua": true
+  },
+  {
+    "key": "full_plate_x",
+    "name": "Full Plate",
+    "category": "armor",
+    "price": "4000 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 70.0,
     "ua": false
   },
   {
     "key": "helmet_great",
-    "name": "Helmet, Great",
+    "name": "Helmet, great",
     "category": "armor",
     "price": "15 gp",
     "shopTypes": [
@@ -62,12 +184,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 15.0,
     "ua": false
   },
   {
     "key": "helmet_small",
-    "name": "Helmet, Small",
+    "name": "Helmet, small",
     "category": "armor",
     "price": "10 gp",
     "shopTypes": [
@@ -80,12 +202,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "leather",
-    "name": "Leather Armor",
+    "name": "Leather",
     "category": "armor",
     "price": "5 gp",
     "shopTypes": [
@@ -98,12 +220,12 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 150.0,
     "ua": false
   },
   {
     "key": "padded",
-    "name": "Padded Armor",
+    "name": "Padded",
     "category": "armor",
     "price": "4 gp",
     "shopTypes": [
@@ -116,12 +238,12 @@ const TradingPost1E = (() => {
       "cloth"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 100.0,
     "ua": false
   },
   {
     "key": "plate",
-    "name": "Plate Mail",
+    "name": "Plate",
     "category": "armor",
     "price": "400 gp",
     "shopTypes": [
@@ -134,12 +256,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 450.0,
     "ua": false
   },
   {
     "key": "ring_mail",
-    "name": "Ring Mail",
+    "name": "Ring",
     "category": "armor",
     "price": "30 gp",
     "shopTypes": [
@@ -152,12 +274,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 250.0,
     "ua": false
   },
   {
     "key": "scale",
-    "name": "Scale Mail",
+    "name": "Scale",
     "category": "armor",
     "price": "45 gp",
     "shopTypes": [
@@ -170,12 +292,32 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 400.0,
     "ua": false
   },
   {
+    "key": "shield_buckler",
+    "name": "Shield, buckler",
+    "category": "armor",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "armor",
+      "wood",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 5.0,
+    "ua": true
+  },
+  {
     "key": "shield_large",
-    "name": "Shield, Large",
+    "name": "Shield, large",
     "category": "armor",
     "price": "15 gp",
     "shopTypes": [
@@ -189,12 +331,30 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "shield_medium",
+    "name": "Shield, Medium",
+    "category": "armor",
+    "price": "10 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline",
+      "trading_post"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 7.5,
     "ua": false
   },
   {
     "key": "shield_small",
-    "name": "Shield, Small",
+    "name": "Shield, small",
     "category": "armor",
     "price": "10 gp",
     "shopTypes": [
@@ -208,12 +368,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
     "key": "shield_small_wood",
-    "name": "Shield, Small, Wooden",
+    "name": "Shield, small, wooden",
     "category": "armor",
     "price": "1 gp",
     "shopTypes": [
@@ -226,12 +386,48 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 30.0,
+    "ua": false
+  },
+  {
+    "key": "spiked_buckler",
+    "name": "Spiked Buckler",
+    "category": "armor",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "armor",
+      "metal",
+      "weapon"
+    ],
+    "tier": "uncommon",
+    "weight": 35.0,
+    "ua": true
+  },
+  {
+    "key": "splint",
+    "name": "Splint",
+    "category": "armor",
+    "price": "80 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "armor"
+    ],
+    "tier": "common",
+    "weight": 400.0,
     "ua": false
   },
   {
     "key": "splinted",
-    "name": "Splinted Armor",
+    "name": "Splinted",
     "category": "armor",
     "price": "80 gp",
     "shopTypes": [
@@ -244,12 +440,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 40.0,
     "ua": false
   },
   {
     "key": "studded",
-    "name": "Studded Leather Armor",
+    "name": "Studded",
     "category": "armor",
     "price": "15 gp",
     "shopTypes": [
@@ -262,65 +458,45 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 200.0,
     "ua": false
   },
   {
-    "key": "arrow_single",
-    "name": "Arrow, normal, single",
-    "category": "ammo",
-    "price": "2 sp",
+    "key": "aklys",
+    "name": "Aklys",
+    "category": "weapons",
+    "price": "2 gp",
     "shopTypes": [
       "baseline",
       "smith",
-      "outfitter",
-      "trading_post"
+      "outfitter"
     ],
     "tags": [
-      "ammo",
+      "weapon",
       "wood"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "arrow_dozen",
-    "name": "Arrow, normal, dozen",
-    "category": "ammo",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter",
-      "trading_post"
-    ],
-    "tags": [
-      "ammo",
-      "wood"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "arrow_silver",
-    "name": "Arrow, silver, single",
-    "category": "ammo",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter",
-      "trading_post"
-    ],
-    "tags": [
-      "ammo",
-      "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
-    "ua": false
+    "weight": 35.0,
+    "ua": true
+  },
+  {
+    "key": "atlatl",
+    "name": "Atlatl",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": true
   },
   {
     "key": "axe_battle",
@@ -338,7 +514,7 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 75.0,
     "ua": false
   },
   {
@@ -357,7 +533,7 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -377,7 +553,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 125.0,
     "ua": false
   },
   {
@@ -396,7 +572,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 100.0,
     "ua": false
   },
   {
@@ -415,7 +591,43 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 150.0,
+    "ua": false
+  },
+  {
+    "key": "blowgun",
+    "name": "Blowgun",
+    "category": "weapons",
+    "price": "20 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "uncommon",
+    "weight": 15.0,
+    "ua": true
+  },
+  {
+    "key": "bo_stick",
+    "name": "Bo Stick",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 15.0,
     "ua": false
   },
   {
@@ -434,12 +646,12 @@ const TradingPost1E = (() => {
       "bow"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
     "key": "bow_comp_long",
-    "name": "Bow, composite long",
+    "name": "Bow, composite, long",
     "category": "weapons",
     "price": "100 gp",
     "shopTypes": [
@@ -453,7 +665,7 @@ const TradingPost1E = (() => {
       "bow"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
   },
   {
@@ -472,7 +684,7 @@ const TradingPost1E = (() => {
       "bow"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 120.0,
     "ua": false
   },
   {
@@ -491,8 +703,28 @@ const TradingPost1E = (() => {
       "bow"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
+  },
+  {
+    "key": "crossbow_hand",
+    "name": "Crossbow, hand",
+    "category": "weapons",
+    "price": "300 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "rare",
+    "weight": 0.0,
+    "ua": true
   },
   {
     "key": "crossbow_heavy",
@@ -511,7 +743,7 @@ const TradingPost1E = (() => {
       "crossbow"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 120.0,
     "ua": false
   },
   {
@@ -531,7 +763,25 @@ const TradingPost1E = (() => {
       "crossbow"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 40.0,
+    "ua": false
+  },
+  {
+    "key": "dagger_x",
+    "name": "Dagger",
+    "category": "weapons",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline",
+      "trading_post"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
@@ -549,14 +799,14 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "dart",
     "name": "Dart",
     "category": "weapons",
-    "price": "5 sp",
+    "price": "0.5 gp",
     "shopTypes": [
       "baseline",
       "smith",
@@ -567,7 +817,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 5.0,
     "ua": false
   },
   {
@@ -586,7 +836,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 60.0,
     "ua": false
   },
   {
@@ -605,12 +855,12 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
   },
   {
     "key": "flail_foot",
-    "name": "Flail, footman’s",
+    "name": "Flail, footman's",
     "category": "weapons",
     "price": "3 gp",
     "shopTypes": [
@@ -624,12 +874,12 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 150.0,
     "ua": false
   },
   {
     "key": "flail_horse",
-    "name": "Flail, horseman’s",
+    "name": "Flail, horseman's",
     "category": "weapons",
     "price": "8 gp",
     "shopTypes": [
@@ -643,7 +893,7 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 35.0,
     "ua": false
   },
   {
@@ -662,8 +912,26 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 75.0,
     "ua": false
+  },
+  {
+    "key": "garrot",
+    "name": "Garrot",
+    "category": "weapons",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "rope"
+    ],
+    "tier": "uncommon",
+    "weight": 1.0,
+    "ua": true
   },
   {
     "key": "glaive",
@@ -681,7 +949,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 75.0,
     "ua": false
   },
   {
@@ -700,7 +968,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 100.0,
     "ua": false
   },
   {
@@ -719,7 +987,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
   },
   {
@@ -738,7 +1006,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 150.0,
     "ua": false
   },
   {
@@ -757,7 +1025,25 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 175.0,
+    "ua": false
+  },
+  {
+    "key": "hammer",
+    "name": "Hammer",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -776,12 +1062,104 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 150.0,
     "ua": false
   },
   {
-    "key": "hammer",
-    "name": "Hammer",
+    "key": "harpoon",
+    "name": "Harpoon",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "water"
+    ],
+    "tier": "uncommon",
+    "weight": 55.0,
+    "ua": true
+  },
+  {
+    "key": "hook_fauchard",
+    "name": "Hook Fauchard",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "uncommon",
+    "weight": 80.0,
+    "ua": true
+  },
+  {
+    "key": "javelin",
+    "name": "Javelin",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "jo_stick",
+    "name": "Jo Stick",
+    "category": "weapons",
+    "price": "5 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 40.0,
+    "ua": false
+  },
+  {
+    "key": "knife_x",
+    "name": "Knife",
+    "category": "weapons",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline",
+      "trading_post"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 6.0,
+    "ua": false
+  },
+  {
+    "key": "knife",
+    "name": "Knife & scabbard",
     "category": "weapons",
     "price": "1 gp",
     "shopTypes": [
@@ -794,27 +1172,8 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "javelin",
-    "name": "Javelin",
-    "category": "weapons",
-    "price": "10 sp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "wood",
-      "missile"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
+    "weight": 6.0,
+    "ua": true
   },
   {
     "key": "lance",
@@ -832,12 +1191,29 @@ const TradingPost1E = (() => {
       "mounted"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 150.0,
+    "ua": false
+  },
+  {
+    "key": "lance_light_horse",
+    "name": "Lance (light horse)",
+    "category": "weapons",
+    "price": "6 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
     "key": "mace_foot",
-    "name": "Mace, footman’s",
+    "name": "Mace, footman's",
     "category": "weapons",
     "price": "8 gp",
     "shopTypes": [
@@ -850,12 +1226,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 100.0,
     "ua": false
   },
   {
     "key": "mace_horse",
-    "name": "Mace, horseman’s",
+    "name": "Mace, horseman's",
     "category": "weapons",
     "price": "4 gp",
     "shopTypes": [
@@ -868,8 +1244,27 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
+  },
+  {
+    "key": "man_catcher",
+    "name": "Man Catcher",
+    "category": "weapons",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal",
+      "polearm"
+    ],
+    "tier": "scarce",
+    "weight": 80.0,
+    "ua": true
   },
   {
     "key": "morning_star",
@@ -886,7 +1281,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 125.0,
     "ua": false
   },
   {
@@ -905,12 +1300,12 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
   },
   {
     "key": "pick_foot",
-    "name": "Pick, Military, footman’s",
+    "name": "Pick, Military, footman's",
     "category": "weapons",
     "price": "8 gp",
     "shopTypes": [
@@ -923,12 +1318,12 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 60.0,
     "ua": false
   },
   {
     "key": "pick_horse",
-    "name": "Pick, Military, horseman’s",
+    "name": "Pick, Military, horseman's",
     "category": "weapons",
     "price": "5 gp",
     "shopTypes": [
@@ -941,7 +1336,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 40.0,
     "ua": false
   },
   {
@@ -960,45 +1355,7 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "quarrel_light_single",
-    "name": "Quarrel (or Bolt), light, single",
-    "category": "ammo",
-    "price": "1 sp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "ammo",
-      "wood",
-      "crossbow"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "quarrel_heavy_score",
-    "name": "Quarrel (or Bolt), heavy, score",
-    "category": "ammo",
-    "price": "2 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "ammo",
-      "wood",
-      "crossbow"
-    ],
-    "tier": "common",
-    "weight": 0,
+    "weight": 80.0,
     "ua": false
   },
   {
@@ -1017,8 +1374,26 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
+  },
+  {
+    "key": "sap",
+    "name": "Sap",
+    "category": "weapons",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": true
   },
   {
     "key": "scimitar",
@@ -1035,14 +1410,14 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 40.0,
     "ua": false
   },
   {
     "key": "sling_dozen",
     "name": "Sling & Bullets, dozen",
     "category": "weapons",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "smith",
@@ -1054,26 +1429,7 @@ const TradingPost1E = (() => {
       "missile"
     ],
     "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "sling_bullets_score",
-    "name": "Sling Bullets, score",
-    "category": "ammo",
-    "price": "10 sp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter",
-      "trading_post"
-    ],
-    "tags": [
-      "ammo",
-      "stone"
-    ],
-    "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -1091,7 +1447,7 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1110,7 +1466,44 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "staff_sling",
+    "name": "Staff Sling",
+    "category": "weapons",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "wood",
+      "missile"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": true
+  },
+  {
+    "key": "staff_quarter",
+    "name": "Staff, Quarter",
+    "category": "weapons",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "smith",
+      "outfitter",
+      "baseline",
+      "trading_post"
+    ],
+    "tags": [
+      "weapon"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1128,7 +1521,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 100.0,
     "ua": false
   },
   {
@@ -1146,8 +1539,44 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 75.0,
     "ua": false
+  },
+  {
+    "key": "sword_falchion",
+    "name": "Sword, falchion, and scabbard",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 70.0,
+    "ua": true
+  },
+  {
+    "key": "sword_khopesh",
+    "name": "Sword, khopesh",
+    "category": "weapons",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 75.0,
+    "ua": true
   },
   {
     "key": "sword_long",
@@ -1164,7 +1593,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 60.0,
     "ua": false
   },
   {
@@ -1182,7 +1611,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 35.0,
     "ua": false
   },
   {
@@ -1200,7 +1629,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 250.0,
     "ua": false
   },
   {
@@ -1218,7 +1647,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1237,14 +1666,181 @@ const TradingPost1E = (() => {
       "polearm"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 125.0,
+    "ua": false
+  },
+  {
+    "key": "whip",
+    "name": "Whip",
+    "category": "weapons",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "weapon",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": true
+  },
+  {
+    "key": "arrow_dozen",
+    "name": "Arrow, normal, dozen",
+    "category": "ammo",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 24.0,
+    "ua": false
+  },
+  {
+    "key": "arrow_single",
+    "name": "Arrow, normal, single",
+    "category": "ammo",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "arrow_silver",
+    "name": "Arrow, silver, single",
+    "category": "ammo",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "metal"
+    ],
+    "tier": "uncommon",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "blowgun_needle",
+    "name": "Blowgun Needle",
+    "category": "ammo",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo"
+    ],
+    "tier": "common",
+    "weight": 15.0,
+    "ua": true
+  },
+  {
+    "key": "quarrel_heavy_score",
+    "name": "Quarrel (or Bolt), heavy, score",
+    "category": "ammo",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 2.0,
+    "ua": false
+  },
+  {
+    "key": "quarrel_light_single",
+    "name": "Quarrel (or Bolt), light, single",
+    "category": "ammo",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "wood",
+      "crossbow"
+    ],
+    "tier": "common",
+    "weight": 1.0,
+    "ua": false
+  },
+  {
+    "key": "quarrels_hand_crossbow",
+    "name": "Quarrels for same",
+    "category": "ammo",
+    "price": "100 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter"
+    ],
+    "tags": [
+      "ammo",
+      "crossbow"
+    ],
+    "tier": "scarce",
+    "weight": 0.0,
+    "ua": true
+  },
+  {
+    "key": "sling_bullets_score",
+    "name": "Sling Bullets, score",
+    "category": "ammo",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "smith",
+      "outfitter",
+      "trading_post"
+    ],
+    "tags": [
+      "ammo",
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 2.0,
     "ua": false
   },
   {
     "key": "belt",
     "name": "Belt",
     "category": "clothing",
-    "price": "3 sp",
+    "price": "0.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1255,7 +1851,41 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "blanket_woollen",
+    "name": "Blanket, woollen",
+    "category": "clothing",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "boots_heavy",
+    "name": "Boots, heavy",
+    "category": "clothing",
+    "price": "2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1273,7 +1903,7 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -1291,7 +1921,7 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -1309,14 +1939,14 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "boots_low_soft",
     "name": "Boots, low, soft",
     "category": "clothing",
-    "price": "8 sp",
+    "price": "0.8 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1327,14 +1957,49 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "boots_soft",
+    "name": "Boots, soft",
+    "category": "clothing",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 30.0,
+    "ua": false
+  },
+  {
+    "key": "bracer_leather",
+    "name": "Bracer, leather",
+    "category": "clothing",
+    "price": "0.8 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "cap",
     "name": "Cap",
     "category": "clothing",
-    "price": "1 sp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1345,14 +2010,14 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "cloak",
     "name": "Cloak",
     "category": "clothing",
-    "price": "5 sp",
+    "price": "0.3 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1363,7 +2028,24 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "doublet_linen",
+    "name": "Doublet, linen",
+    "category": "clothing",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -1381,14 +2063,14 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "girdle_normal",
     "name": "Girdle, normal",
     "category": "clothing",
-    "price": "10 sp",
+    "price": "1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1399,14 +2081,82 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "gloves_kidskin_pair",
+    "name": "Gloves, kidskin, pair",
+    "category": "clothing",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "gown_linen",
+    "name": "Gown, linen",
+    "category": "clothing",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "gown_silk",
+    "name": "Gown, silk",
+    "category": "clothing",
+    "price": "50 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "gown_woollen",
+    "name": "Gown, woollen",
+    "category": "clothing",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "hat",
     "name": "Hat",
     "category": "clothing",
-    "price": "7 sp",
+    "price": "0.7 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1417,14 +2167,48 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "hose",
+    "name": "Hose",
+    "category": "clothing",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "pin_cloak",
+    "name": "Pin (cloak)",
+    "category": "clothing",
+    "price": "0.4 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "robe",
     "name": "Robe",
     "category": "clothing",
-    "price": "6 sp",
+    "price": "0.6 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1435,14 +2219,116 @@ const TradingPost1E = (() => {
       "wearable"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "robe_linen",
+    "name": "Robe, linen",
+    "category": "clothing",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "robe_silk",
+    "name": "Robe, silk",
+    "category": "clothing",
+    "price": "60 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "shoes_common",
+    "name": "Shoes, common",
+    "category": "clothing",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "shoes_noble",
+    "name": "Shoes, noble",
+    "category": "clothing",
+    "price": "30 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "tunic_banqueting",
+    "name": "Tunic, banqueting",
+    "category": "clothing",
+    "price": "10 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "tunic_woollen",
+    "name": "Tunic, woollen",
+    "category": "clothing",
+    "price": "0.3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "clothing"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "belladonna",
     "name": "Belladona, sprig",
     "category": "herbs",
-    "price": "4 sp",
+    "price": "0.4 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1454,14 +2340,14 @@ const TradingPost1E = (() => {
       "herb"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "garlic",
     "name": "Garlic, bud",
     "category": "herbs",
-    "price": "5 cp",
+    "price": "0.05 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1473,14 +2359,14 @@ const TradingPost1E = (() => {
       "herb"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "wolfsbane",
     "name": "Wolvesbane, sprig",
     "category": "herbs",
-    "price": "10 sp",
+    "price": "1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1492,385 +2378,41 @@ const TradingPost1E = (() => {
       "herb"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "chicken",
-    "name": "Chicken",
-    "category": "livestock",
-    "price": "3 cp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "food"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "cow",
-    "name": "Cow",
-    "category": "livestock",
-    "price": "10 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "farm"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "dog_guard",
-    "name": "Dog, guard",
-    "category": "livestock",
-    "price": "25 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "dog_hunting",
-    "name": "Dog, hunting",
-    "category": "livestock",
-    "price": "17 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "donkey",
-    "name": "Donkey",
-    "category": "livestock",
-    "price": "8 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "goat",
-    "name": "Goat",
-    "category": "livestock",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "farm"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "hawk_large",
-    "name": "Hawk, large",
-    "category": "livestock",
-    "price": "40 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "scarce",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "hawk_small",
-    "name": "Hawk, small",
-    "category": "livestock",
-    "price": "18 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "scarce",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "horse_draft",
-    "name": "Horse, draft",
-    "category": "livestock",
-    "price": "30 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount",
-      "transport"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "horse_heavy_war",
-    "name": "Horse, heavy war",
-    "category": "livestock",
-    "price": "300 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount",
-      "military"
-    ],
-    "tier": "rare",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "horse_light_war",
-    "name": "Horse, light war",
-    "category": "livestock",
-    "price": "150 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount",
-      "military"
-    ],
-    "tier": "scarce",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "horse_medium_war",
-    "name": "Horse, medium war",
-    "category": "livestock",
-    "price": "225 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount",
-      "military"
-    ],
-    "tier": "rare",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "horse_riding",
-    "name": "Horse, riding (light)",
-    "category": "livestock",
-    "price": "25 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "mule",
-    "name": "Mule",
-    "category": "livestock",
-    "price": "20 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount",
-      "transport"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "ox",
-    "name": "Ox",
-    "category": "livestock",
+    "key": "air_bladder",
+    "name": "Air bladder",
+    "category": "misc",
     "price": "15 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
-      "stable"
+      "outfitter",
+      "baseline"
     ],
     "tags": [
-      "animal",
-      "farm",
-      "transport"
+      "misc"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 20.0,
     "ua": false
   },
   {
-    "key": "pigeon",
-    "name": "Pigeon",
-    "category": "livestock",
-    "price": "2 cp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "piglet",
-    "name": "Piglet",
-    "category": "livestock",
+    "key": "axe_hand_x",
+    "name": "Axe, hand",
+    "category": "misc",
     "price": "1 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
-      "stable"
+      "outfitter",
+      "baseline"
     ],
     "tags": [
-      "animal",
-      "farm"
+      "misc"
     ],
     "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "pig",
-    "name": "Pig",
-    "category": "livestock",
-    "price": "3 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "farm"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "pony",
-    "name": "Pony",
-    "category": "livestock",
-    "price": "15 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "mount"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "sheep",
-    "name": "Sheep",
-    "category": "livestock",
-    "price": "2 gp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal",
-      "farm"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": false
-  },
-  {
-    "key": "songbird",
-    "name": "Songbird",
-    "category": "livestock",
-    "price": "4 cp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "stable"
-    ],
-    "tags": [
-      "animal"
-    ],
-    "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1890,7 +2432,126 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "basket_large_bushel",
+    "name": "Basket, large (bushel)",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 80.0,
+    "ua": false
+  },
+  {
+    "key": "basket_small",
+    "name": "Basket, small",
+    "category": "misc",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 40.0,
+    "ua": false
+  },
+  {
+    "key": "beacon",
+    "name": "Beacon",
+    "category": "misc",
+    "price": "40 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 200.0,
+    "ua": false
+  },
+  {
+    "key": "bedroll",
+    "name": "Bedroll",
+    "category": "misc",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "bell",
+    "name": "Bell",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "birdcage",
+    "name": "Birdcage",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "block_and_tackle",
+    "name": "Block and tackle",
+    "category": "misc",
+    "price": "5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -1910,7 +2571,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 20.0,
     "ua": false
   },
   {
@@ -1930,14 +2591,101 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "box_small_gold",
+    "name": "Box, small gold",
+    "category": "misc",
+    "price": "100 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "box_small_lead",
+    "name": "Box, small lead",
+    "category": "misc",
+    "price": "20 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "caltrop",
+    "name": "Caltrop",
+    "category": "misc",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith"
+    ],
+    "tags": [
+      "metal",
+      "adventuring"
+    ],
+    "tier": "common",
+    "weight": 3.0,
+    "ua": true
+  },
+  {
+    "key": "caltrops",
+    "name": "Caltrops",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "candle_beeswax",
+    "name": "Candle, beeswax",
+    "category": "misc",
+    "price": "0.01 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "candle_tallow",
     "name": "Candle, tallow",
     "category": "misc",
-    "price": "1 cp",
+    "price": "0.01 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1950,14 +2698,14 @@ const TradingPost1E = (() => {
       "tallow"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "candle_wax",
     "name": "Candle, wax",
     "category": "misc",
-    "price": "1 sp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -1970,7 +2718,24 @@ const TradingPost1E = (() => {
       "wax"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "canvas_per_sq_yd",
+    "name": "Canvas (per sq. yd.)",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
@@ -1989,14 +2754,14 @@ const TradingPost1E = (() => {
       "container"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "case_leather_scroll",
     "name": "Case, leather, map or scroll",
     "category": "misc",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2009,14 +2774,65 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "cauldron_and_tripod",
+    "name": "Cauldron and tripod",
+    "category": "misc",
+    "price": "2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 150.0,
+    "ua": false
+  },
+  {
+    "key": "chain_per_10_ft",
+    "name": "Chain (per 10 ft.)",
+    "category": "misc",
+    "price": "30 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "chalk_piece",
+    "name": "Chalk, piece",
+    "category": "misc",
+    "price": "0.01 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "chest_wood_large",
     "name": "Chest, wooden, large",
     "category": "misc",
-    "price": "17 sp",
+    "price": "1.7 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2029,14 +2845,14 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 20.0,
     "ua": false
   },
   {
     "key": "chest_wood_small",
     "name": "Chest, wooden, small",
     "category": "misc",
-    "price": "8 sp",
+    "price": "0.8 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2049,7 +2865,313 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "composite_bow_long",
+    "name": "Composite bow, long",
+    "category": "misc",
+    "price": "100 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 80.0,
+    "ua": false
+  },
+  {
+    "key": "composite_bow_short",
+    "name": "Composite bow, short",
+    "category": "misc",
+    "price": "75 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "crampons",
+    "name": "Crampons",
+    "category": "misc",
+    "price": "40 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "crowbar",
+    "name": "Crowbar",
+    "category": "misc",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 75.0,
+    "ua": false
+  },
+  {
+    "key": "dice_bone_pair",
+    "name": "Dice, bone, pair",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "dice_loaded_pair",
+    "name": "Dice, loaded, pair",
+    "category": "misc",
+    "price": "5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "drill_iron",
+    "name": "Drill, iron",
+    "category": "misc",
+    "price": "5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "iron"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "fish_hook",
+    "name": "Fish hook",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "fishing_net_per_25_sq_ft",
+    "name": "Fishing net (per 25 sq. ft.)",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "flail_heavy",
+    "name": "Flail, heavy",
+    "category": "misc",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "flail_light",
+    "name": "Flail, light",
+    "category": "misc",
+    "price": "6 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 40.0,
+    "ua": false
+  },
+  {
+    "key": "flask_leather",
+    "name": "Flask (leather)",
+    "category": "misc",
+    "price": "0.03 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "flint_and_steel",
+    "name": "Flint and steel",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "grappling_hook",
+    "name": "Grappling hook",
+    "category": "misc",
+    "price": "75 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 75.0,
+    "ua": false
+  },
+  {
+    "key": "hammer_tool_not_war",
+    "name": "Hammer (tool, not war)",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "iron_spikes_dozen",
+    "name": "Iron spikes, dozen",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "iron"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "ladder_per_10_ft",
+    "name": "Ladder (per 10 ft.)",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 200.0,
+    "ua": false
+  },
+  {
+    "key": "lamp_bronze",
+    "name": "Lamp (bronze)",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
@@ -2069,7 +3191,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 30.0,
     "ua": false
   },
   {
@@ -2089,7 +3211,149 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "lantern_waterproof",
+    "name": "Lantern, waterproof",
+    "category": "misc",
+    "price": "50 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "lasso",
+    "name": "Lasso",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "stable"
+    ],
+    "tags": [
+      "rope",
+      "tool"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": true
+  },
+  {
+    "key": "lock",
+    "name": "Lock",
+    "category": "misc",
+    "price": "20 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "mace_heavy",
+    "name": "Mace, heavy",
+    "category": "misc",
+    "price": "10 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "mace_light",
+    "name": "Mace, light",
+    "category": "misc",
+    "price": "4 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "manacles",
+    "name": "Manacles",
+    "category": "misc",
+    "price": "15 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "mirror_small_silver",
+    "name": "Mirror (small silver)",
+    "category": "misc",
+    "price": "45 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "smith",
+      "herbalist"
+    ],
+    "tags": [
+      "tool",
+      "luxury",
+      "metal"
+    ],
+    "tier": "scarce",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "mirror_small_steel",
+    "name": "Mirror (small steel)",
+    "category": "misc",
+    "price": "20 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.5,
     "ua": false
   },
   {
@@ -2109,33 +3373,46 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "mirror_small_silver",
-    "name": "Mirror, small, silver",
+    "key": "musical_instrument",
+    "name": "Musical instrument",
     "category": "misc",
-    "price": "20 gp",
+    "price": "5 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
       "outfitter",
-      "smith",
-      "herbalist"
+      "baseline"
     ],
     "tags": [
-      "tool",
-      "luxury",
-      "metal"
+      "misc"
     ],
-    "tier": "scarce",
-    "weight": 0,
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "needle_and_thread",
+    "name": "Needle and thread",
+    "category": "misc",
+    "price": "0.03 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "oil_flask",
-    "name": "Oil, flask",
+    "name": "Oil, flask of",
     "category": "misc",
     "price": "1 gp",
     "shopTypes": [
@@ -2150,14 +3427,133 @@ const TradingPost1E = (() => {
       "imported"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "oil_waterproofing",
+    "name": "Oil, waterproofing",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "pick_heavy",
+    "name": "Pick, heavy",
+    "category": "misc",
+    "price": "8 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "pick_light",
+    "name": "Pick, light",
+    "category": "misc",
+    "price": "5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 40.0,
+    "ua": false
+  },
+  {
+    "key": "pickaxe",
+    "name": "Pickaxe",
+    "category": "misc",
+    "price": "20 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 200.0,
+    "ua": false
+  },
+  {
+    "key": "piton",
+    "name": "Piton",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "pole_per_10_ft",
+    "name": "Pole (per 10 ft.)",
+    "category": "misc",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 80.0,
+    "ua": false
+  },
+  {
+    "key": "pole_arm",
+    "name": "Pole arm",
+    "category": "misc",
+    "price": "6 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 80.0,
     "ua": false
   },
   {
     "key": "pole_10",
-    "name": "Pole, 10’",
+    "name": "Pole, 10ft",
     "category": "misc",
-    "price": "3 cp",
+    "price": "0.03 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2170,7 +3566,24 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "pot_iron",
+    "name": "Pot, iron",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "iron"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -2190,14 +3603,14 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "pouch_small",
     "name": "Pouch, belt, small",
     "category": "misc",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2210,14 +3623,116 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "powder_chalk",
+    "name": "Powder, chalk",
+    "category": "misc",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 20.0,
+    "ua": false
+  },
+  {
+    "key": "pulley",
+    "name": "Pulley",
+    "category": "misc",
+    "price": "25 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 60.0,
+    "ua": false
+  },
+  {
+    "key": "quiver_holds_12_arrows",
+    "name": "Quiver (holds 12 arrows)",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "quiver_holds_12_bolts",
+    "name": "Quiver (holds 12 bolts)",
+    "category": "misc",
+    "price": "1.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "quiver_holds_24_arrows",
+    "name": "Quiver (holds 24 arrows)",
+    "category": "misc",
+    "price": "2.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "quiver_holds_24_bolts",
+    "name": "Quiver (holds 24 bolts)",
+    "category": "misc",
+    "price": "3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "quiver_arrows_dozen",
     "name": "Quiver, 1 doz. arrows cap.",
     "category": "misc",
-    "price": "8 sp",
+    "price": "0.8 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2231,14 +3746,14 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "quiver_arrows_score",
     "name": "Quiver, 1 score arrows cap.",
     "category": "misc",
-    "price": "12 sp",
+    "price": "1.2 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2252,14 +3767,14 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "quiver_bolts_score",
     "name": "Quiver, 1 score bolts cap.",
     "category": "misc",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2273,7 +3788,7 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2294,14 +3809,31 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "reed_hollow",
+    "name": "Reed, hollow",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 1.0,
     "ua": false
   },
   {
     "key": "rope_50",
-    "name": "Rope, 50’",
+    "name": "Rope, 50ft",
     "category": "misc",
-    "price": "4 sp",
+    "price": "0.4 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2315,14 +3847,48 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "rope_hemp_per_50_ft",
+    "name": "Rope, hemp (per 50 ft.)",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "rope_silk_per_50_ft",
+    "name": "Rope, silk (per 50 ft.)",
+    "category": "misc",
+    "price": "10 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
     "key": "sack_large",
     "name": "Sack, large",
     "category": "misc",
-    "price": "16 cp",
+    "price": "0.16 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2335,14 +3901,14 @@ const TradingPost1E = (() => {
       "cloth"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "sack_small",
     "name": "Sack, small",
     "category": "misc",
-    "price": "10 cp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2355,14 +3921,65 @@ const TradingPost1E = (() => {
       "cloth"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "shovel",
+    "name": "Shovel",
+    "category": "misc",
+    "price": "10 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 180.0,
+    "ua": false
+  },
+  {
+    "key": "signal_whistle",
+    "name": "Signal whistle",
+    "category": "misc",
+    "price": "0.8 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "skillet",
+    "name": "Skillet",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
     "key": "skin_water_wine",
     "name": "Skin for water or wine",
     "category": "misc",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2375,14 +3992,48 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "sling",
+    "name": "Sling",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 5.0,
+    "ua": false
+  },
+  {
+    "key": "soap_per_lb",
+    "name": "Soap (per lb.)",
+    "category": "misc",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "spike_iron_large",
     "name": "Spike, iron, large",
     "category": "misc",
-    "price": "1 cp",
+    "price": "0.01 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2395,12 +4046,63 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "sword_bastard_claymore",
+    "name": "Sword, bastard/claymore",
+    "category": "misc",
+    "price": "25 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "sword_scimitar_cutlass",
+    "name": "Sword, scimitar/cutlass",
+    "category": "misc",
+    "price": "15 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "tent",
+    "name": "Tent",
+    "category": "misc",
+    "price": "10 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 200.0,
     "ua": false
   },
   {
     "key": "thieves_tools",
-    "name": "Thieves’ picks & tools",
+    "name": "Thieves' picks & tools",
     "category": "misc",
     "price": "30 gp",
     "shopTypes": [
@@ -2416,7 +4118,24 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "thieves_tools_x",
+    "name": "Thieves’ tools",
+    "category": "misc",
+    "price": "30 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
@@ -2436,14 +4155,14 @@ const TradingPost1E = (() => {
       "tool"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "torch",
     "name": "Torch",
     "category": "misc",
-    "price": "1 cp",
+    "price": "0.01 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2456,14 +4175,82 @@ const TradingPost1E = (() => {
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "warhammer_heavy",
+    "name": "Warhammer, heavy",
+    "category": "misc",
+    "price": "7 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 100.0,
+    "ua": false
+  },
+  {
+    "key": "warhammer_light",
+    "name": "Warhammer, light",
+    "category": "misc",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "whetstone",
+    "name": "Whetstone",
+    "category": "misc",
+    "price": "0.02 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "stone"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "whistle",
+    "name": "Whistle",
+    "category": "misc",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "misc"
+    ],
+    "tier": "common",
+    "weight": 1.0,
     "ua": false
   },
   {
     "key": "ale_pint",
     "name": "Ale, pint",
     "category": "provisions",
-    "price": "1 sp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2476,14 +4263,14 @@ const TradingPost1E = (() => {
       "drink"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "beer_pint",
     "name": "Beer, small, pint",
     "category": "provisions",
-    "price": "5 cp",
+    "price": "0.05 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2496,14 +4283,49 @@ const TradingPost1E = (() => {
       "drink"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "bottle_wine",
+    "name": "Bottle (wine)",
+    "category": "provisions",
+    "price": "2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "firewood_per_day",
+    "name": "Firewood (per day)",
+    "category": "provisions",
+    "price": "0.01 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 30.0,
     "ua": false
   },
   {
     "key": "food_meal_merchant",
-    "name": "Food, merchant’s meal",
+    "name": "Food, merchant's meal",
     "category": "provisions",
-    "price": "1 sp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2515,7 +4337,7 @@ const TradingPost1E = (() => {
       "food"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2535,14 +4357,14 @@ const TradingPost1E = (() => {
       "luxury"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "grain_horse_day",
     "name": "Grain, horse meal, 1 day",
     "category": "provisions",
-    "price": "1 sp",
+    "price": "0.1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2555,14 +4377,31 @@ const TradingPost1E = (() => {
       "animal"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 50.0,
+    "ua": false
+  },
+  {
+    "key": "lard_pint",
+    "name": "Lard, pint",
+    "category": "provisions",
+    "price": "0.05 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 20.0,
     "ua": false
   },
   {
     "key": "mead_pint",
     "name": "Mead, pint",
     "category": "provisions",
-    "price": "5 sp",
+    "price": "0.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2575,14 +4414,31 @@ const TradingPost1E = (() => {
       "drink"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "oil_lamp_per_pint",
+    "name": "Oil (lamp) (per pint)",
+    "category": "provisions",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "rations_iron_week",
     "name": "Rations, iron, 1 week",
     "category": "provisions",
-    "price": "5 gp",
+    "price": "0 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2595,7 +4451,24 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 140.0,
+    "ua": false
+  },
+  {
+    "key": "rations_standard_per_day",
+    "name": "Rations, standard (per day)",
+    "category": "provisions",
+    "price": "2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 20.0,
     "ua": false
   },
   {
@@ -2615,14 +4488,82 @@ const TradingPost1E = (() => {
       "adventuring"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 140.0,
+    "ua": false
+  },
+  {
+    "key": "rations_trail_per_day",
+    "name": "Rations, trail (per day)",
+    "category": "provisions",
+    "price": "6 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "twine_linen_per_100_ft",
+    "name": "Twine, linen (per 100 ft.)",
+    "category": "provisions",
+    "price": "0.08 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "water_holy_unholy_vial",
+    "name": "Water, Holy/Unholy, vial",
+    "category": "provisions",
+    "price": "25 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "wine_pint",
+    "name": "Wine, pint",
+    "category": "provisions",
+    "price": "0.5 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "provisions"
+    ],
+    "tier": "common",
+    "weight": 10.0,
     "ua": false
   },
   {
     "key": "wine_good_pint",
     "name": "Wine, pint, good",
     "category": "provisions",
-    "price": "10 sp",
+    "price": "1 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2636,14 +4577,14 @@ const TradingPost1E = (() => {
       "luxury"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "wine_watered_pint",
     "name": "Wine, pint, watered",
     "category": "provisions",
-    "price": "5 sp",
+    "price": "0.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2656,7 +4597,7 @@ const TradingPost1E = (() => {
       "drink"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2674,7 +4615,65 @@ const TradingPost1E = (() => {
       "religious"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_iron",
+    "name": "Holy symbol, pewter",
+    "category": "religious",
+    "price": "5 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "metal"
+    ],
+    "tier": "common",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_silver",
+    "name": "Holy symbol, silver",
+    "category": "religious",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "metal",
+      "luxury"
+    ],
+    "tier": "scarce",
+    "weight": 10.0,
+    "ua": false
+  },
+  {
+    "key": "symbol_holy_wood",
+    "name": "Holy symbol, wooden",
+    "category": "religious",
+    "price": "0.6 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "outfitter",
+      "herbalist"
+    ],
+    "tags": [
+      "religious",
+      "wood"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2692,70 +4691,66 @@ const TradingPost1E = (() => {
       "religious"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "symbol_holy_iron",
-    "name": "Symbol, Holy, iron",
+    "key": "symbol_holy_unholy_iron",
+    "name": "Symbol, Holy/Unholy, iron",
     "category": "religious",
     "price": "2 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
-      "outfitter",
-      "herbalist"
+      "herbalist",
+      "baseline"
     ],
     "tags": [
       "religious",
-      "metal"
+      "iron"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "symbol_holy_silver",
-    "name": "Symbol, Holy, silver",
+    "key": "symbol_holy_unholy_silver",
+    "name": "Symbol, Holy/Unholy, silver",
     "category": "religious",
     "price": "50 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
-      "outfitter",
-      "herbalist"
+      "herbalist",
+      "baseline"
     ],
     "tags": [
       "religious",
-      "metal",
-      "luxury"
+      "silver"
     ],
-    "tier": "scarce",
-    "weight": 0,
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "symbol_holy_wood",
-    "name": "Symbol, Holy, wooden",
+    "key": "symbol_holy_unholy_wooden",
+    "name": "Symbol, Holy/Unholy, wooden",
     "category": "religious",
-    "price": "7 sp",
+    "price": "0.7 gp",
     "shopTypes": [
-      "baseline",
       "trading_post",
-      "outfitter",
-      "herbalist"
+      "herbalist",
+      "baseline"
     ],
     "tags": [
       "religious",
       "wood"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "water_holy_vial",
-    "name": "Water, Holy, vial",
+    "name": "Water, holy (per vial)",
     "category": "religious",
     "price": "25 gp",
     "shopTypes": [
@@ -2768,7 +4763,93 @@ const TradingPost1E = (() => {
       "religious"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "parchment_per_sheet",
+    "name": "Parchment (per sheet)",
+    "category": "books",
+    "price": "0.2 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "book"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "quill_pen",
+    "name": "Quill (pen)",
+    "category": "books",
+    "price": "0.1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "book"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "scrollcase_bone",
+    "name": "Scrollcase, bone",
+    "category": "books",
+    "price": "4 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "book"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "scrollcase_leather",
+    "name": "Scrollcase, leather",
+    "category": "books",
+    "price": "1 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "book",
+      "leather"
+    ],
+    "tier": "common",
+    "weight": 0.5,
+    "ua": false
+  },
+  {
+    "key": "vellum_per_sheet",
+    "name": "Vellum (per sheet)",
+    "category": "books",
+    "price": "0.3 gp",
+    "shopTypes": [
+      "trading_post",
+      "outfitter",
+      "baseline"
+    ],
+    "tags": [
+      "book"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2789,7 +4870,7 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2810,14 +4891,14 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "barding_plate",
     "name": "Barding, plate",
     "category": "tack",
-    "price": "500 gp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2831,14 +4912,14 @@ const TradingPost1E = (() => {
       "metal"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "bit_bridle",
     "name": "Bit and Bridle",
     "category": "tack",
-    "price": "15 sp",
+    "price": "1.5 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2852,14 +4933,14 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "harness",
     "name": "Harness",
     "category": "tack",
-    "price": "12 sp",
+    "price": "1.2 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2873,7 +4954,24 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "reins_bit_and_bridle",
+    "name": "Reins, bit and bridle",
+    "category": "tack",
+    "price": "2 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "tack"
+    ],
+    "tier": "common",
+    "weight": 50.0,
     "ua": false
   },
   {
@@ -2894,7 +4992,24 @@ const TradingPost1E = (() => {
       "leather"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "saddle_and_stirrups",
+    "name": "Saddle and stirrups",
+    "category": "tack",
+    "price": "10 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "tack"
+    ],
+    "tier": "common",
+    "weight": 200.0,
     "ua": false
   },
   {
@@ -2916,7 +5031,7 @@ const TradingPost1E = (() => {
       "container"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2938,14 +5053,14 @@ const TradingPost1E = (() => {
       "container"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
     "key": "saddle_blanket",
     "name": "Saddle Blanket",
     "category": "tack",
-    "price": "3 sp",
+    "price": "0.3 gp",
     "shopTypes": [
       "baseline",
       "trading_post",
@@ -2959,7 +5074,504 @@ const TradingPost1E = (() => {
       "cloth"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "chicken",
+    "name": "Chicken",
+    "category": "livestock",
+    "price": "0.03 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "food"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "cow",
+    "name": "Cow",
+    "category": "livestock",
+    "price": "10 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "uncommon",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "dog_guard",
+    "name": "Dog, guard",
+    "category": "livestock",
+    "price": "25 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "uncommon",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "dog_hunting",
+    "name": "Dog, hunting",
+    "category": "livestock",
+    "price": "17 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "uncommon",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "donkey",
+    "name": "Donkey",
+    "category": "livestock",
+    "price": "8 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "goat",
+    "name": "Goat",
+    "category": "livestock",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "hawk_large",
+    "name": "Hawk, large",
+    "category": "livestock",
+    "price": "40 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "scarce",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "hawk_small",
+    "name": "Hawk, small",
+    "category": "livestock",
+    "price": "18 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "scarce",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "horse_cart_draft",
+    "name": "Horse, cart (draft)",
+    "category": "livestock",
+    "price": "15 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 8000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_draft",
+    "name": "Horse, draft",
+    "category": "livestock",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "transport"
+    ],
+    "tier": "uncommon",
+    "weight": 8000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_heavy_war",
+    "name": "Horse, heavy war",
+    "category": "livestock",
+    "price": "500 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "rare",
+    "weight": 8000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_light_war",
+    "name": "Horse, light war",
+    "category": "livestock",
+    "price": "200 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "scarce",
+    "weight": 5000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_medium_war",
+    "name": "Horse, medium war",
+    "category": "livestock",
+    "price": "350 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "military"
+    ],
+    "tier": "rare",
+    "weight": 7000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_nag",
+    "name": "Horse, nag",
+    "category": "livestock",
+    "price": "8 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 3000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_palfrey_riding_horse",
+    "name": "Horse, palfrey (riding horse)",
+    "category": "livestock",
+    "price": "40 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 3500.0,
+    "ua": false
+  },
+  {
+    "key": "horse_riding",
+    "name": "Horse, riding (light)",
+    "category": "livestock",
+    "price": "40 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "uncommon",
+    "weight": 3500.0,
+    "ua": false
+  },
+  {
+    "key": "horse_rouncey_all_purpose",
+    "name": "Horse, rouncey (all-purpose)",
+    "category": "livestock",
+    "price": "25 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 4000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_war_heavy",
+    "name": "Horse, war, heavy",
+    "category": "livestock",
+    "price": "500 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 8000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_war_light",
+    "name": "Horse, war, light",
+    "category": "livestock",
+    "price": "200 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 5000.0,
+    "ua": false
+  },
+  {
+    "key": "horse_war_medium",
+    "name": "Horse, war, medium",
+    "category": "livestock",
+    "price": "350 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "livestock"
+    ],
+    "tier": "common",
+    "weight": 7000.0,
+    "ua": false
+  },
+  {
+    "key": "mule",
+    "name": "Mule",
+    "category": "livestock",
+    "price": "18 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount",
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 6000.0,
+    "ua": false
+  },
+  {
+    "key": "ox",
+    "name": "Ox",
+    "category": "livestock",
+    "price": "15 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm",
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 8000.0,
+    "ua": false
+  },
+  {
+    "key": "pig",
+    "name": "Pig",
+    "category": "livestock",
+    "price": "3 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "pigeon",
+    "name": "Pigeon",
+    "category": "livestock",
+    "price": "0.02 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "piglet",
+    "name": "Piglet",
+    "category": "livestock",
+    "price": "1 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "pony",
+    "name": "Pony",
+    "category": "livestock",
+    "price": "12 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "mount"
+    ],
+    "tier": "common",
+    "weight": 3000.0,
+    "ua": false
+  },
+  {
+    "key": "sheep",
+    "name": "Sheep",
+    "category": "livestock",
+    "price": "2 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal",
+      "farm"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "songbird",
+    "name": "Songbird",
+    "category": "livestock",
+    "price": "0.04 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "animal"
+    ],
+    "tier": "common",
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -2977,25 +5589,24 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "boat_small",
-    "name": "Boat, small",
+    "key": "boat_collapsible",
+    "name": "Boat, collapsible",
     "category": "transport",
-    "price": "75 gp",
+    "price": "500 gp",
     "shopTypes": [
-      "baseline",
+      "stable",
       "trading_post",
-      "stable"
+      "baseline"
     ],
     "tags": [
-      "transport",
-      "water"
+      "transport"
     ],
-    "tier": "scarce",
-    "weight": 0,
+    "tier": "common",
+    "weight": 600.0,
     "ua": false
   },
   {
@@ -3013,7 +5624,59 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "scarce",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "boat_small",
+    "name": "Boat, small",
+    "category": "transport",
+    "price": "75 gp",
+    "shopTypes": [
+      "baseline",
+      "trading_post",
+      "stable"
+    ],
+    "tags": [
+      "transport",
+      "water"
+    ],
+    "tier": "scarce",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "canoe_large",
+    "name": "Canoe, large",
+    "category": "transport",
+    "price": "300 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 1600.0,
+    "ua": false
+  },
+  {
+    "key": "canoe_small",
+    "name": "Canoe, small",
+    "category": "transport",
+    "price": "100 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 800.0,
     "ua": false
   },
   {
@@ -3031,7 +5694,7 @@ const TradingPost1E = (() => {
       "land"
     ],
     "tier": "common",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -3049,7 +5712,7 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -3067,7 +5730,24 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "kayak",
+    "name": "Kayak",
+    "category": "transport",
+    "price": "250 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 500.0,
     "ua": false
   },
   {
@@ -3085,7 +5765,7 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -3103,7 +5783,7 @@ const TradingPost1E = (() => {
       "water"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -3122,7 +5802,7 @@ const TradingPost1E = (() => {
       "military"
     ],
     "tier": "rare",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
@@ -3140,436 +5820,44 @@ const TradingPost1E = (() => {
       "land"
     ],
     "tier": "uncommon",
-    "weight": 0,
+    "weight": 0.0,
     "ua": false
   },
   {
-    "key": "bronze_plate",
-    "name": "Bronze Plate Armor",
-    "category": "armor",
+    "key": "wagon_large",
+    "name": "Wagon, large",
+    "category": "transport",
+    "price": "250 gp",
+    "shopTypes": [
+      "stable",
+      "trading_post",
+      "baseline"
+    ],
+    "tags": [
+      "transport"
+    ],
+    "tier": "common",
+    "weight": 0.0,
+    "ua": false
+  },
+  {
+    "key": "wagon_small",
+    "name": "Wagon, small",
+    "category": "transport",
     "price": "100 gp",
     "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "armor",
-      "metal"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "field_plate",
-    "name": "Field Plate Armor",
-    "category": "armor",
-    "price": "2000 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "armor",
-      "metal"
-    ],
-    "tier": "rare",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "full_plate",
-    "name": "Full Plate Armor",
-    "category": "armor",
-    "price": "4000 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "armor",
-      "metal"
-    ],
-    "tier": "rare",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "shield_buckler",
-    "name": "Shield, buckler",
-    "category": "armor",
-    "price": "5 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter",
-      "trading_post"
-    ],
-    "tags": [
-      "armor",
-      "wood",
-      "metal"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "aklys",
-    "name": "Aklys",
-    "category": "weapons",
-    "price": "2 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "wood"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "atlatl",
-    "name": "Atlatl",
-    "category": "weapons",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "wood",
-      "missile"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "blowgun",
-    "name": "Blowgun",
-    "category": "weapons",
-    "price": "20 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "wood",
-      "missile"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "blowgun_needle",
-    "name": "Blowgun Needle",
-    "category": "ammo",
-    "price": "1 sp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "ammo"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "caltrop",
-    "name": "Caltrop",
-    "category": "misc",
-    "price": "2 sp",
-    "shopTypes": [
-      "baseline",
+      "stable",
       "trading_post",
-      "outfitter",
-      "smith"
+      "baseline"
     ],
     "tags": [
-      "metal",
-      "adventuring"
+      "transport"
     ],
     "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "crossbow_hand",
-    "name": "Crossbow, hand",
-    "category": "weapons",
-    "price": "300 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal",
-      "wood",
-      "crossbow"
-    ],
-    "tier": "rare",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "quarrels_hand_crossbow",
-    "name": "Quarrels for hand crossbow",
-    "category": "ammo",
-    "price": "100 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "ammo",
-      "crossbow"
-    ],
-    "tier": "scarce",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "garrot",
-    "name": "Garrot",
-    "category": "weapons",
-    "price": "1 ep",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "rope"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "harpoon",
-    "name": "Harpoon",
-    "category": "weapons",
-    "price": "5 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal",
-      "water"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "hook_fauchard",
-    "name": "Hook Fauchard",
-    "category": "weapons",
-    "price": "6 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal",
-      "polearm"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "knife",
-    "name": "Knife & scabbard",
-    "category": "weapons",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "lasso",
-    "name": "Lasso",
-    "category": "misc",
-    "price": "5 sp",
-    "shopTypes": [
-      "baseline",
-      "trading_post",
-      "outfitter",
-      "stable"
-    ],
-    "tags": [
-      "rope",
-      "tool"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "man_catcher",
-    "name": "Man Catcher",
-    "category": "weapons",
-    "price": "25 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal",
-      "polearm"
-    ],
-    "tier": "scarce",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "sap",
-    "name": "Sap",
-    "category": "weapons",
-    "price": "1 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "leather"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "spiked_buckler",
-    "name": "Spiked Buckler",
-    "category": "armor",
-    "price": "10 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "armor",
-      "metal",
-      "weapon"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "staff_sling",
-    "name": "Staff Sling",
-    "category": "weapons",
-    "price": "2 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "wood",
-      "missile"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "sword_falchion",
-    "name": "Sword, falchion, and scabbard",
-    "category": "weapons",
-    "price": "10 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "sword_khopesh",
-    "name": "Sword, khopesh",
-    "category": "weapons",
-    "price": "10 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "metal"
-    ],
-    "tier": "uncommon",
-    "weight": 0,
-    "ua": true
-  },
-  {
-    "key": "whip",
-    "name": "Whip",
-    "category": "weapons",
-    "price": "3 gp",
-    "shopTypes": [
-      "baseline",
-      "smith",
-      "outfitter"
-    ],
-    "tags": [
-      "weapon",
-      "leather"
-    ],
-    "tier": "common",
-    "weight": 0,
-    "ua": true
+    "weight": 0.0,
+    "ua": false
   }
-];
+];;
   const TRINKETS = [
   {
     "key": "trinket_1",
@@ -4015,11 +6303,7 @@ const TradingPost1E = (() => {
     dagger: true, knife: true, axe_hand: true, spear: true, javelin: true,
     sling_dozen: true, sling_bullets_score: true, staff_sling: true, whip: true
   };
-  const BASIC_TRADE_ARMOR = {
-    leather: true, padded: true, studded: true, scale: true,
-    shield_small_wood: true, shield_small: true, shield_buckler: true, shield_large: true,
-    helmet_small: true
-  };
+  const BASIC_TRADE_ARMOR = { leather: true, padded: true, studded: true, scale: true, ring_mail: true, chain: true, banded: true, plate: true, bronze_plate: true, field_plate: true, full_plate: true, splint: true, splinted: true, shield_small_wood: true, shield_small: true, shield_medium: true, shield_buckler: true, shield_large: true, spiked_buckler: true, helmet_small: true, helmet_great: true, chain_elfin: true };
 
   const ARMOR_FIT_REQUIRED_KEYS = ['padded', 'leather', 'studded', 'ring_mail', 'scale', 'chain', 'banded', 'splinted'];
   const STABLE_BARDING_KEYS = ['barding_leather', 'barding_chain'];
@@ -4033,7 +6317,7 @@ const TradingPost1E = (() => {
   ];
   const HOMMLET_FOOTWEAR_KEYS = ['belt','boots_high_hard','boots_high_soft','boots_low_hard','boots_low_soft'];
 
-  const CUSTOM_ONLY_KEYS = ['plate', 'barding_plate', 'bronze_plate', 'field_plate', 'full_plate'];
+  const CUSTOM_ONLY_KEYS = [];
   const HORSE_TRAITS_POOR = ['Biter', 'Kicks', 'Steps on feet', 'Won’t gallop', 'Chews fences', 'Stops occasionally', 'Rubs against fences', 'Bucks', 'Untrained'];
   const HORSE_TRAITS_GOOD = ['Bucks', 'Bone-jarring', 'Bites', 'Single rider', 'Rears', 'Headstrong', 'Kicks', 'Leaper', 'Knows trick'];
   const HORSE_TRAITS_OTHER = ['robust', 'fleet', 'fearless', 'skittish', 'strong', 'stable', 'gentle', 'sure-footed'];
@@ -27845,7 +30129,7 @@ const TradingPost1E = (() => {
 
   const itemByKey = byKey;
 
-  const SHEET_SYNC_BY_ITEM_KEY = Object.freeze({"banded":{"sheetItem":"Banded","type":"2","cost":"90","weight":"350","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain":{"sheetItem":"Chain","type":"2","cost":"75","weight":"300","armorType":"1","armor":{"ac":"5","base":"5","bulk":"fairly"}},"helmet_great":{"sheetItem":"Helmet, great","type":"2","cost":"15","weight":"15","armorType":"4","armor":{"ac":"1","base":"","bulk":"bulky"}},"helmet_small":{"sheetItem":"Helmet, small","type":"2","cost":"10","weight":"10","armorType":"4","armor":{"ac":"1","base":"","bulk":"non-bulky"}},"leather":{"sheetItem":"Leather","type":"2","cost":"5","weight":"150","armorType":"1","armor":{"ac":"8","base":"8","bulk":"non-bulky"}},"padded":{"sheetItem":"Padded","type":"2","cost":"4","weight":"100","armorType":"1","armor":{"ac":"8","base":"8","bulk":"fairly"}},"plate":{"sheetItem":"Plate (Mail)","type":"0","cost":"0","weight":"450"},"ring_mail":{"sheetItem":"Ring","type":"2","cost":"30","weight":"250","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"scale":{"sheetItem":"Scale","type":"2","cost":"45","weight":"400","armorType":"1","armor":{"ac":"6","base":"6","bulk":"fairly"}},"shield_large":{"sheetItem":"Shield, large","type":"2","cost":"15","weight":"100","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"bulky"}},"shield_small":{"sheetItem":"Shield, small","type":"2","cost":"10","weight":"50","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"shield_small_wood":{"sheetItem":"Shield, small, wooden","type":"2","cost":"1","weight":"30","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"splinted":{"sheetItem":"Splinted","type":"2","cost":"80","weight":"40","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"studded":{"sheetItem":"Studded (Leather)","type":"0","cost":"0","weight":"200"},"arrow_single":{"sheetItem":"Arrow, normal, single","type":"1","cost":"0.2","weight":"2","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":""}},"arrow_dozen":{"sheetItem":"Arrow, normal, dozen","type":"1","cost":"1","weight":"24","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":""}},"arrow_silver":{"sheetItem":"Arrow, silver, single","type":"1","cost":"1","weight":"0","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":""}},"axe_battle":{"sheetItem":"Axe, battle","type":"1","cost":"5","weight":"75","weapon":{"attack_type":"0","speed":"7","length":"c. 4ft","space":"4ft","dsm":"1d8","dlg":"1d4","dmgtype":"","rof":"","range":""}},"axe_hand":{"sheetItem":"Axe, hand or throwing","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","speed":"4","length":"c. 1.5ft","space":"1ft","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3"}},"bardiche":{"sheetItem":"Bardiche","type":"1","cost":"7","weight":"125","weapon":{"attack_type":"0","speed":"9","length":"c. 5ft","space":"5ft","dsm":"2d4","dlg":"3d4","dmgtype":"","rof":"","range":""}},"bec_de_corbin":{"sheetItem":"Bec de corbin","type":"1","cost":"6","weight":"100","weapon":{"attack_type":"0","speed":"9","length":"c. 6ft","space":"6ft","dsm":"1d8","dlg":"1d6","dmgtype":"","rof":"","range":""}},"bill_guisarme":{"sheetItem":"Bill-Guisarme","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","speed":"10","length":"8ft+","space":"2ft","dsm":"2d4","dlg":"1d10","dmgtype":"","rof":"","range":""}},"bow_comp_short":{"sheetItem":"Bow, composite short","type":"1","cost":"75","weight":"50","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/18"}},"bow_comp_long":{"sheetItem":"Bow, composite, long","type":"1","cost":"100","weight":"80","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"6/12/21"}},"bow_long":{"sheetItem":"Bow, long","type":"1","cost":"60","weight":"120","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"7/14/21"}},"bow_short":{"sheetItem":"Bow, short","type":"1","cost":"15","weight":"80","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/15"}},"crossbow_heavy":{"sheetItem":"Crossbow, heavy","type":"1","cost":"20","weight":"120","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"8/16/24"}},"crossbow_light":{"sheetItem":"Crossbow, light","type":"1","cost":"12","weight":"40","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"6/12/18"}},"dagger":{"sheetItem":"Dagger and scabbard","type":"1","cost":"2","weight":"10","weapon":{"attack_type":"1","speed":"2","length":"15in","space":"1ft","dsm":"1d4","dlg":"1d3","dmgtype":"","rof":"2","range":"1/2/3"}},"dart":{"sheetItem":"Dart","type":"1","cost":"0.5","weight":"5","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"3","range":"1.5/3/4.5"}},"fauchard":{"sheetItem":"Fauchard","type":"1","cost":"3","weight":"60","weapon":{"attack_type":"0","speed":"8","length":"8ft+","space":"2ft","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":""}},"fauchard_fork":{"sheetItem":"Fauchard-Fork","type":"1","cost":"8","weight":"80","weapon":{"attack_type":"0","speed":"8","length":"8ft","space":"2ft","dsm":"1d8","dlg":"1d10","dmgtype":"","rof":"","range":""}},"flail_foot":{"sheetItem":"Flail, footman's","type":"1","cost":"3","weight":"150","weapon":{"attack_type":"0","speed":"7","length":"c. 4ft","space":"6ft","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":""}},"flail_horse":{"sheetItem":"Flail, horseman's","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","speed":"6","length":"c. 2ft","space":"4ft","dsm":"1d4+1","dlg":"1d4+1","dmgtype":"","rof":"","range":""}},"fork_military":{"sheetItem":"Fork, Military","type":"1","cost":"4","weight":"75","weapon":{"attack_type":"0","speed":"7","length":"7ft+","space":"1ft","dsm":"1d8","dlg":"2d4","dmgtype":"","rof":"","range":""}},"glaive":{"sheetItem":"Glaive","type":"1","cost":"6","weight":"75","weapon":{"attack_type":"0","speed":"8","length":"8ft+","space":"1ft","dsm":"1d6","dlg":"1d10","dmgtype":"","rof":"","range":""}},"glaive_guisarme":{"sheetItem":"Glaive-Guisarme","type":"1","cost":"10","weight":"100","weapon":{"attack_type":"0","speed":"9","length":"8ft+","space":"1ft","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"","range":""}},"guisarme":{"sheetItem":"Guisarme","type":"1","cost":"5","weight":"80","weapon":{"attack_type":"0","speed":"8","length":"6ft+","space":"2ft","dsm":"2d4","dlg":"1d8","dmgtype":"","rof":"","range":""}},"guisarme_voulge":{"sheetItem":"Guisarme-Voulge","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","speed":"10","length":"7ft+","space":"2ft","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":""}},"halberd":{"sheetItem":"Halberd","type":"1","cost":"9","weight":"175","weapon":{"attack_type":"0","speed":"9","length":"5ft+","space":"5ft","dsm":"1d10","dlg":"2d6","dmgtype":"","rof":"","range":""}},"hammer_lucern":{"sheetItem":"Hammer, Lucern","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","speed":"9","length":"5ft+","space":"5ft","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":""}},"hammer":{"sheetItem":"Hammer","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","speed":"4","length":"c. 1.5ft","space":"2ft","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3"}},"javelin":{"sheetItem":"Javelin","type":"1","cost":"1","weight":"20","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"2/4/6"}},"lance":{"sheetItem":"Lance","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"","dlg":"","dmgtype":"","rof":"","range":""}},"mace_foot":{"sheetItem":"Mace, footman's","type":"1","cost":"8","weight":"100","weapon":{"attack_type":"0","speed":"7","length":"c. 2.5ft","space":"4ft","dsm":"1d6+1","dlg":"1d6","dmgtype":"","rof":"","range":""}},"mace_horse":{"sheetItem":"Mace, horseman's","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","speed":"6","length":"c. 1.5ft","space":"2ft","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"","range":""}},"morning_star":{"sheetItem":"Morning Star","type":"1","cost":"5","weight":"125","weapon":{"attack_type":"0","speed":"7","length":"c. 4ft","space":"5ft","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"partisan":{"sheetItem":"Partisan","type":"1","cost":"10","weight":"80","weapon":{"attack_type":"0","speed":"9","length":"7ft+","space":"3ft","dsm":"1d6","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"pick_foot":{"sheetItem":"Pick, Military, footman's","type":"1","cost":"8","weight":"60","weapon":{"attack_type":"0","speed":"7","length":"c. 4ft","space":"4ft","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":""}},"pick_horse":{"sheetItem":"Pick, Military, horseman's","type":"1","cost":"5","weight":"40","weapon":{"attack_type":"0","speed":"5","length":"c. 2ft","space":"2ft","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"","range":""}},"pike_awl":{"sheetItem":"Pike, awl","type":"1","cost":"3","weight":"80","weapon":{"attack_type":"0","speed":"13","length":"18ft+","space":"1ft","dsm":"1d6","dlg":"1d12","dmgtype":"","rof":"","range":""}},"quarrel_light_single":{"sheetItem":"Quarrel (or Bolt), light, single","type":"1","cost":"0.1","weight":"1","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":""}},"quarrel_heavy_score":{"sheetItem":"Quarrel (or Bolt), heavy, score","type":"1","cost":"2","weight":"2","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"ranseur":{"sheetItem":"Ranseur","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","speed":"8","length":"8ft+","space":"1ft","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":""}},"scimitar":{"sheetItem":"Scimitar","type":"1","cost":"15","weight":"40","weapon":{"attack_type":"0","speed":"4","length":"c. 3ft","space":"2ft","dsm":"1d8","dlg":"1d8","dmgtype":"","rof":"","range":""}},"sling_dozen":{"sheetItem":"Sling & Bullets, dozen","type":"1","cost":"1.5","weight":"0","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"sling_bullets_score":{"sheetItem":"Sling Bullets, score","type":"1","cost":"1","weight":"2","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"spear":{"sheetItem":"Spear","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","speed":"6-8","length":"5-13ft+","space":"1ft","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"1","range":"1/2/3"}},"spetum":{"sheetItem":"Spetum","type":"1","cost":"3","weight":"50","weapon":{"attack_type":"0","speed":"8","length":"8ft+","space":"1ft","dsm":"1d6+1","dlg":"2d6","dmgtype":"","rof":"","range":""}},"sword_bastard":{"sheetItem":"Sword, bastard, & scabbard","type":"1","cost":"25","weight":"100","weapon":{"attack_type":"0","speed":"6","length":"c. 4.5ft","space":"4ft+","dsm":"2d4","dlg":"2d8","dmgtype":"","rof":"","range":""}},"sword_broad":{"sheetItem":"Sword, broad, & scabbard","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","speed":"5","length":"c. 3.5ft","space":"4ft","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":""}},"sword_long":{"sheetItem":"Sword, long & scabbard","type":"1","cost":"15","weight":"60","weapon":{"attack_type":"0","speed":"5","length":"c. 3.5ft","space":"3ft","dsm":"1d8","dlg":"1d12","dmgtype":"","rof":"","range":""}},"sword_short":{"sheetItem":"Sword, short & scabbard","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","speed":"3","length":"c. 2ft","space":"1ft","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":""}},"sword_twohanded":{"sheetItem":"Sword, two-handed","type":"1","cost":"30","weight":"250","weapon":{"attack_type":"0","speed":"10","length":"c. 6ft","space":"6ft","dsm":"1d10","dlg":"3d6","dmgtype":"","rof":"","range":""}},"trident":{"sheetItem":"Trident","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","speed":"6-8","length":"4-8ft+","space":"1ft","dsm":"1d6+1","dlg":"3d4","dmgtype":"","rof":"","range":""}},"voulge":{"sheetItem":"Voulge","type":"1","cost":"2","weight":"125","weapon":{"attack_type":"0","speed":"10","length":"8ft+","space":"2ft","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":""}},"belt":{"sheetItem":"Belt","type":"0","cost":"0.5","weight":"0"},"boots_high_hard":{"sheetItem":"Boots, high, hard","type":"0","cost":"2","weight":"0"},"boots_high_soft":{"sheetItem":"Boots, high, soft","type":"0","cost":"1","weight":"0"},"boots_low_hard":{"sheetItem":"Boots, low, hard","type":"0","cost":"1","weight":"0"},"boots_low_soft":{"sheetItem":"Boots, low, soft","type":"0","cost":"0.8","weight":"0"},"cap":{"sheetItem":"Cap","type":"0","cost":"0.1","weight":"0"},"cloak":{"sheetItem":"Cloak","type":"0","cost":"0.3","weight":"10"},"girdle_broad":{"sheetItem":"Girdle, broad","type":"0","cost":"2","weight":"0"},"girdle_normal":{"sheetItem":"Girdle, normal","type":"0","cost":"1","weight":"0"},"hat":{"sheetItem":"Hat","type":"0","cost":"0.7","weight":"0"},"robe":{"sheetItem":"Robe","type":"0","cost":"0.6","weight":"0"},"belladonna":{"sheetItem":"Belladona, sprig","type":"0","cost":"0.4","weight":"0"},"garlic":{"sheetItem":"Garlic, bud","type":"3","cost":"0.05","weight":"0"},"wolfsbane":{"sheetItem":"Wolvesbane, sprig","type":"0","cost":"1","weight":"0"},"chicken":{"sheetItem":"Chicken","type":"4","cost":"0.03","weight":"0"},"cow":{"sheetItem":"Cow","type":"4","cost":"10","weight":"0"},"dog_guard":{"sheetItem":"Dog, guard","type":"4","cost":"25","weight":"0"},"dog_hunting":{"sheetItem":"Dog, hunting","type":"4","cost":"17","weight":"0"},"donkey":{"sheetItem":"Donkey","type":"4","cost":"8","weight":"0"},"goat":{"sheetItem":"Goat","type":"4","cost":"1","weight":"0"},"hawk_large":{"sheetItem":"Hawk, large","type":"4","cost":"40","weight":"0"},"hawk_small":{"sheetItem":"Hawk, small","type":"4","cost":"18","weight":"0"},"horse_draft":{"sheetItem":"Horse, draft","type":"4","cost":"15","weight":"8000"},"horse_heavy_war":{"sheetItem":"Horse, heavy war","type":"4","cost":"500","weight":"8000"},"horse_light_war":{"sheetItem":"Horse, light war","type":"4","cost":"200","weight":"5000"},"horse_medium_war":{"sheetItem":"Horse, medium war","type":"4","cost":"350","weight":"7000"},"horse_riding":{"sheetItem":"Horse, riding (light)","type":"4","cost":"40","weight":"3500"},"mule":{"sheetItem":"Mule","type":"4","cost":"18","weight":"6000"},"ox":{"sheetItem":"Ox","type":"4","cost":"15","weight":"8000"},"pigeon":{"sheetItem":"Pigeon","type":"4","cost":"0.02","weight":"0"},"piglet":{"sheetItem":"Piglet","type":"4","cost":"1","weight":"0"},"pig":{"sheetItem":"Pig","type":"4","cost":"3","weight":"0"},"pony":{"sheetItem":"Pony","type":"4","cost":"12","weight":"3000"},"sheep":{"sheetItem":"Sheep","type":"4","cost":"2","weight":"0"},"songbird":{"sheetItem":"Songbird","type":"4","cost":"0.04","weight":"0"},"backpack":{"sheetItem":"Backpack, leather","type":"0","cost":"2","weight":"0"},"box_iron_large":{"sheetItem":"Box, iron, large","type":"0","cost":"28","weight":"20"},"box_iron_small":{"sheetItem":"Box, iron, small","type":"0","cost":"9","weight":"10"},"candle_tallow":{"sheetItem":"Candle, tallow","type":"0","cost":"0.01","weight":"0"},"candle_wax":{"sheetItem":"Candle, wax","type":"0","cost":"0.1","weight":"0"},"case_bone_scroll":{"sheetItem":"Case, bone, map or scroll","type":"0","cost":"5","weight":"0"},"case_leather_scroll":{"sheetItem":"Case, leather, map or scroll","type":"0","cost":"1.5","weight":"0"},"chest_wood_large":{"sheetItem":"Chest, wooden, large","type":"0","cost":"1.7","weight":"20"},"chest_wood_small":{"sheetItem":"Chest, wooden, small","type":"0","cost":"0.8","weight":"0"},"lantern_bullseye":{"sheetItem":"Lantern, bullseye","type":"0","cost":"12","weight":"30"},"lantern_hooded":{"sheetItem":"Lantern, hooded","type":"0","cost":"7","weight":"20"},"mirror_large_metal":{"sheetItem":"Mirror, large metal","type":"0","cost":"10","weight":"0"},"mirror_small_silver":{"sheetItem":"Mirror (small silver)","type":"0","cost":"45","weight":"0.5"},"oil_flask":{"sheetItem":"Oil, flask of","type":"0","cost":"1","weight":"0"},"pole_10":{"sheetItem":"Pole, 10ft","type":"0","cost":"0.03","weight":"0"},"pouch_large":{"sheetItem":"Pouch, belt, large","type":"0","cost":"1","weight":"0"},"pouch_small":{"sheetItem":"Pouch, belt, small","type":"0","cost":"1.5","weight":"0"},"quiver_arrows_dozen":{"sheetItem":"Quiver, 1 doz. arrows cap.","type":"0","cost":"0.8","weight":"0"},"quiver_arrows_score":{"sheetItem":"Quiver, 1 score arrows cap.","type":"0","cost":"1.2","weight":"0"},"quiver_bolts_score":{"sheetItem":"Quiver, 1 score bolts cap.","type":"0","cost":"1.5","weight":"0"},"quiver_bolts_2score":{"sheetItem":"Quiver, 2 score bolts cap.","type":"0","cost":"1","weight":"0"},"rope_50":{"sheetItem":"Rope, 50ft","type":"0","cost":"0.4","weight":"0"},"sack_large":{"sheetItem":"Sack, large","type":"0","cost":"0.16","weight":"0"},"sack_small":{"sheetItem":"Sack, small","type":"0","cost":"0.1","weight":"0"},"skin_water_wine":{"sheetItem":"Skin for water or wine","type":"0","cost":"1.5","weight":"0"},"spike_iron_large":{"sheetItem":"Spike, iron, large","type":"0","cost":"0.01","weight":"0"},"thieves_tools":{"sheetItem":"Thieves' picks & tools","type":"0","cost":"30","weight":"0"},"tinderbox":{"sheetItem":"Tinder Box, with flint & steel","type":"0","cost":"1","weight":"0"},"torch":{"sheetItem":"Torch","type":"0","cost":"0.01","weight":"10"},"ale_pint":{"sheetItem":"Ale, pint","type":"0","cost":"0.1","weight":"10"},"beer_pint":{"sheetItem":"Beer, small, pint","type":"0","cost":"0.05","weight":"0"},"food_meal_merchant":{"sheetItem":"Food, merchant's meal","type":"0","cost":"0.1","weight":"0"},"food_meal_rich":{"sheetItem":"Food, rich meal","type":"0","cost":"1","weight":"0"},"grain_horse_day":{"sheetItem":"Grain, horse meal, 1 day","type":"0","cost":"0.1","weight":"50"},"mead_pint":{"sheetItem":"Mead, pint","type":"0","cost":"0.5","weight":"0"},"rations_iron_week":{"sheetItem":"Rations, iron, 1 week","type":"0","cost":"0","weight":"140"},"rations_standard_week":{"sheetItem":"Rations, standard, 1 week","type":"0","cost":"3","weight":"140"},"wine_good_pint":{"sheetItem":"Wine, pint, good","type":"0","cost":"1","weight":"0"},"wine_watered_pint":{"sheetItem":"Wine, pint, watered","type":"0","cost":"0.5","weight":"0"},"beads_prayer":{"sheetItem":"Beads, Prayer","type":"0","cost":"1","weight":"0"},"incense_stick":{"sheetItem":"Incense, stick","type":"0","cost":"1","weight":"0"},"symbol_holy_iron":{"sheetItem":"Holy symbol, pewter","type":"0","cost":"5","weight":"10"},"symbol_holy_silver":{"sheetItem":"Holy symbol, silver","type":"0","cost":"25","weight":"10"},"symbol_holy_wood":{"sheetItem":"Holy symbol, wooden","type":"0","cost":"0.6","weight":"0"},"water_holy_vial":{"sheetItem":"Water, holy (per vial)","type":"0","cost":"25","weight":"0.5"},"barding_chain":{"sheetItem":"Barding, chain","type":"4","cost":"250","weight":"0"},"barding_leather":{"sheetItem":"Barding, leather","type":"4","cost":"100","weight":"0"},"barding_plate":{"sheetItem":"Barding, plate","type":"4","cost":"1.5","weight":"0"},"bit_bridle":{"sheetItem":"Bit and Bridle","type":"4","cost":"1.5","weight":"0"},"harness":{"sheetItem":"Harness","type":"4","cost":"1.2","weight":"0"},"saddle":{"sheetItem":"Saddle","type":"4","cost":"10","weight":"0"},"saddlebags_large":{"sheetItem":"Saddle Bags, large","type":"4","cost":"4","weight":"0"},"saddlebags_small":{"sheetItem":"Saddle Bags, small","type":"4","cost":"3","weight":"0"},"saddle_blanket":{"sheetItem":"Saddle Blanket","type":"4","cost":"0.3","weight":"0"},"barge_small":{"sheetItem":"Barge (or Raft), small","type":"4","cost":"50","weight":"0"},"boat_small":{"sheetItem":"Boat, small","type":"4","cost":"75","weight":"0"},"boat_long":{"sheetItem":"Boat, long","type":"4","cost":"150","weight":"0"},"cart":{"sheetItem":"Cart","type":"4","cost":"50","weight":"0"},"galley_large":{"sheetItem":"Galley, large","type":"4","cost":"25000","weight":"0"},"galley_small":{"sheetItem":"Galley, small","type":"4","cost":"10000","weight":"0"},"ship_merchant_large":{"sheetItem":"Ship, merchant, large","type":"4","cost":"15000","weight":"0"},"ship_merchant_small":{"sheetItem":"Ship, merchant, small","type":"4","cost":"5000","weight":"0"},"ship_war":{"sheetItem":"Ship, war","type":"4","cost":"20000","weight":"0"},"wagon":{"sheetItem":"Wagon","type":"4","cost":"150","weight":"0"},"bronze_plate":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"field_plate":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_buckler":{"sheetItem":"Shield, buckler","type":"2","cost":"5","weight":"5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"aklys":{"sheetItem":"Aklys","type":"1","cost":"2","weight":"35","weapon":{"attack_type":"1","speed":"4 (+1)","length":"c. 2ft","space":"2ft","dsm":"1d6","dlg":"1d3","dmgtype":"","rof":"1","range":"1*/-/-"}},"atlatl":{"sheetItem":"Atlatl","type":"1","cost":"1","weight":"30","weapon":{"attack_type":"1","speed":"n/a","length":"c. 3ft","space":"1ft","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"3/6/9"}},"blowgun":{"sheetItem":"Blowgun","type":"1","cost":"20","weight":"15","weapon":{"attack_type":"0","speed":"n/a","length":"4-7ft","space":"1ft","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":""}},"blowgun_needle":{"sheetItem":"Blowgun and needle","type":"0","cost":"0","weight":"15"},"caltrop":{"sheetItem":"Caltrop","type":"1","cost":"0.2","weight":"3","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":""}},"crossbow_hand":{"sheetItem":"Crossbow, hand","type":"1","cost":"300","weight":"0","weapon":{"attack_type":"1","speed":"","length":"","space":"","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"2/4/6"}},"quarrels_hand_crossbow":{"sheetItem":"Quarrels for same","type":"1","cost":"100","weight":"0","weapon":{"attack_type":"0","speed":"","length":"","space":"","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":""}},"garrot":{"sheetItem":"Garrot","type":"1","cost":"0.5","weight":"1","weapon":{"attack_type":"0","speed":"2","length":"c. 3ft","space":"1.5ft","dsm":"1d4","dlg":"1d6","dmgtype":"","rof":"","range":""}},"harpoon":{"sheetItem":"Harpoon","type":"1","cost":"5","weight":"55","weapon":{"attack_type":"1","speed":"6","length":"6-8ft","space":"1.5ft","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"1","range":"1/2/3"}},"hook_fauchard":{"sheetItem":"Hook Fauchard","type":"1","cost":"6","weight":"80","weapon":{"attack_type":"0","speed":"9","length":"8ft+","space":"2.5ft","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":""}},"knife":{"sheetItem":"Knife & scabbard","type":"1","cost":"1","weight":"6","weapon":{"attack_type":"1","speed":"2","length":"c. 1ft","space":"1ft","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"2","range":"1/2/3"}},"lasso":{"sheetItem":"Lasso","type":"1","cost":"0.5","weight":"20","weapon":{"attack_type":"1","speed":"10","length":"10-20ft","space":"8ft+","dsm":"","dlg":"","dmgtype":"","rof":"1/2","range":"1/2/3"}},"man_catcher":{"sheetItem":"Man Catcher","type":"1","cost":"25","weight":"80","weapon":{"attack_type":"0","speed":"7","length":"8ft+","space":"2.5ft","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":""}},"sap":{"sheetItem":"Sap","type":"1","cost":"1","weight":"10","weapon":{"attack_type":"0","speed":"2","length":"0.5ft","space":"1ft","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":""}},"spiked_buckler":{"sheetItem":"Spiked Buckler","type":"2","cost":"10","weight":"35","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"staff_sling":{"sheetItem":"Staff Sling","type":"1","cost":"2","weight":"0","weapon":{"attack_type":"1","speed":"11","length":"5ft","space":"6ft","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9"}},"sword_falchion":{"sheetItem":"Sword, falchion, and scabbard","type":"1","cost":"10","weight":"70","weapon":{"attack_type":"0","speed":"5","length":"c. 3.5ft","space":"3.5ft","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":""}},"sword_khopesh":{"sheetItem":"Sword, khopesh","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","speed":"9","length":"c. 3.5ft","space":"4ft","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":""}},"whip":{"sheetItem":"Whip","type":"1","cost":"3","weight":"30","weapon":{"attack_type":"0","speed":"5-8","length":"8-20ft","space":"8-20ft","dsm":"1d2","dlg":"1","dmgtype":"","rof":"","range":""}}});
+  const SHEET_SYNC_BY_ITEM_KEY = Object.freeze({"banded":{"sheetItem":"Banded","type":"2","cost":"90","weight":"350","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain":{"sheetItem":"Chain","type":"2","cost":"75","weight":"300","armorType":"1","armor":{"ac":"5","base":"5","bulk":"fairly"}},"helmet_great":{"sheetItem":"Helmet, great","type":"2","cost":"15","weight":"15","armorType":"4","armor":{"ac":"1","base":"","bulk":"bulky"}},"helmet_small":{"sheetItem":"Helmet, small","type":"2","cost":"10","weight":"10","armorType":"4","armor":{"ac":"1","base":"","bulk":"non-bulky"}},"leather":{"sheetItem":"Leather","type":"2","cost":"5","weight":"150","armorType":"1","armor":{"ac":"8","base":"8","bulk":"non-bulky"}},"padded":{"sheetItem":"Padded","type":"2","cost":"4","weight":"100","armorType":"1","armor":{"ac":"8","base":"8","bulk":"fairly"}},"plate":{"sheetItem":"Plate","type":"0","cost":"400","weight":"450","armorType":"1","armor":{"ac":"3","base":"3","bulk":"bulky"}},"ring_mail":{"sheetItem":"Ring","type":"2","cost":"30","weight":"250","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"scale":{"sheetItem":"Scale","type":"2","cost":"45","weight":"400","armorType":"1","armor":{"ac":"6","base":"6","bulk":"fairly"}},"shield_large":{"sheetItem":"Shield, large","type":"2","cost":"15","weight":"100","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"bulky"}},"shield_small":{"sheetItem":"Shield, small","type":"2","cost":"10","weight":"50","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"shield_small_wood":{"sheetItem":"Shield, small, wooden","type":"2","cost":"1","weight":"30","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"splinted":{"sheetItem":"Splinted","type":"2","cost":"80","weight":"40","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"studded":{"sheetItem":"Studded","type":"0","cost":"15","weight":"200","armorType":"1","armor":{"ac":"7","base":"7","bulk":"fairly"}},"arrow_single":{"sheetItem":"Arrow, normal, single","type":"1","cost":"0.2","weight":"2","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_dozen":{"sheetItem":"Arrow, normal, dozen","type":"1","cost":"1","weight":"24","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"arrow_silver":{"sheetItem":"Arrow, silver, single","type":"1","cost":"1","weight":"0","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"axe_battle":{"sheetItem":"Axe, battle","type":"1","cost":"5","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"axe_hand":{"sheetItem":"Axe, hand or throwing","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"1ft"}},"bardiche":{"sheetItem":"Bardiche","type":"1","cost":"7","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 5ft","space":"5ft"}},"bec_de_corbin":{"sheetItem":"Bec de corbin","type":"1","cost":"6","weight":"100","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 6ft","space":"6ft"}},"bill_guisarme":{"sheetItem":"Bill-Guisarme","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"bow_comp_short":{"sheetItem":"Bow, composite short","type":"1","cost":"75","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/18","speed":"","length":"","space":""}},"bow_comp_long":{"sheetItem":"Bow, composite, long","type":"1","cost":"100","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"6/12/21","speed":"","length":"","space":""}},"bow_long":{"sheetItem":"Bow, long","type":"1","cost":"60","weight":"120","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"7/14/21","speed":"","length":"","space":""}},"bow_short":{"sheetItem":"Bow, short","type":"1","cost":"15","weight":"80","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"2","range":"5/10/15","speed":"","length":"","space":""}},"crossbow_heavy":{"sheetItem":"Crossbow, heavy","type":"1","cost":"20","weight":"120","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"8/16/24","speed":"","length":"","space":""}},"crossbow_light":{"sheetItem":"Crossbow, light","type":"1","cost":"12","weight":"40","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"6/12/18","speed":"","length":"","space":""}},"dagger":{"sheetItem":"Dagger and scabbard","type":"1","cost":"2","weight":"10","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d3","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"15in","space":"1ft"}},"dart":{"sheetItem":"Dart","type":"1","cost":"0.5","weight":"5","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"3","range":"1.5/3/4.5","speed":"","length":"","space":""}},"fauchard":{"sheetItem":"Fauchard","type":"1","cost":"3","weight":"60","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"2ft"}},"fauchard_fork":{"sheetItem":"Fauchard-Fork","type":"1","cost":"8","weight":"80","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft","space":"2ft"}},"flail_foot":{"sheetItem":"Flail, footman's","type":"1","cost":"3","weight":"150","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"6ft"}},"flail_horse":{"sheetItem":"Flail, horseman's","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4+1","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 2ft","space":"4ft"}},"fork_military":{"sheetItem":"Fork, Military","type":"1","cost":"4","weight":"75","weapon":{"attack_type":"0","dsm":"1d8","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"7ft+","space":"1ft"}},"glaive":{"sheetItem":"Glaive","type":"1","cost":"6","weight":"75","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d10","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"glaive_guisarme":{"sheetItem":"Glaive-Guisarme","type":"1","cost":"10","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"1ft"}},"guisarme":{"sheetItem":"Guisarme","type":"1","cost":"5","weight":"80","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"8","length":"6ft+","space":"2ft"}},"guisarme_voulge":{"sheetItem":"Guisarme-Voulge","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"7ft+","space":"2ft"}},"halberd":{"sheetItem":"Halberd","type":"1","cost":"9","weight":"175","weapon":{"attack_type":"0","dsm":"1d10","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer_lucern":{"sheetItem":"Hammer, Lucern","type":"1","cost":"7","weight":"150","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"5ft+","space":"5ft"}},"hammer":{"sheetItem":"Hammer","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"1","range":"1/2/3","speed":"4","length":"c. 1.5ft","space":"2ft"}},"javelin":{"sheetItem":"Javelin","type":"1","cost":"1","weight":"20","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"lance":{"sheetItem":"Lance","type":"1","cost":"6","weight":"150","weapon":{"attack_type":"0","dsm":"","dlg":"","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"mace_foot":{"sheetItem":"Mace, footman's","type":"1","cost":"8","weight":"100","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 2.5ft","space":"4ft"}},"mace_horse":{"sheetItem":"Mace, horseman's","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 1.5ft","space":"2ft"}},"morning_star":{"sheetItem":"Morning Star","type":"1","cost":"5","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"5ft"}},"partisan":{"sheetItem":"Partisan","type":"1","cost":"10","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"9","length":"7ft+","space":"3ft"}},"pick_foot":{"sheetItem":"Pick, Military, footman's","type":"1","cost":"8","weight":"60","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"7","length":"c. 4ft","space":"4ft"}},"pick_horse":{"sheetItem":"Pick, Military, horseman's","type":"1","cost":"5","weight":"40","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 2ft","space":"2ft"}},"pike_awl":{"sheetItem":"Pike, awl","type":"1","cost":"3","weight":"80","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"13","length":"18ft+","space":"1ft"}},"quarrel_light_single":{"sheetItem":"Quarrel (or Bolt), light, single","type":"1","cost":"0.1","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"quarrel_heavy_score":{"sheetItem":"Quarrel (or Bolt), heavy, score","type":"1","cost":"2","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"ranseur":{"sheetItem":"Ranseur","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"scimitar":{"sheetItem":"Scimitar","type":"1","cost":"15","weight":"40","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"4","length":"c. 3ft","space":"2ft"}},"sling_dozen":{"sheetItem":"Sling & Bullets, dozen","type":"1","cost":"1.5","weight":"0","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"sling_bullets_score":{"sheetItem":"Sling Bullets, score","type":"1","cost":"1","weight":"2","weapon":{"attack_type":"0","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"spear":{"sheetItem":"Spear","type":"1","cost":"1","weight":"50","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"1","range":"1/2/3","speed":"6-8","length":"5-13ft+","space":"1ft"}},"spetum":{"sheetItem":"Spetum","type":"1","cost":"3","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d6","dmgtype":"","rof":"","range":"","speed":"8","length":"8ft+","space":"1ft"}},"sword_bastard":{"sheetItem":"Sword, bastard, & scabbard","type":"1","cost":"25","weight":"100","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d8","dmgtype":"","rof":"","range":"","speed":"6","length":"c. 4.5ft","space":"4ft+"}},"sword_broad":{"sheetItem":"Sword, broad, & scabbard","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6+1","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"4ft"}},"sword_long":{"sheetItem":"Sword, long & scabbard","type":"1","cost":"15","weight":"60","weapon":{"attack_type":"0","dsm":"1d8","dlg":"1d12","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3ft"}},"sword_short":{"sheetItem":"Sword, short & scabbard","type":"1","cost":"8","weight":"35","weapon":{"attack_type":"0","dsm":"1d6","dlg":"1d8","dmgtype":"","rof":"","range":"","speed":"3","length":"c. 2ft","space":"1ft"}},"sword_twohanded":{"sheetItem":"Sword, two-handed","type":"1","cost":"30","weight":"250","weapon":{"attack_type":"0","dsm":"1d10","dlg":"3d6","dmgtype":"","rof":"","range":"","speed":"10","length":"c. 6ft","space":"6ft"}},"trident":{"sheetItem":"Trident","type":"1","cost":"4","weight":"50","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"3d4","dmgtype":"","rof":"","range":"","speed":"6-8","length":"4-8ft+","space":"1ft"}},"voulge":{"sheetItem":"Voulge","type":"1","cost":"2","weight":"125","weapon":{"attack_type":"0","dsm":"2d4","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"10","length":"8ft+","space":"2ft"}},"belt":{"sheetItem":"Belt","type":"0","cost":"0.5","weight":"0"},"boots_high_hard":{"sheetItem":"Boots, high, hard","type":"0","cost":"2","weight":"0"},"boots_high_soft":{"sheetItem":"Boots, high, soft","type":"0","cost":"1","weight":"0"},"boots_low_hard":{"sheetItem":"Boots, low, hard","type":"0","cost":"1","weight":"0"},"boots_low_soft":{"sheetItem":"Boots, low, soft","type":"0","cost":"0.8","weight":"0"},"cap":{"sheetItem":"Cap","type":"0","cost":"0.1","weight":"0"},"cloak":{"sheetItem":"Cloak","type":"0","cost":"0.3","weight":"10"},"girdle_broad":{"sheetItem":"Girdle, broad","type":"0","cost":"2","weight":"0"},"girdle_normal":{"sheetItem":"Girdle, normal","type":"0","cost":"1","weight":"0"},"hat":{"sheetItem":"Hat","type":"0","cost":"0.7","weight":"0"},"robe":{"sheetItem":"Robe","type":"0","cost":"0.6","weight":"0"},"belladonna":{"sheetItem":"Belladona, sprig","type":"0","cost":"0.4","weight":"0"},"garlic":{"sheetItem":"Garlic, bud","type":"3","cost":"0.05","weight":"0"},"wolfsbane":{"sheetItem":"Wolvesbane, sprig","type":"0","cost":"1","weight":"0"},"chicken":{"sheetItem":"Chicken","type":"4","cost":"0.03","weight":"0"},"cow":{"sheetItem":"Cow","type":"4","cost":"10","weight":"0"},"dog_guard":{"sheetItem":"Dog, guard","type":"4","cost":"25","weight":"0"},"dog_hunting":{"sheetItem":"Dog, hunting","type":"4","cost":"17","weight":"0"},"donkey":{"sheetItem":"Donkey","type":"4","cost":"8","weight":"0"},"goat":{"sheetItem":"Goat","type":"4","cost":"1","weight":"0"},"hawk_large":{"sheetItem":"Hawk, large","type":"4","cost":"40","weight":"0"},"hawk_small":{"sheetItem":"Hawk, small","type":"4","cost":"18","weight":"0"},"horse_draft":{"sheetItem":"Horse, draft","type":"4","cost":"15","weight":"8000"},"horse_heavy_war":{"sheetItem":"Horse, heavy war","type":"4","cost":"500","weight":"8000"},"horse_light_war":{"sheetItem":"Horse, light war","type":"4","cost":"200","weight":"5000"},"horse_medium_war":{"sheetItem":"Horse, medium war","type":"4","cost":"350","weight":"7000"},"horse_riding":{"sheetItem":"Horse, riding (light)","type":"4","cost":"40","weight":"3500"},"mule":{"sheetItem":"Mule","type":"4","cost":"18","weight":"6000"},"ox":{"sheetItem":"Ox","type":"4","cost":"15","weight":"8000"},"pigeon":{"sheetItem":"Pigeon","type":"4","cost":"0.02","weight":"0"},"piglet":{"sheetItem":"Piglet","type":"4","cost":"1","weight":"0"},"pig":{"sheetItem":"Pig","type":"4","cost":"3","weight":"0"},"pony":{"sheetItem":"Pony","type":"4","cost":"12","weight":"3000"},"sheep":{"sheetItem":"Sheep","type":"4","cost":"2","weight":"0"},"songbird":{"sheetItem":"Songbird","type":"4","cost":"0.04","weight":"0"},"backpack":{"sheetItem":"Backpack, leather","type":"0","cost":"2","weight":"0"},"box_iron_large":{"sheetItem":"Box, iron, large","type":"0","cost":"28","weight":"20"},"box_iron_small":{"sheetItem":"Box, iron, small","type":"0","cost":"9","weight":"10"},"candle_tallow":{"sheetItem":"Candle, tallow","type":"0","cost":"0.01","weight":"0"},"candle_wax":{"sheetItem":"Candle, wax","type":"0","cost":"0.1","weight":"0"},"case_bone_scroll":{"sheetItem":"Case, bone, map or scroll","type":"0","cost":"5","weight":"0"},"case_leather_scroll":{"sheetItem":"Case, leather, map or scroll","type":"0","cost":"1.5","weight":"0"},"chest_wood_large":{"sheetItem":"Chest, wooden, large","type":"0","cost":"1.7","weight":"20"},"chest_wood_small":{"sheetItem":"Chest, wooden, small","type":"0","cost":"0.8","weight":"0"},"lantern_bullseye":{"sheetItem":"Lantern, bullseye","type":"0","cost":"12","weight":"30"},"lantern_hooded":{"sheetItem":"Lantern, hooded","type":"0","cost":"7","weight":"20"},"mirror_large_metal":{"sheetItem":"Mirror, large metal","type":"0","cost":"10","weight":"0"},"mirror_small_silver":{"sheetItem":"Mirror (small silver)","type":"0","cost":"45","weight":"0.5"},"oil_flask":{"sheetItem":"Oil, flask of","type":"0","cost":"1","weight":"0"},"pole_10":{"sheetItem":"Pole, 10ft","type":"0","cost":"0.03","weight":"0"},"pouch_large":{"sheetItem":"Pouch, belt, large","type":"0","cost":"1","weight":"0"},"pouch_small":{"sheetItem":"Pouch, belt, small","type":"0","cost":"1.5","weight":"0"},"quiver_arrows_dozen":{"sheetItem":"Quiver, 1 doz. arrows cap.","type":"0","cost":"0.8","weight":"0"},"quiver_arrows_score":{"sheetItem":"Quiver, 1 score arrows cap.","type":"0","cost":"1.2","weight":"0"},"quiver_bolts_score":{"sheetItem":"Quiver, 1 score bolts cap.","type":"0","cost":"1.5","weight":"0"},"quiver_bolts_2score":{"sheetItem":"Quiver, 2 score bolts cap.","type":"0","cost":"1","weight":"0"},"rope_50":{"sheetItem":"Rope, 50ft","type":"0","cost":"0.4","weight":"0"},"sack_large":{"sheetItem":"Sack, large","type":"0","cost":"0.16","weight":"0"},"sack_small":{"sheetItem":"Sack, small","type":"0","cost":"0.1","weight":"0"},"skin_water_wine":{"sheetItem":"Skin for water or wine","type":"0","cost":"1.5","weight":"0"},"spike_iron_large":{"sheetItem":"Spike, iron, large","type":"0","cost":"0.01","weight":"0"},"thieves_tools":{"sheetItem":"Thieves' picks & tools","type":"0","cost":"30","weight":"0"},"tinderbox":{"sheetItem":"Tinder Box, with flint & steel","type":"0","cost":"1","weight":"0"},"torch":{"sheetItem":"Torch","type":"0","cost":"0.01","weight":"10"},"ale_pint":{"sheetItem":"Ale, pint","type":"0","cost":"0.1","weight":"10"},"beer_pint":{"sheetItem":"Beer, small, pint","type":"0","cost":"0.05","weight":"0"},"food_meal_merchant":{"sheetItem":"Food, merchant's meal","type":"0","cost":"0.1","weight":"0"},"food_meal_rich":{"sheetItem":"Food, rich meal","type":"0","cost":"1","weight":"0"},"grain_horse_day":{"sheetItem":"Grain, horse meal, 1 day","type":"0","cost":"0.1","weight":"50"},"mead_pint":{"sheetItem":"Mead, pint","type":"0","cost":"0.5","weight":"0"},"rations_iron_week":{"sheetItem":"Rations, iron, 1 week","type":"0","cost":"0","weight":"140"},"rations_standard_week":{"sheetItem":"Rations, standard, 1 week","type":"0","cost":"3","weight":"140"},"wine_good_pint":{"sheetItem":"Wine, pint, good","type":"0","cost":"1","weight":"0"},"wine_watered_pint":{"sheetItem":"Wine, pint, watered","type":"0","cost":"0.5","weight":"0"},"beads_prayer":{"sheetItem":"Beads, Prayer","type":"0","cost":"1","weight":"0"},"incense_stick":{"sheetItem":"Incense, stick","type":"0","cost":"1","weight":"0"},"symbol_holy_iron":{"sheetItem":"Holy symbol, pewter","type":"0","cost":"5","weight":"10"},"symbol_holy_silver":{"sheetItem":"Holy symbol, silver","type":"0","cost":"25","weight":"10"},"symbol_holy_wood":{"sheetItem":"Holy symbol, wooden","type":"0","cost":"0.6","weight":"0"},"water_holy_vial":{"sheetItem":"Water, holy (per vial)","type":"0","cost":"25","weight":"0.5"},"barding_chain":{"sheetItem":"Barding, chain","type":"4","cost":"250","weight":"0"},"barding_leather":{"sheetItem":"Barding, leather","type":"4","cost":"100","weight":"0"},"barding_plate":{"sheetItem":"Barding, plate","type":"4","cost":"1.5","weight":"0"},"bit_bridle":{"sheetItem":"Bit and Bridle","type":"4","cost":"1.5","weight":"0"},"harness":{"sheetItem":"Harness","type":"4","cost":"1.2","weight":"0"},"saddle":{"sheetItem":"Saddle","type":"4","cost":"10","weight":"0"},"saddlebags_large":{"sheetItem":"Saddle Bags, large","type":"4","cost":"4","weight":"0"},"saddlebags_small":{"sheetItem":"Saddle Bags, small","type":"4","cost":"3","weight":"0"},"saddle_blanket":{"sheetItem":"Saddle Blanket","type":"4","cost":"0.3","weight":"0"},"barge_small":{"sheetItem":"Barge (or Raft), small","type":"4","cost":"50","weight":"0"},"boat_small":{"sheetItem":"Boat, small","type":"4","cost":"75","weight":"0"},"boat_long":{"sheetItem":"Boat, long","type":"4","cost":"150","weight":"0"},"cart":{"sheetItem":"Cart","type":"4","cost":"50","weight":"0"},"galley_large":{"sheetItem":"Galley, large","type":"4","cost":"25000","weight":"0"},"galley_small":{"sheetItem":"Galley, small","type":"4","cost":"10000","weight":"0"},"ship_merchant_large":{"sheetItem":"Ship, merchant, large","type":"4","cost":"15000","weight":"0"},"ship_merchant_small":{"sheetItem":"Ship, merchant, small","type":"4","cost":"5000","weight":"0"},"ship_war":{"sheetItem":"Ship, war","type":"4","cost":"20000","weight":"0"},"wagon":{"sheetItem":"Wagon","type":"4","cost":"150","weight":"0"},"bronze_plate":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"field_plate":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_buckler":{"sheetItem":"Shield, buckler","type":"2","cost":"5","weight":"5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"aklys":{"sheetItem":"Aklys","type":"1","cost":"2","weight":"35","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d3","dmgtype":"","rof":"1","range":"1*/-/-","speed":"4 (+1)","length":"c. 2ft","space":"2ft"}},"atlatl":{"sheetItem":"Atlatl","type":"1","cost":"1","weight":"30","weapon":{"attack_type":"1","dsm":"1d6","dlg":"1d6","dmgtype":"","rof":"1","range":"3/6/9","speed":"n/a","length":"c. 3ft","space":"1ft"}},"blowgun":{"sheetItem":"Blowgun","type":"1","cost":"20","weight":"15","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"n/a","length":"4-7ft","space":"1ft"}},"blowgun_needle":{"sheetItem":"Blowgun Needle","type":"0","cost":"0.1","weight":"15","weapon":{"attack_type":"1","speed":"","length":"","space":"","misc":"","dsm":"1","dlg":"1","dmgtype":"","rof":"2","range":"1/2/3"}},"caltrop":{"sheetItem":"Caltrop","type":"1","cost":"0.2","weight":"3","weapon":{"attack_type":"0","dsm":"1","dlg":"1","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"crossbow_hand":{"sheetItem":"Crossbow, hand","type":"1","cost":"300","weight":"0","weapon":{"attack_type":"1","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"1","range":"2/4/6","speed":"","length":"","space":""}},"quarrels_hand_crossbow":{"sheetItem":"Quarrels for same","type":"1","cost":"100","weight":"0","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"","length":"","space":""}},"garrot":{"sheetItem":"Garrot","type":"1","cost":"0.5","weight":"1","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"2","length":"c. 3ft","space":"1.5ft"}},"harpoon":{"sheetItem":"Harpoon","type":"1","cost":"5","weight":"55","weapon":{"attack_type":"1","dsm":"2d4","dlg":"2d6","dmgtype":"","rof":"1","range":"1/2/3","speed":"6","length":"6-8ft","space":"1.5ft"}},"hook_fauchard":{"sheetItem":"Hook Fauchard","type":"1","cost":"6","weight":"80","weapon":{"attack_type":"0","dsm":"1d4","dlg":"1d4","dmgtype":"","rof":"","range":"","speed":"9","length":"8ft+","space":"2.5ft"}},"knife":{"sheetItem":"Knife & scabbard","type":"1","cost":"1","weight":"6","weapon":{"attack_type":"1","dsm":"1d3","dlg":"1d2","dmgtype":"","rof":"2","range":"1/2/3","speed":"2","length":"c. 1ft","space":"1ft"}},"lasso":{"sheetItem":"Lasso","type":"1","cost":"0.5","weight":"20","weapon":{"attack_type":"1","dsm":"","dlg":"","dmgtype":"","rof":"1/2","range":"1/2/3","speed":"10","length":"10-20ft","space":"8ft+"}},"man_catcher":{"sheetItem":"Man Catcher","type":"1","cost":"25","weight":"80","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"7","length":"8ft+","space":"2.5ft"}},"sap":{"sheetItem":"Sap","type":"1","cost":"1","weight":"10","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1d2","dmgtype":"","rof":"","range":"","speed":"2","length":"0.5ft","space":"1ft"}},"spiked_buckler":{"sheetItem":"Spiked Buckler","type":"2","cost":"10","weight":"35","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"non-bulky"}},"staff_sling":{"sheetItem":"Staff Sling","type":"1","cost":"2","weight":"0","weapon":{"attack_type":"1","dsm":"1d4+1","dlg":"1d6+1","dmgtype":"","rof":"1/2","range":"-/3-6/9","speed":"11","length":"5ft","space":"6ft"}},"sword_falchion":{"sheetItem":"Sword, falchion, and scabbard","type":"1","cost":"10","weight":"70","weapon":{"attack_type":"0","dsm":"1d6+1","dlg":"2d4","dmgtype":"","rof":"","range":"","speed":"5","length":"c. 3.5ft","space":"3.5ft"}},"sword_khopesh":{"sheetItem":"Sword, khopesh","type":"1","cost":"10","weight":"75","weapon":{"attack_type":"0","dsm":"2d4","dlg":"1d6","dmgtype":"","rof":"","range":"","speed":"9","length":"c. 3.5ft","space":"4ft"}},"whip":{"sheetItem":"Whip","type":"1","cost":"3","weight":"30","weapon":{"attack_type":"0","dsm":"1d2","dlg":"1","dmgtype":"","rof":"","range":"","speed":"5-8","length":"8-20ft","space":"8-20ft"}},"bronze_plate_x":{"sheetItem":"Bronze Plate","type":"2","cost":"100","weight":"45","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"chain_elfin":{"sheetItem":"Chain, Elfin","type":"2","cost":"0","weight":"150","armorType":"1","armor":{"ac":"5","base":"5","bulk":"non-bulky"}},"field_plate_x":{"sheetItem":"Field Plate","type":"2","cost":"2000","weight":"50","armorType":"1","armor":{"ac":"2","base":"2","bulk":"bulky"}},"full_plate_x":{"sheetItem":"Full Plate","type":"2","cost":"4000","weight":"70","armorType":"1","armor":{"ac":"1","base":"1","bulk":"bulky"}},"shield_medium":{"sheetItem":"Shield, Medium","type":"2","cost":"10","weight":"7.5","armorType":"3","armor":{"ac":"-1","base":"-1","bulk":"fairly"}},"splint":{"sheetItem":"Splint","type":"2","cost":"80","weight":"400","armorType":"1","armor":{"ac":"4","base":"4","bulk":"bulky"}},"bo_stick":{"sheetItem":"Bo Stick","type":"1","cost":"5","weight":"15"},"dagger_x":{"sheetItem":"Dagger","type":"1","cost":"0.2","weight":"10"},"jo_stick":{"sheetItem":"Jo Stick","type":"1","cost":"5","weight":"40"},"knife_x":{"sheetItem":"Knife","type":"1","cost":"0.1","weight":"6"},"lance_light_horse":{"sheetItem":"Lance (light horse)","type":"1","cost":"6","weight":"50"},"staff_quarter":{"sheetItem":"Staff, Quarter","type":"1","cost":"0.2","weight":"50"},"air_bladder":{"sheetItem":"Air bladder","type":"0","cost":"15","weight":"20"},"basket_large_bushel":{"sheetItem":"Basket, large (bushel)","type":"0","cost":"0.5","weight":"80"},"basket_small":{"sheetItem":"Basket, small","type":"0","cost":"0.2","weight":"40"},"beacon":{"sheetItem":"Beacon","type":"0","cost":"40","weight":"200"},"bedroll":{"sheetItem":"Bedroll","type":"0","cost":"0.2","weight":"50"},"bell":{"sheetItem":"Bell","type":"0","cost":"1","weight":"0"},"birdcage":{"sheetItem":"Birdcage","type":"0","cost":"0.5","weight":"50"},"blanket_woollen":{"sheetItem":"Blanket, woollen","type":"0","cost":"0.2","weight":"20"},"block_and_tackle":{"sheetItem":"Block and tackle","type":"0","cost":"5","weight":"50"},"boots_heavy":{"sheetItem":"Boots, heavy","type":"0","cost":"2","weight":"50"},"boots_soft":{"sheetItem":"Boots, soft","type":"0","cost":"1","weight":"30"},"bottle_wine":{"sheetItem":"Bottle (wine)","type":"0","cost":"2","weight":"10"},"box_small_gold":{"sheetItem":"Box, small gold","type":"0","cost":"100","weight":"20"},"box_small_lead":{"sheetItem":"Box, small lead","type":"0","cost":"20","weight":"20"},"bracer_leather":{"sheetItem":"Bracer, leather","type":"0","cost":"0.8","weight":"0"},"caltrops":{"sheetItem":"Caltrops","type":"0","cost":"1","weight":"20"},"candle_beeswax":{"sheetItem":"Candle, beeswax","type":"0","cost":"0.01","weight":"0"},"canvas_per_sq_yd":{"sheetItem":"Canvas (per sq. yd.)","type":"0","cost":"0.1","weight":"10"},"cauldron_and_tripod":{"sheetItem":"Cauldron and tripod","type":"0","cost":"2","weight":"150"},"chain_per_10_ft":{"sheetItem":"Chain (per 10 ft.)","type":"0","cost":"30","weight":"100"},"chalk_piece":{"sheetItem":"Chalk, piece","type":"0","cost":"0.01","weight":"0"},"crampons":{"sheetItem":"Crampons","type":"0","cost":"40","weight":"50"},"crowbar":{"sheetItem":"Crowbar","type":"0","cost":"3","weight":"75"},"dice_bone_pair":{"sheetItem":"Dice, bone, pair","type":"0","cost":"0.5","weight":"0"},"dice_loaded_pair":{"sheetItem":"Dice, loaded, pair","type":"0","cost":"5","weight":"0"},"doublet_linen":{"sheetItem":"Doublet, linen","type":"0","cost":"3","weight":"0"},"drill_iron":{"sheetItem":"Drill, iron","type":"0","cost":"5","weight":"50"},"firewood_per_day":{"sheetItem":"Firewood (per day)","type":"0","cost":"0.01","weight":"30"},"fish_hook":{"sheetItem":"Fish hook","type":"0","cost":"0.1","weight":"0"},"fishing_net_per_25_sq_ft":{"sheetItem":"Fishing net (per 25 sq. ft.)","type":"0","cost":"0.1","weight":"0"},"flask_leather":{"sheetItem":"Flask (leather)","type":"0","cost":"0.03","weight":"0"},"flint_and_steel":{"sheetItem":"Flint and steel","type":"0","cost":"1","weight":"0"},"gloves_kidskin_pair":{"sheetItem":"Gloves, kidskin, pair","type":"0","cost":"3","weight":"0"},"gown_linen":{"sheetItem":"Gown, linen","type":"0","cost":"3","weight":"10"},"gown_silk":{"sheetItem":"Gown, silk","type":"0","cost":"50","weight":"10"},"gown_woollen":{"sheetItem":"Gown, woollen","type":"0","cost":"0.5","weight":"10"},"grappling_hook":{"sheetItem":"Grappling hook","type":"0","cost":"75","weight":"75"},"hammer_tool_not_war":{"sheetItem":"Hammer (tool, not war)","type":"0","cost":"0.5","weight":"20"},"hose":{"sheetItem":"Hose","type":"0","cost":"1","weight":"0"},"iron_spikes_dozen":{"sheetItem":"Iron spikes, dozen","type":"0","cost":"1","weight":"50"},"ladder_per_10_ft":{"sheetItem":"Ladder (per 10 ft.)","type":"0","cost":"0.5","weight":"200"},"lamp_bronze":{"sheetItem":"Lamp (bronze)","type":"0","cost":"0.1","weight":"10"},"lantern_waterproof":{"sheetItem":"Lantern, waterproof","type":"0","cost":"50","weight":"50"},"lard_pint":{"sheetItem":"Lard, pint","type":"0","cost":"0.05","weight":"20"},"lock":{"sheetItem":"Lock","type":"0","cost":"20","weight":"0.5"},"manacles":{"sheetItem":"Manacles","type":"0","cost":"15","weight":"20"},"mirror_small_steel":{"sheetItem":"Mirror (small steel)","type":"0","cost":"20","weight":"0.5"},"musical_instrument":{"sheetItem":"Musical instrument","type":"0","cost":"5","weight":"10"},"needle_and_thread":{"sheetItem":"Needle and thread","type":"0","cost":"0.03","weight":"0"},"oil_lamp_per_pint":{"sheetItem":"Oil (lamp) (per pint)","type":"0","cost":"0.1","weight":"10"},"oil_waterproofing":{"sheetItem":"Oil, waterproofing","type":"0","cost":"1","weight":"20"},"parchment_per_sheet":{"sheetItem":"Parchment (per sheet)","type":"0","cost":"0.2","weight":"0"},"pickaxe":{"sheetItem":"Pickaxe","type":"0","cost":"20","weight":"200"},"pin_cloak":{"sheetItem":"Pin (cloak)","type":"0","cost":"0.4","weight":"0"},"piton":{"sheetItem":"Piton","type":"0","cost":"0.1","weight":"0.5"},"pole_per_10_ft":{"sheetItem":"Pole (per 10 ft.)","type":"0","cost":"0.2","weight":"80"},"pot_iron":{"sheetItem":"Pot, iron","type":"0","cost":"0.5","weight":"50"},"powder_chalk":{"sheetItem":"Powder, chalk","type":"0","cost":"0.2","weight":"20"},"pulley":{"sheetItem":"Pulley","type":"0","cost":"25","weight":"60"},"quill_pen":{"sheetItem":"Quill (pen)","type":"0","cost":"0.1","weight":"0"},"quiver_holds_12_arrows":{"sheetItem":"Quiver (holds 12 arrows)","type":"0","cost":"1","weight":"0"},"quiver_holds_12_bolts":{"sheetItem":"Quiver (holds 12 bolts)","type":"0","cost":"1.2","weight":"0"},"quiver_holds_24_arrows":{"sheetItem":"Quiver (holds 24 arrows)","type":"0","cost":"2.5","weight":"0"},"quiver_holds_24_bolts":{"sheetItem":"Quiver (holds 24 bolts)","type":"0","cost":"3","weight":"0"},"rations_standard_per_day":{"sheetItem":"Rations, standard (per day)","type":"0","cost":"2","weight":"20"},"rations_trail_per_day":{"sheetItem":"Rations, trail (per day)","type":"0","cost":"6","weight":"10"},"reed_hollow":{"sheetItem":"Reed, hollow","type":"0","cost":"0.1","weight":"1"},"reins_bit_and_bridle":{"sheetItem":"Reins, bit and bridle","type":"0","cost":"2","weight":"50"},"robe_linen":{"sheetItem":"Robe, linen","type":"0","cost":"3","weight":"10"},"robe_silk":{"sheetItem":"Robe, silk","type":"0","cost":"60","weight":"10"},"rope_hemp_per_50_ft":{"sheetItem":"Rope, hemp (per 50 ft.)","type":"0","cost":"1","weight":"100"},"rope_silk_per_50_ft":{"sheetItem":"Rope, silk (per 50 ft.)","type":"0","cost":"10","weight":"50"},"saddle_and_stirrups":{"sheetItem":"Saddle and stirrups","type":"0","cost":"10","weight":"200"},"scrollcase_bone":{"sheetItem":"Scrollcase, bone","type":"0","cost":"4","weight":"0.5"},"scrollcase_leather":{"sheetItem":"Scrollcase, leather","type":"0","cost":"1","weight":"0.5"},"shoes_common":{"sheetItem":"Shoes, common","type":"0","cost":"0.5","weight":"10"},"shoes_noble":{"sheetItem":"Shoes, noble","type":"0","cost":"30","weight":"10"},"shovel":{"sheetItem":"Shovel","type":"0","cost":"10","weight":"180"},"signal_whistle":{"sheetItem":"Signal whistle","type":"0","cost":"0.8","weight":"0"},"skillet":{"sheetItem":"Skillet","type":"0","cost":"1","weight":"50"},"soap_per_lb":{"sheetItem":"Soap (per lb.)","type":"0","cost":"0.5","weight":"10"},"symbol_holy_unholy_iron":{"sheetItem":"Symbol, Holy/Unholy, iron","type":"0","cost":"2","weight":"0"},"symbol_holy_unholy_silver":{"sheetItem":"Symbol, Holy/Unholy, silver","type":"0","cost":"50","weight":"0"},"symbol_holy_unholy_wooden":{"sheetItem":"Symbol, Holy/Unholy, wooden","type":"0","cost":"0.7","weight":"0"},"tent":{"sheetItem":"Tent","type":"0","cost":"10","weight":"200"},"thieves_tools_x":{"sheetItem":"Thieves’ tools","type":"0","cost":"30","weight":"10"},"tunic_banqueting":{"sheetItem":"Tunic, banqueting","type":"0","cost":"10","weight":"10"},"tunic_woollen":{"sheetItem":"Tunic, woollen","type":"0","cost":"0.3","weight":"10"},"twine_linen_per_100_ft":{"sheetItem":"Twine, linen (per 100 ft.)","type":"0","cost":"0.08","weight":"0.5"},"vellum_per_sheet":{"sheetItem":"Vellum (per sheet)","type":"0","cost":"0.3","weight":"0"},"wagon_large":{"sheetItem":"Wagon, large","type":"0","cost":"250","weight":"0"},"wagon_small":{"sheetItem":"Wagon, small","type":"0","cost":"100","weight":"0"},"water_holy_unholy_vial":{"sheetItem":"Water, Holy/Unholy, vial","type":"0","cost":"25","weight":"0"},"whetstone":{"sheetItem":"Whetstone","type":"0","cost":"0.02","weight":"0.5"},"whistle":{"sheetItem":"Whistle","type":"0","cost":"0.1","weight":"1"},"wine_pint":{"sheetItem":"Wine, pint","type":"0","cost":"0.5","weight":"10"},"boat_collapsible":{"sheetItem":"Boat, collapsible","type":"4","cost":"500","weight":"600"},"canoe_large":{"sheetItem":"Canoe, large","type":"4","cost":"300","weight":"1600"},"canoe_small":{"sheetItem":"Canoe, small","type":"4","cost":"100","weight":"800"},"kayak":{"sheetItem":"Kayak","type":"4","cost":"250","weight":"500"},"axe_hand_x":{"sheetItem":"Axe, hand","type":"0","cost":"1","weight":"50"},"composite_bow_long":{"sheetItem":"Composite bow, long","type":"0","cost":"100","weight":"80"},"composite_bow_short":{"sheetItem":"Composite bow, short","type":"0","cost":"75","weight":"50"},"flail_heavy":{"sheetItem":"Flail, heavy","type":"0","cost":"3","weight":"100"},"flail_light":{"sheetItem":"Flail, light","type":"0","cost":"6","weight":"40"},"horse_cart_draft":{"sheetItem":"Horse, cart (draft)","type":"0","cost":"15","weight":"8000"},"horse_nag":{"sheetItem":"Horse, nag","type":"0","cost":"8","weight":"3000"},"horse_palfrey_riding_horse":{"sheetItem":"Horse, palfrey (riding horse)","type":"0","cost":"40","weight":"3500"},"horse_rouncey_all_purpose":{"sheetItem":"Horse, rouncey (all-purpose)","type":"0","cost":"25","weight":"4000"},"horse_war_heavy":{"sheetItem":"Horse, war, heavy","type":"0","cost":"500","weight":"8000"},"horse_war_light":{"sheetItem":"Horse, war, light","type":"0","cost":"200","weight":"5000"},"horse_war_medium":{"sheetItem":"Horse, war, medium","type":"0","cost":"350","weight":"7000"},"mace_heavy":{"sheetItem":"Mace, heavy","type":"0","cost":"10","weight":"100"},"mace_light":{"sheetItem":"Mace, light","type":"0","cost":"4","weight":"50"},"pick_heavy":{"sheetItem":"Pick, heavy","type":"0","cost":"8","weight":"10"},"pick_light":{"sheetItem":"Pick, light","type":"0","cost":"5","weight":"40"},"pole_arm":{"sheetItem":"Pole arm","type":"0","cost":"6","weight":"80"},"sling":{"sheetItem":"Sling","type":"0","cost":"0.5","weight":"5"},"sword_bastard_claymore":{"sheetItem":"Sword, bastard/claymore","type":"0","cost":"25","weight":"100"},"sword_scimitar_cutlass":{"sheetItem":"Sword, scimitar/cutlass","type":"0","cost":"15","weight":"50"},"warhammer_heavy":{"sheetItem":"Warhammer, heavy","type":"0","cost":"7","weight":"100"},"warhammer_light":{"sheetItem":"Warhammer, light","type":"0","cost":"1","weight":"50"}});
 
   const trinketByKey = {};
   TRINKETS.forEach(t => {
@@ -29437,7 +31721,7 @@ const TradingPost1E = (() => {
     const formatStoreHeader = (store) => {
     if (store.id === 'baseline') return [
       'Permanent chargen and resupply market.',
-      'All standard PHB + UA purchasable gear is available here at book price.',
+      'All non-magic PHB/UA sheet gear is available here at the character-sheet price, with exact sheet labels for drop-in equipment sync.',
       'Categories:',
       categoriesForStore(store).map(cat => btn(cap(cat), '!shop-view baseline ' + cat + ' 1', 105)).join(' '),
       searchBaselineButton(120) + ' ' + btn('Main Menu', '!shop-menu', 100) + ' ' + btn('View Cart', '!shop-cart', 100)
